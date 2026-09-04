@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard | LearnHub</title>
+
+    <!-- Shared Day-1 CSS -->
+    <link rel="stylesheet" href="../../css/teacher-admin.css">
+
+    <!-- Day-2 Dashboard CSS -->
+    <link rel="stylesheet" href="../../css/teacher-dashboard.css">
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <!-- ==================== SIDEBAR ==================== -->
+    <aside class="sidebar">
+
+        <a href="teacher-dashboard.html" class="brand">
+            <span class="brand-icon">◆</span>
+            <span>LearnHub</span>
+        </a>
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-label">Teacher</p>
+
+            <a href="teacher-dashboard.html" class="nav-item active">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="teacher-courses.html" class="nav-item">
+                <span class="nav-icon">▣</span>
+                <span>My Courses</span>
+            </a>
+
+            <a href="teacher-students.html" class="nav-item">
+                <span class="nav-icon">♙</span>
+                <span>Students</span>
+            </a>
+
+            <p class="nav-label account-label">Account</p>
+
+            <a href="profile.html" class="nav-item">
+                <span class="nav-icon">◉</span>
+                <span>Profile</span>
+            </a>
+
+            <a href="settings.html" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="role-card">
+                <div class="role-icon">✓</div>
+                <div>
+                    <strong>Teacher View</strong>
+                    <span>Current workspace</span>
+                </div>
+            </div>
+
+            <a href="#" class="logout">
+                <span>↪</span>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="main-content">
+
+        <!-- TOP NAVBAR -->
+        <header class="topbar">
+
+            <div class="mobile-brand">
+                <span class="brand-icon">◆</span>
+                <strong>LearnHub</strong>
+            </div>
+
+            <div class="topbar-actions">
+
+                <label class="search-box">
+                    <span>⌕</span>
+                    <input type="search" placeholder="Search anything...">
+                </label>
+
+                <button class="icon-button" aria-label="Notifications">
+                    ♧
+                    <span class="notification-dot"></span>
+                </button>
+
+                <button class="icon-button" aria-label="Messages">✉</button>
+
+                <a href="profile.html" class="avatar">CV</a>
+
+            </div>
+
+        </header>
+
+
+        <!-- ==================== DASHBOARD ==================== -->
+        <section class="page-content">
+
+            <!-- Heading -->
+            <div class="page-heading">
+
+                <div>
+                    <span class="eyebrow">TEACHER PORTAL</span>
+
+                    <h1>
+                        Welcome back, Teacher!
+                        <span class="wave">👋</span>
+                    </h1>
+
+                    <p>
+                        Here's an overview of your courses and student activity.
+                    </p>
+                </div>
+
+                <a href="teacher-courses.html" class="primary-button">
+                    + Create Course
+                </a>
+
+            </div>
+
+
+            <!-- ==================== STATISTICS ==================== -->
+            <div class="stats-grid">
+
+                <article class="stat-card">
+                    <div class="stat-icon purple">▣</div>
+
+                    <div>
+                        <span class="stat-label">My Courses</span>
+                        <strong class="stat-value">5</strong>
+                    </div>
+
+                    <span class="stat-note">+1 this month</span>
+                </article>
+
+
+                <article class="stat-card">
+                    <div class="stat-icon blue">♙</div>
+
+                    <div>
+                        <span class="stat-label">Total Students</span>
+                        <strong class="stat-value">245</strong>
+                    </div>
+
+                    <span class="stat-note">+12%</span>
+                </article>
+
+
+                <article class="stat-card">
+                    <div class="stat-icon orange">▤</div>
+
+                    <div>
+                        <span class="stat-label">Assignments</span>
+                        <strong class="stat-value">18</strong>
+                    </div>
+
+                    <span class="stat-note orange-text">4 pending</span>
+                </article>
+
+
+                <article class="stat-card">
+                    <div class="stat-icon green">✓</div>
+
+                    <div>
+                        <span class="stat-label">Quizzes</span>
+                        <strong class="stat-value">12</strong>
+                    </div>
+
+                    <span class="stat-note">3 active</span>
+                </article>
+
+            </div>
+
+
+            <!-- ==================== MAIN GRID ==================== -->
+            <div class="dashboard-grid">
+
+
+                <!-- MY COURSES -->
+                <section class="dashboard-panel courses-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h2>My Courses</h2>
+                            <p>Course performance at a glance</p>
+                        </div>
+
+                        <a href="teacher-courses.html" class="text-link">
+                            View all →
+                        </a>
+
+                    </div>
+
+
+                    <div class="course-table-wrap">
+
+                        <table class="course-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Course Name</th>
+                                    <th>Students</th>
+                                    <th>Assignments</th>
+                                    <th>Progress</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <div class="course-name">
+                                            <span class="course-symbol purple-bg">⌘</span>
+                                            <div>
+                                                <strong>Web Development</strong>
+                                                <span>HTML, CSS, JavaScript</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>120</td>
+                                    <td>6</td>
+
+                                    <td>
+                                        <div class="dashboard-progress">
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 75%;"></div>
+                                            </div>
+                                            <span>75%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <div class="course-name">
+                                            <span class="course-symbol blue-bg">◇</span>
+                                            <div>
+                                                <strong>Data Structures</strong>
+                                                <span>C / C++ Fundamentals</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>80</td>
+                                    <td>4</td>
+
+                                    <td>
+                                        <div class="dashboard-progress">
+                                            <div class="progress">
+                                                <div class="progress-bar blue-progress" style="width: 60%;"></div>
+                                            </div>
+                                            <span>60%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <div class="course-name">
+                                            <span class="course-symbol green-bg">✦</span>
+                                            <div>
+                                                <strong>UI/UX Design</strong>
+                                                <span>Figma & Design Systems</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>45</td>
+                                    <td>5</td>
+
+                                    <td>
+                                        <div class="dashboard-progress">
+                                            <div class="progress">
+                                                <div class="progress-bar green-progress" style="width: 90%;"></div>
+                                            </div>
+                                            <span>90%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+
+                <!-- RECENT ACTIVITY -->
+                <section class="dashboard-panel activity-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h2>Recent Activity</h2>
+                            <p>Latest classroom updates</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-list">
+
+                        <div class="activity-item">
+                            <span class="activity-icon green">✓</span>
+
+                            <div>
+                                <strong>New assignment submitted</strong>
+                                <span>Web Development · 2 min ago</span>
+                            </div>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <span class="activity-icon purple">★</span>
+
+                            <div>
+                                <strong>Quiz completed</strong>
+                                <span>JavaScript Basics · 1 hour ago</span>
+                            </div>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <span class="activity-icon blue">+</span>
+
+                            <div>
+                                <strong>New student enrolled</strong>
+                                <span>Data Structures · 3 hours ago</span>
+                            </div>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <span class="activity-icon orange">!</span>
+
+                            <div>
+                                <strong>Assignment deadline approaching</strong>
+                                <span>Responsive Design · Tomorrow</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- UPCOMING DEADLINES -->
+                <section class="dashboard-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h2>Upcoming Deadlines</h2>
+                            <p>Tasks requiring your attention</p>
+                        </div>
+
+                        <a href="#" class="text-link">
+                            View calendar
+                        </a>
+
+                    </div>
+
+
+                    <div class="deadline-list">
+
+                        <div class="deadline-item">
+
+                            <div class="date-box">
+                                <strong>18</strong>
+                                <span>SEP</span>
+                            </div>
+
+                            <div class="deadline-info">
+                                <strong>Responsive Website Design</strong>
+                                <span>Web Development · Due in 2 days</span>
+                            </div>
+
+                            <span class="badge warning">Review</span>
+
+                        </div>
+
+
+                        <div class="deadline-item">
+
+                            <div class="date-box">
+                                <strong>21</strong>
+                                <span>SEP</span>
+                            </div>
+
+                            <div class="deadline-info">
+                                <strong>JavaScript Functions</strong>
+                                <span>Web Development · Due in 5 days</span>
+                            </div>
+
+                            <span class="badge success">Upcoming</span>
+
+                        </div>
+
+
+                        <div class="deadline-item">
+
+                            <div class="date-box">
+                                <strong>24</strong>
+                                <span>SEP</span>
+                            </div>
+
+                            <div class="deadline-info">
+                                <strong>Database Normalization</strong>
+                                <span>Database Systems · Due in 8 days</span>
+                            </div>
+
+                            <span class="badge purple-badge">Planned</span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- QUICK ACTIONS -->
+                <section class="dashboard-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h2>Quick Actions</h2>
+                            <p>Frequently used tools</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+                        <a href="teacher-courses.html" class="quick-action">
+                            <span class="quick-icon purple">+</span>
+                            <div>
+                                <strong>Create Course</strong>
+                                <span>Add a new learning course</span>
+                            </div>
+                            <b>→</b>
+                        </a>
+
+
+                        <a href="teacher-students.html" class="quick-action">
+                            <span class="quick-icon blue">♙</span>
+                            <div>
+                                <strong>View Students</strong>
+                                <span>Check student progress</span>
+                            </div>
+                            <b>→</b>
+                        </a>
+
+
+                        <a href="#" class="quick-action">
+                            <span class="quick-icon green">▤</span>
+                            <div>
+                                <strong>Review Assignments</strong>
+                                <span>See pending submissions</span>
+                            </div>
+                            <b>→</b>
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
