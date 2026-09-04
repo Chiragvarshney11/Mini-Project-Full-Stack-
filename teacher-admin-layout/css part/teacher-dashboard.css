@@ -1,0 +1,391 @@
+
+/* =========================================================
+   LearnHub — Day 2 Teacher Dashboard
+   Dashboard-specific styles
+   HTML + CSS only — NO BOOTSTRAP
+   ========================================================= */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(310px, 1fr);
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.dashboard-panel {
+    min-width: 0;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.courses-panel {
+    min-width: 0;
+}
+
+.panel-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 17px;
+}
+
+.panel-header h2 {
+    margin: 0;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.panel-header p {
+    margin: 5px 0 0;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.text-link {
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+/* ---------- Statistics ---------- */
+
+.stat-note {
+    margin-left: auto;
+    align-self: flex-start;
+    color: var(--green);
+    font-size: 9px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.orange-text {
+    color: var(--orange);
+}
+
+/* ---------- Course Table ---------- */
+
+.course-table-wrap {
+    overflow-x: auto;
+}
+
+.course-table {
+    width: 100%;
+    min-width: 590px;
+    border-collapse: collapse;
+}
+
+.course-table th {
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--border);
+    color: #8a93a7;
+    font-size: 9px;
+    font-weight: 800;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.course-table td {
+    padding: 14px 8px;
+    border-bottom: 1px solid #f0f1f5;
+    color: #596277;
+    font-size: 10px;
+    vertical-align: middle;
+}
+
+.course-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.course-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.course-name strong,
+.course-name span {
+    display: block;
+}
+
+.course-name strong {
+    color: var(--text);
+    font-size: 10px;
+}
+
+.course-name div span {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 8px;
+}
+
+.course-symbol {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.purple-bg {
+    background: var(--purple-soft);
+    color: var(--primary);
+}
+
+.blue-bg {
+    background: var(--blue-soft);
+    color: var(--blue);
+}
+
+.green-bg {
+    background: var(--green-soft);
+    color: var(--green);
+}
+
+.dashboard-progress {
+    min-width: 110px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.dashboard-progress .progress {
+    min-width: 65px;
+}
+
+.dashboard-progress > span {
+    width: 27px;
+    color: var(--muted);
+    font-size: 9px;
+}
+
+.blue-progress {
+    background: var(--blue);
+}
+
+.green-progress {
+    background: var(--green);
+}
+
+/* ---------- Activity ---------- */
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f1f5;
+}
+
+.activity-item:last-child {
+    border-bottom: 0;
+}
+
+.activity-icon {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.activity-item strong,
+.activity-item span {
+    display: block;
+}
+
+.activity-item strong {
+    color: var(--text);
+    font-size: 10px;
+}
+
+.activity-item div span {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 8px;
+}
+
+/* ---------- Deadlines ---------- */
+
+.deadline-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.deadline-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f1f5;
+}
+
+.deadline-item:last-child {
+    border-bottom: 0;
+}
+
+.date-box {
+    width: 40px;
+    height: 43px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: var(--purple-soft);
+    color: var(--primary);
+}
+
+.date-box strong {
+    font-size: 15px;
+    line-height: 1;
+}
+
+.date-box span {
+    margin-top: 3px;
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.deadline-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.deadline-info strong,
+.deadline-info span {
+    display: block;
+}
+
+.deadline-info strong {
+    color: var(--text);
+    font-size: 10px;
+}
+
+.deadline-info span {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 8px;
+}
+
+.purple-badge {
+    background: var(--purple-soft);
+    color: var(--primary);
+}
+
+/* ---------- Quick Actions ---------- */
+
+.quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.quick-action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    transition: .2s ease;
+}
+
+.quick-action:hover {
+    border-color: #cbc5ff;
+    background: #faf9ff;
+}
+
+.quick-icon {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.quick-action div {
+    min-width: 0;
+    flex: 1;
+}
+
+.quick-action strong,
+.quick-action div span {
+    display: block;
+}
+
+.quick-action strong {
+    color: var(--text);
+    font-size: 10px;
+}
+
+.quick-action div span {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 8px;
+}
+
+.quick-action b {
+    color: #9aa2b3;
+    font-size: 13px;
+}
+
+/* ---------- Dashboard Responsive ---------- */
+
+@media (max-width: 1100px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-panel {
+        padding: 16px;
+    }
+
+    .course-table {
+        min-width: 590px;
+    }
+}
+
+@media (max-width: 450px) {
+    .stat-card {
+        min-height: 75px;
+    }
+
+    .stat-note {
+        display: none;
+    }
+
+    .panel-header {
+        gap: 8px;
+    }
+}
