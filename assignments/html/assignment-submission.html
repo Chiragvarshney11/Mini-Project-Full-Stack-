@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Submission</title>
+
+    <link rel="stylesheet" href="../css/assignment-submission.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>LearnHub</span>
+    </div>
+
+    <ul class="menu">
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-house"></i>Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-book"></i>My Courses
+            </a>
+        </li>
+
+        <li class="active">
+            <a href="assignments.html">
+                <i class="fa-solid fa-file-lines"></i>Assignments
+            </a>
+        </li>
+
+        <li>
+            <a href="../../quizzes/html/quizzes.html">
+                <i class="fa-solid fa-clipboard-question"></i>Quizzes
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-chart-line"></i>Progress
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-calendar"></i>Calendar
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-message"></i>Messages
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-folder"></i>Resources
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-user"></i>Profile
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>Settings
+            </a>
+        </li>
+
+    </ul>
+
+</aside>
+
+
+<div class="main">
+
+    <div class="topbar">
+
+        <div class="search">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <div class="notification">
+            <i class="fa-solid fa-bell"></i>
+            <span></span>
+        </div>
+
+        <div class="profile">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+    </div>
+
+
+    <div class="content">
+
+        <a href="#" class="back" onclick="goBack()"></a>
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Assignment
+        </a>
+
+
+        <div class="submission-card">
+
+            <h2>Submit Assignment</h2>
+
+            <p class="subtext">
+                Responsive Website Design
+            </p>
+
+
+            <label>Upload your file</label>
+
+            <input type="file" id="file">
+
+
+            <label>Comments</label>
+
+            <textarea placeholder="Write a comment..."></textarea>
+
+
+            <button onclick="submitAssignment()">
+                Submit Assignment
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+let url = new URLSearchParams(window.location.search);
+let id = url.get("id");
+
+function submitAssignment() {
+
+    let file = document.getElementById("file").value;
+    let message = document.getElementById("message");
+
+    if (file == "") {
+
+        message.innerText = "Please select a file.";
+        message.style.color = "red";
+
+    } else {
+
+        localStorage.setItem("assignmentStatus_" + id, "Submitted");
+
+        message.innerText = "Assignment submitted successfully!";
+        message.style.color = "green";
+
+    }
+
+}
+function goBack() {
+    window.location.href = "assignment-details.html?id=" + id;
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+
+    <link rel="stylesheet" href="../css/assignments.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>LearnHub</span>
+    </div>
+
+    <ul class="menu">
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-house"></i>Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-book"></i>My Courses
+            </a>
+        </li>
+
+        <li class="active">
+            <a href="assignments.html">
+                <i class="fa-solid fa-file-lines"></i>Assignments
+            </a>
+        </li>
+
+        <li>
+            <a href="../../quizzes/html/quizzes.html">
+                <i class="fa-solid fa-clipboard-question"></i>Quizzes
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-chart-line"></i>Progress
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-calendar"></i>Calendar
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-message"></i>Messages
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-folder"></i>Resources
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-user"></i>Profile
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>Settings
+            </a>
+        </li>
+
+    </ul>
+
+</aside>
+
+
+<div class="main">
+
+    <div class="topbar">
+
+        <div class="search">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <div class="notification">
+            <i class="fa-solid fa-bell"></i>
+            <span></span>
+        </div>
+
+        <div class="profile">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+    </div>
+
+
+    <div class="content">
+
+        <div class="page-header">
+            <div>
+                <h2>Assignments</h2>
+                <p>View and manage your assignments</p>
+            </div>
+        </div>
+
+
+        <!-- Tabs -->
+
+        <div class="tabs">
+
+            <button class="tab active"
+                onclick="filterAssignments('all', this)">
+                All
+            </button>
+
+            <button class="tab"
+                onclick="filterAssignments('upcoming', this)">
+                Upcoming
+            </button>
+
+            <button class="tab"
+                onclick="filterAssignments('submitted', this)">
+                Submitted
+            </button>
+
+            <button class="tab"
+                onclick="filterAssignments('graded', this)">
+                Graded
+            </button>
+
+        </div>
+
+
+        <!-- Assignment 1 -->
+
+        <div class="assignment-card"
+            data-id="1"
+            data-status="upcoming">
+
+            <div class="assignment-left">
+
+                <div class="assignment-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <div class="assignment-info">
+
+                    <h5>Responsive Website Design</h5>
+
+                    <p>
+                        Create a responsive portfolio website using HTML, CSS and JavaScript.
+                    </p>
+
+                    <small>
+                        Due: 05 September 2026 | 20 Marks
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="assignment-right">
+
+                <span class="status pending">
+                    Pending
+                </span>
+
+                <a href="assignment-details.html?id=1"
+                    class="view-btn">
+                    View
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Assignment 2 -->
+
+        <div class="assignment-card"
+            data-id="2"
+            data-status="submitted">
+
+            <div class="assignment-left">
+
+                <div class="assignment-icon">
+                    <i class="fa-brands fa-js"></i>
+                </div>
+
+                <div class="assignment-info">
+
+                    <h5>JavaScript Functions</h5>
+
+                    <p>
+                        Solve the given programming problems using JavaScript functions.
+                    </p>
+
+                    <small>
+                        Due: 07 September 2026 | 20 Marks
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="assignment-right">
+
+                <span class="status submitted">
+                    Submitted
+                </span>
+
+                <a href="assignment-details.html?id=2"
+                    class="view-btn">
+                    View
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Assignment 3 -->
+
+        <div class="assignment-card"
+            data-id="3"
+            data-status="upcoming">
+
+            <div class="assignment-left">
+
+                <div class="assignment-icon">
+                    <i class="fa-solid fa-file-pen"></i>
+                </div>
+
+                <div class="assignment-info">
+
+                    <h5>HTML Forms & Validation</h5>
+
+                    <p>
+                        Create a registration form with proper HTML validation.
+                    </p>
+
+                    <small>
+                        Due: 10 September 2026 | 15 Marks
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="assignment-right">
+
+                <span class="status pending">
+                    Pending
+                </span>
+
+                <a href="assignment-details.html?id=3"
+                    class="view-btn">
+                    View
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Assignment 4 -->
+
+        <div class="assignment-card"
+            data-id="4"
+            data-status="graded">
+
+            <div class="assignment-left">
+
+                <div class="assignment-icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+
+                <div class="assignment-info">
+
+                    <h5>Database Normalization</h5>
+
+                    <p>
+                        Explain database normalization with suitable examples.
+                    </p>
+
+                    <small>
+                        Due: 01 September 2026 | 25 Marks
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="assignment-right">
+
+                <span class="status graded">
+                    Graded
+                </span>
+
+                <a href="assignment-details.html?id=4"
+                    class="view-btn">
+                    View
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Assignment 5 -->
+
+        <div class="assignment-card"
+            data-id="5"
+            data-status="submitted">
+
+            <div class="assignment-left">
+
+                <div class="assignment-icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+
+                <div class="assignment-info">
+
+                    <h5>CSS Flexbox Layout</h5>
+
+                    <p>
+                        Build a modern responsive layout using CSS Flexbox.
+                    </p>
+
+                    <small>
+                        Due: 03 September 2026 | 20 Marks
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="assignment-right">
+
+                <span class="status submitted">
+                    Submitted
+                </span>
+
+                <a href="assignment-details.html?id=5"
+                    class="view-btn">
+                    View
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<script>
+
+function filterAssignments(status, button) {
+
+    document.querySelectorAll(".tab").forEach(function(tab) {
+        tab.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+
+    document.querySelectorAll(".assignment-card").forEach(function(card) {
+
+        if (status == "all") {
+
+            card.style.display = "flex";
+
+        }
+        else if (card.dataset.status == status) {
+
+            card.style.display = "flex";
+
+        }
+        else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+// Check submitted assignments
+
+document.querySelectorAll(".assignment-card").forEach(function(card) {
+
+    let id = card.dataset.id;
+
+    let savedStatus =
+        localStorage.getItem("assignmentStatus_" + id);
+
+
+    if (savedStatus == "Submitted") {
+
+        let status = card.querySelector(".status");
+
+        status.innerText = "Submitted";
+
+        status.className = "status submitted";
+
+        card.dataset.status = "submitted";
+
+    }
+
+});
+
+</script>
+
+
+</body>
+</html>

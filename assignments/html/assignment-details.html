@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Assignment Details</title>
+
+    <link rel="stylesheet" href="../css/assignment-details.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>LearnHub</span>
+    </div>
+
+    <ul class="menu">
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-house"></i>Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-book"></i>My Courses
+            </a>
+        </li>
+
+        <li class="active">
+            <a href="assignments.html">
+                <i class="fa-solid fa-file-lines"></i>Assignments
+            </a>
+        </li>
+
+        <li>
+            <a href="../../quizzes/html/quizzes.html">
+                <i class="fa-solid fa-clipboard-question"></i>Quizzes
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-chart-line"></i>Progress
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-calendar"></i>Calendar
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-message"></i>Messages
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-folder"></i>Resources
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-user"></i>Profile
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>Settings
+            </a>
+        </li>
+
+    </ul>
+
+</aside>
+
+
+<div class="main">
+
+    <div class="topbar">
+
+        <div class="search">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <div class="notification">
+            <i class="fa-solid fa-bell"></i>
+            <span></span>
+        </div>
+
+        <div class="profile">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+    </div>
+
+
+    <div class="content">
+
+        <a href="assignments.html" class="back">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Assignments
+        </a>
+
+
+        <div class="details-card">
+
+            <div class="heading">
+
+                <div class="icon">
+                    <i id="assignmentIcon" class="fa-solid fa-code"></i>
+                </div>
+
+                <div>
+                    <h2 id="assignmentTitle"></h2>
+                    <p id="assignmentShort"></p>
+                </div>
+
+            </div>
+
+
+            <div class="info">
+
+                <div>
+                    <span>Due Date</span>
+                    <b id="dueDate"></b>
+                </div>
+
+                <div>
+                    <span>Total Marks</span>
+                    <b id="marks"></b>
+                </div>
+
+                <div>
+                    <span>Status</span>
+                    <b id="status"></b>
+                </div>
+
+            </div>
+
+
+            <div class="description">
+
+                <h3>Assignment Description</h3>
+
+                <p id="description"></p>
+
+
+                <h3>Requirements</h3>
+
+                <ul id="requirements"></ul>
+
+            </div>
+
+
+             <a href="#" class="submit-btn" id="submitButton">
+    Submit Assignment
+</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+let assignments = [
+
+    {
+        title: "Responsive Website Design",
+        short: "Create a responsive portfolio website using HTML, CSS and JavaScript.",
+        due: "05 September 2026",
+        marks: "20 Marks",
+        status: "Pending",
+        description: "Create a responsive portfolio website using HTML, CSS and JavaScript.",
+        requirements: [
+            "Create a simple portfolio page.",
+            "Use HTML for the structure.",
+            "Use CSS for styling.",
+            "Add basic JavaScript functionality."
+        ]
+    },
+
+    {
+        title: "JavaScript Functions",
+        short: "Solve the given programming problems using JavaScript functions.",
+        due: "07 September 2026",
+        marks: "20 Marks",
+        status: "Submitted",
+        description: "Solve the given programming problems using JavaScript functions.",
+        requirements: [
+            "Write simple JavaScript functions.",
+            "Use proper function syntax.",
+            "Test the functions with different values.",
+            "Submit the completed code."
+        ]
+    },
+
+    {
+        title: "HTML Forms & Validation",
+        short: "Create a registration form with proper HTML validation.",
+        due: "10 September 2026",
+        marks: "15 Marks",
+        status: "Pending",
+        description: "Create a registration form with proper HTML validation.",
+        requirements: [
+            "Create a registration form.",
+            "Add name and email fields.",
+            "Use HTML validation.",
+            "Add a submit button."
+        ]
+    },
+
+    {
+        title: "Database Normalization",
+        short: "Explain database normalization with suitable examples.",
+        due: "01 September 2026",
+        marks: "25 Marks",
+        status: "Graded",
+        description: "Explain database normalization with suitable examples.",
+        requirements: [
+            "Explain normalization.",
+            "Explain 1NF, 2NF and 3NF.",
+            "Give suitable examples.",
+            "Submit the assignment."
+        ]
+    },
+
+    {
+        title: "CSS Flexbox Layout",
+        short: "Build a modern responsive layout using CSS Flexbox.",
+        due: "03 September 2026",
+        marks: "20 Marks",
+        status: "Submitted",
+        description: "Build a modern responsive layout using CSS Flexbox.",
+        requirements: [
+            "Create a responsive layout.",
+            "Use CSS Flexbox.",
+            "Arrange different elements properly.",
+            "Make the layout responsive."
+        ]
+    }
+
+];
+
+
+let url = new URLSearchParams(window.location.search);
+
+let id = url.get("id");
+
+let assignment = assignments[id - 1];
+document.getElementById("submitButton").href =
+    "assignment-submission.html?id=" + id;
+
+
+document.getElementById("assignmentTitle").innerText = assignment.title;
+
+document.getElementById("assignmentShort").innerText = assignment.short;
+
+document.getElementById("dueDate").innerText = assignment.due;
+
+document.getElementById("marks").innerText = assignment.marks;
+
+let savedStatus = localStorage.getItem("assignmentStatus_" + id);
+
+if (savedStatus) {
+    document.getElementById("status").innerText = savedStatus;
+} else {
+    document.getElementById("status").innerText = assignment.status;
+}
+
+
+let list = document.getElementById("requirements");
+
+assignment.requirements.forEach(function(item) {
+
+    let li = document.createElement("li");
+
+    li.innerText = item;
+
+    list.appendChild(li);
+
+});
+
+
+</script>
+
+</body>
+</html>
