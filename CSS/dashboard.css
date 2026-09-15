@@ -1,0 +1,677 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(244, 246, 249);
+}
+
+
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.sidebar {
+    width: 270px;
+    height: 100vh;
+
+    background-color: rgb(36, 48, 66);
+
+    display: flex;
+    flex-direction: column;
+
+    flex-shrink: 0;
+
+    color: white;
+
+    padding-top: 20px;
+}
+
+
+
+.site-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.site-logo img {
+    width: 220px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    margin: 0 14px;
+    padding: 14px 15px;
+
+    text-decoration: none;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    border-radius: 6px;
+
+    transition: 0.2s;
+}
+
+.nav-item i {
+    width: 24px;
+
+    text-align: center;
+
+    font-size: 20px;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+.nav-item:first-child {
+    background-color: rgba(62, 113, 181, 0.45);
+    color: white;
+}
+
+
+/* Sidebar line */
+
+.sidebar hr {
+    margin-top: auto;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    border: none;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logout {
+    margin: 0 20px 25px;
+
+    padding: 12px 5px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    cursor: pointer;
+}
+
+.logout i {
+    width: 24px;
+
+    text-align: center;
+
+    font-size: 20px;
+}
+
+
+.main-content {
+    flex: 1;
+
+    height: 100vh;
+
+    min-width: 0;
+    min-height: 0;
+
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 40px;
+}
+
+
+.search {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    width: 100%;
+
+    height: 80px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 30px;
+
+    background-color: rgba(244, 246, 249, 0.95);
+
+    backdrop-filter: blur(8px);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.search i {
+    color: #7b8798;
+
+    font-size: 18px;
+}
+
+.search input {
+    width: 520px;
+
+    padding: 12px 15px;
+
+    margin-left: 10px;
+
+    border: 1px solid rgba(128, 128, 128, 0.17);
+
+    border-radius: 8px;
+
+    background-color: rgb(242, 246, 250);
+
+    font-size: 14px;
+
+    color: #333;
+}
+
+.search input:focus {
+    outline: none;
+
+    border-color: #3b82f6;
+}
+
+.search input::placeholder {
+    color: #8a94a6;
+}
+
+
+.welcome-tag {
+    width: calc(100% - 60px);
+
+    min-height: 130px;
+
+    margin: 20px 30px;
+
+    padding: 20px 28px;
+
+    border: 1px solid rgba(165, 165, 225, 0.44);
+
+    background-color: rgb(229, 240, 253);
+
+    border-radius: 6px;
+
+    flex-shrink: 0;
+}
+
+.welcome-tag h1 {
+    margin-bottom: 8px;
+
+    font-size: 30px;
+
+    color: #111827;
+}
+
+.welcome-tag p {
+    font-size: 17px;
+
+    color: #43536a;
+}
+
+
+.stats {
+    width: calc(100% - 60px);
+
+    margin: 0 30px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.totalcourses,
+.totalstud,
+.totallessons,
+.avgcomp {
+    min-height: 140px;
+
+    padding: 20px;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.totalcourses {
+    background-color: rgb(236, 245, 254);
+}
+
+.totalstud {
+    background-color: rgb(235, 250, 240);
+}
+
+.totallessons {
+    background-color: rgb(254, 246, 231);
+}
+
+.avgcomp {
+    background-color: rgb(254, 238, 239);
+}
+
+
+.stats p {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #111827;
+}
+
+.stats h2 {
+    font-size: 28px;
+
+    color: #111827;
+}
+
+.stats h5 {
+    font-size: 13px;
+
+    font-weight: 500;
+
+    color: rgb(42, 164, 91);
+}
+.quick {
+    width: calc(100% - 60px);
+
+    margin: 25px 30px 0;
+
+    padding: 16px;
+
+    background-color: rgba(255, 255, 255, 0.7);
+
+    border: 1px solid rgba(0, 0, 0, 0.12);
+
+    border-radius: 6px;
+}
+
+
+.quick h2 {
+    margin: 0;
+
+    font-size: 21px;
+
+    color: #111827;
+}
+
+.submits {
+    width: 100%;
+
+    margin-top: 15px;
+
+    display: flex;
+
+    gap: 15px;
+}
+
+.addcourse,
+.addlesson,
+.viewstud,
+.viewreports {
+    flex: 1;
+
+    height: 75px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 12px 15px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+
+.addcourse {
+    background-color: #2768eb;
+
+    color: white;
+}
+
+.addlesson {
+    background-color: #299c57;
+
+    color: white;
+}
+
+.viewstud {
+    background-color: #e9e5fe;
+
+    color: #7350f3;
+}
+
+.viewreports {
+    background-color: #333c51;
+
+    color: white;
+}
+
+
+.addcourse:hover,
+.addlesson:hover,
+.viewstud:hover,
+.viewreports:hover {
+    transform: translateX(-2px);
+
+    opacity: 0.9;
+}
+
+
+.courses {
+    width: calc(100% - 60px);
+
+    margin: 25px 30px 0;
+
+    padding: 16px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 6px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.courses-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+}
+
+.courses-header h2 {
+    margin: 0;
+
+    font-size: 20px;
+
+    color: #111827;
+}
+
+
+
+.view-all {
+    text-decoration: none;
+
+    color: #1264e8;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+.view-all span {
+    font-size: 18px;
+
+    margin-left: 4px;
+}
+.course-table {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+.course-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(260px, 3fr)
+        0.9fr
+        0.8fr
+        1fr
+        1fr;
+
+    align-items: center;
+    
+    min-height: 60px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.table-header {
+    min-height: 36px;
+
+    background: #f3f6fa;
+
+    border-radius: 4px;
+
+    border-bottom: none;
+
+    padding: 0 10px;
+
+    color: #374151;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.course-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-left: 10px;
+
+    min-width: 0;
+}
+
+.course-info img {
+    width: 50px;
+
+    height: 46px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+}
+
+.course-info h3 {
+    margin: 0 0 4px;
+
+    font-size: 14px;
+
+    color: #111827;
+}
+
+.course-info p {
+    margin: 0;
+
+    font-size: 12px;
+
+    color: #7b8798;
+}
+
+.number {
+    font-size: 13px;
+
+    color: #536174;
+
+    text-align: center;
+}
+
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 80px;
+
+    padding: 9px 12px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+.published {
+    background: #dcfce7;
+
+    color: #159447;
+}
+
+.draft {
+    background: #fff1d6;
+
+    color: #d89000;
+}
+
+
+
+.actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.actions button {
+    background: #ffffff;
+
+    border: 1px solid #dce2ea;
+
+    border-radius: 5px;
+
+    padding: 7px 13px;
+
+    font-size: 12px;
+
+    color: #27364a;
+
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background: #f5f7fa;
+}
+
+.actions .more {
+    border: none;
+
+    font-size: 20px;
+
+    padding: 0;
+
+    color: #64748b;
+}
+.number{
+    display: flex;
+   
+}
+
+@media (max-width: 1100px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search input {
+        width: 400px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .site-logo img {
+        width: 180px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .submits {
+        flex-wrap: wrap;
+    }
+
+    .addcourse,
+    .addlesson,
+    .viewstud,
+    .viewreports {
+        min-width: 200px;
+    }
+}
