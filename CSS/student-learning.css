@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #243042;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    width: 235px;
+    min-height: 100vh;
+    background-color: rgb(36, 48, 66);
+    padding: 22px 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 5px 12px 30px;
+
+    color: white;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.logo i {
+    font-size: 21px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 12px 13px;
+
+    color: #c8ced7;
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+}
+
+.menu-item i {
+    width: 18px;
+    text-align: center;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background-color: #344154;
+    color: white;
+}
+
+.logout {
+    margin-top: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 12px 13px;
+
+    color: #c8ced7;
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+/* ================= CONTENT ================= */
+
+.content {
+    flex: 1;
+    padding: 25px 38px 35px;
+}
+
+
+/* ================= HEADING ================= */
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.page-heading h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.page-heading > div:first-child p {
+    font-size: 14px;
+    color: #7b8491;
+}
+
+
+/* ================= STUDENT ================= */
+
+.student-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.student-avatar {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background-color: #dbe5f1;
+    color: #243042;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.student-name {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.student-role {
+    margin-top: 2px;
+
+    font-size: 11px;
+    color: #89919d;
+}
+
+
+/* =========================================================
+   COURSE PAGES – same visual language as assignment-list.css
+   ========================================================= */
+
+/* ---- Course Card (grid item on courses.html / my-courses.html) ---- */
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.course-card {
+    background-color: white;
+
+    border: 1px solid #e1e5ea;
+    border-radius: 8px;
+
+    padding: 20px;
+}
+
+.course-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #edf2f7;
+    border-radius: 8px;
+
+    color: #243042;
+    font-size: 22px;
+
+    margin-bottom: 14px;
+}
+
+.course-tag {
+    display: inline-block;
+
+    padding: 4px 11px;
+
+    background-color: #e8eef8;
+    color: #46658b;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+.course-card h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.course-card p {
+    font-size: 13px;
+    color: #7e8793;
+    margin-bottom: 14px;
+}
+
+/* ---- Progress bar ---- */
+
+.progress-bar-bg {
+    width: 100%;
+    height: 10px;
+
+    background-color: #edf0f3;
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-bottom: 14px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #46658b;
+    border-radius: 20px;
+}
+
+.progress-label {
+    font-size: 12px;
+    color: #7b8491;
+    margin-bottom: 6px;
+}
+
+/* ---- Buttons (same style as submit-btn in assignment-list.css) ---- */
+
+.btn-primary {
+    display: inline-block;
+
+    padding: 9px 14px;
+
+    background-color: #243042;
+    color: white;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #344154;
+}
+
+/* ---- Lesson row (course-view.html) ---- */
+
+.lesson-card {
+    background-color: white;
+
+    border: 1px solid #e1e5ea;
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    margin-bottom: 20px;
+}
+
+.lesson-row {
+    min-height: 90px;
+
+    padding: 18px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #edf0f3;
+}
+
+.lesson-row:last-child {
+    border-bottom: none;
+}
+
+.lesson-main {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.lesson-icon {
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #edf2f7;
+    border-radius: 8px;
+
+    color: #243042;
+    font-size: 18px;
+}
+
+.lesson-info h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.lesson-info p {
+    font-size: 12px;
+    color: #7e8793;
+}
+
+.status {
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.status.completed {
+    background-color: #e7f5ec;
+    color: #27814a;
+}
+
+.status.locked {
+    background-color: #fff2df;
+    color: #b36a00;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+    color: #46658b;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        width: 70px;
+    }
+
+    .logo span,
+    .menu-item span,
+    .logout span {
+        display: none;
+    }
+
+    .logo,
+    .menu-item,
+    .logout {
+        justify-content: center;
+    }
+
+    .content {
+        padding: 18px 12px;
+    }
+
+    .page-heading {
+        align-items: flex-start;
+    }
+}
