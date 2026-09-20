@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Profile</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <div class="site-logo">
+                <img
+                    src="assests/Learnhub logo.png"
+                    alt="LearnHub Logo"
+                >
+            </div>
+
+            <nav class="navbar">
+
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Manage Courses</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Add Course</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Students</span>
+                </a>
+
+                <a href="profile.html" class="nav-item active">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+
+            </nav>
+
+            <hr>
+
+            <div class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </div>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <div class="topbar">
+
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Search students, courses or anything..."
+                    >
+                </div>  
+                <div class="notification">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+                <div class="profile-dropdown">
+                    <div class="profile-info">
+                        <div class="profile-photo">T</div>
+
+                        <div class="profile-name">
+                            <span>Teacher</span>
+                            <small>Admin</small>
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="profile.html">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="profile-content">
+
+                <div class="profile-bar">
+                    <h1>My Profile</h1>
+                    <p>
+                        View and update your personal information.
+                    </p>
+                </div>
+
+
+                <div class="box">
+
+                    <div class="my-profile">
+                        <h1>Profile Information</h1>
+                    </div>
+
+
+                    <div class="name">
+                        <h2>Teacher</h2>
+                        <p>
+                            Computer Science Faculty
+                        </p>
+                    </div>
+                    <div class="details">
+
+                        <div class="fname">
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Enter Name"
+                            >
+                        </div>
+
+
+                        <div class="mail">
+
+                            <label for="mail">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="mail"
+                                placeholder="Enter Mail ID"
+                            >
+
+                        </div>
+
+
+                        <div class="phone">
+
+                            <label for="phoneno">
+                                Contact Details
+                            </label>
+
+                            <input type="tel" id="phoneno" placeholder="+91 XXXXX XXXXX">
+
+                        </div>
+
+
+                        <button>
+                            Save Changes
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
