@@ -326,3 +326,43 @@ body {
 .btn-primary:hover {
     background-color: #1d4ed8;
 }
+
+@media (max-width: 800px) {
+    .sidebar {
+        width: 200px;
+    }
+    .content {
+        margin-left: 200px;
+        padding: 20px;
+    }
+    .search-box {
+        width: 260px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 70px;
+    }
+    .site-logo img {
+        width: 40px;
+    }
+    .nav-item span,
+    .logout span {
+        display: none;
+    }
+    .nav-item, .logout {
+        justify-content: center;
+    }
+    .content {
+        margin-left: 70px;
+        padding: 18px 12px;
+    }
+    .topbar {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .search-box {
+        width: 100%;
+    }
+}
