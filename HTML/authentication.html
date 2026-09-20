@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LearnHub | Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../CSS/auth.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+    <img src="../assets/authentication-learnhublogo.png" alt="LearnHub">
+</div>
+
+            <nav class="sidebar-menu">
+
+                <a href="authentication.html" class="sidebar-link active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" class="sidebar-link">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>My Courses</span>
+                </a>
+
+                <a href="#" class="sidebar-link">
+                    <i class="fa-solid fa-users"></i>
+                    <span>My Progress</span>
+                </a>
+
+                <a href="#" class="sidebar-link">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>Assignments</span>
+                </a>
+
+                <a href="#" class="sidebar-link">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+
+            </nav>
+
+            <a href="login.html" class="logout-link">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+
+    <div class="search-box">
+
+        <i class="bi bi-search"></i>
+
+        <input type="text" placeholder="Search students, courses or anything...">
+
+    </div>
+
+
+    <div class="topbar-right">
+
+        <!-- Notification -->
+        <div class="notification">
+            <i class="bi bi-bell-fill"></i>
+        </div>
+
+
+        <!-- Profile -->
+        <div class="profile-box">
+
+            <div class="profile-circle">
+                A
+            </div>
+
+            <div class="profile-info">
+                <strong>Aman</strong>
+                <span>Student</span>
+            </div>
+
+            <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+        </div>
+
+    </div>
+
+</header>
+
+            <div class="page-content">
+
+                <section class="welcome-section">
+
+                    <h1>Welcome back, Aman !</h1>
+
+                    <p>
+                        Manage your courses, create lessons and help your students grow
+                    </p>
+
+                </section>
+
+                <section class="stats-grid">
+
+                    <div class="stat-card blue-card">
+                        <h3>Total Courses</h3>
+                        <h2>3</h2>
+                        <p>+1 This Month</p>
+                    </div>
+
+                    <div class="stat-card green-card">
+                        <h3>Total Students</h3>
+                        <h2>42</h2>
+                        <p>+5 This Month</p>
+                    </div>
+
+                    <div class="stat-card yellow-card">
+                        <h3>Total Lessons</h3>
+                        <h2>18</h2>
+                        <p>+3 This Month</p>
+                    </div>
+
+                    <div class="stat-card red-card">
+                        <h3>Avg Completion</h3>
+                        <h2>68%</h2>
+                        <p>+12% This Month</p>
+                    </div>
+
+                </section>
+
+                <section class="quick-actions">
+
+                    <h2>Quick Actions</h2>
+
+                    <div class="action-grid">
+
+                        <a href="#" class="action-button add-course">
+                            View Courses
+                        </a>
+
+                        <a href="#" class="action-button add-lesson">
+                            View Lessons
+                        </a>
+
+                        
+
+                       
+
+                    </div>
+
+                </section>
+
+                <section class="courses-section">
+
+                    <div class="section-header">
+
+                        <h2>My Courses</h2>
+
+                        <a href="#">
+                            View All
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+                                    <th>Course</th>
+                                    <th>Students</th>
+                                    <th>Lessons</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="course-info">
+
+                                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=200&q=80"
+                                                alt="Web Development">
+
+                                            <div>
+
+                                                <strong>
+                                                    Web Development
+                                                </strong>
+
+                                                <span>
+                                                    HTML • CSS • JavaScript
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>18</td>
+
+                                    <td>8</td>
+
+                                    <td>
+                                        <span class="status published">
+                                            Published
+                                        </span>
+                                    </td>
+
+                                    <td>
+
+                                        <div class="actions">
+
+                                            <button>Edit</button>
+
+                                            <i class="bi bi-three-dots-vertical"></i>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="course-info">
+
+                                            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=200&q=80"
+                                                alt="Data Structures">
+
+                                            <div>
+
+                                                <strong>
+                                                    Data Structures
+                                                </strong>
+
+                                                <span>
+                                                    Learn with Examples
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>12</td>
+
+                                    <td>6</td>
+
+                                    <td>
+                                        <span class="status published">
+                                            Published
+                                        </span>
+                                    </td>
+
+                                    <td>
+
+                                        <div class="actions">
+
+                                            <button>Edit</button>
+
+                                            <i class="bi bi-three-dots-vertical"></i>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="course-info">
+
+                                            <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=200&q=80"
+                                                alt="Python Programming">
+
+                                            <div>
+
+                                                <strong>
+                                                    Python Programming
+                                                </strong>
+
+                                                <span>
+                                                    Basics to Advanced
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>12</td>
+
+                                    <td>4</td>
+
+                                    <td>
+                                        <span class="status draft">
+                                            Draft
+                                        </span>
+                                    </td>
+
+                                    <td>
+
+                                        <div class="actions">
+
+                                            <button>Edit</button>
+
+                                            <i class="bi bi-three-dots-vertical"></i>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
