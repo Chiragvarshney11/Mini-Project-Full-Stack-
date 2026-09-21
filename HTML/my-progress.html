@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Progress - LearnHub</title>
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+>
+
+    <link rel="stylesheet" href="../CSS/my-progress.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+    <img src="../assets/assessment-logo.png" alt="LearnHub Logo">
+</div>
+
+        <nav class="menu">
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-book-open"></i>
+                <span>My Courses</span>
+            </a>
+
+            
+
+           
+
+            <a href="my-progress.html" class="nav-item active">
+                <i class="fa-solid fa-users"></i>
+                <span>My Progress</span>
+            </a>
+            <a href="assignment-list.html" class="nav-item">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Assignments</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+            <a href="#" class="nav-item logout">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    <span>Logout</span>
+</a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Topbar -->
+         <header class="topbar">
+
+    <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text"
+               placeholder="Search students, courses or anything...">
+    </div>
+
+    <!-- TOPBAR RIGHT -->
+
+<div class="topbar-right">
+
+    <!-- Notification -->
+
+    <div class="notification">
+
+        <i class="fa-regular fa-bell"></i>
+
+    </div>
+
+
+    <!-- Student Profile -->
+
+    <div class="student-profile">
+
+        <div class="profile-icon">
+            A
+        </div>
+
+        <div class="student-info">
+
+            <strong>Aman</strong>
+
+            <span>Student</span>
+
+        </div>
+
+        <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+    </div>
+
+</div>
+
+</header>
+
+
+        <!-- Page Header -->
+        <section class="page-header">
+
+            <div>
+                <h1>My Progress</h1>
+
+                <p>
+                    Track your learning progress across all courses
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- Summary -->
+        <section class="summary-cards">
+
+            <div class="summary-card blue">
+
+                <div>
+                    <p>Total Courses</p>
+                    <h2>4</h2>
+                </div>
+
+                <i class="fa-solid fa-book-open"></i>
+
+            </div>
+
+
+            <div class="summary-card green">
+
+                <div>
+                    <p>Completed</p>
+                    <h2>0</h2>
+                </div>
+
+                <i class="fa-solid fa-circle-check"></i>
+
+            </div>
+
+
+            <div class="summary-card yellow">
+
+                <div>
+                    <p>In Progress</p>
+                    <h2>4</h2>
+                </div>
+
+                <i class="fa-solid fa-spinner"></i>
+
+            </div>
+
+
+            <div class="summary-card pink">
+
+                <div>
+                    <p>Average Progress</p>
+                    <h2>65%</h2>
+                </div>
+
+                <i class="fa-solid fa-chart-simple"></i>
+
+            </div>
+
+        </section>
+
+
+        <!-- Courses -->
+        <section class="progress-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Course Progress</h2>
+
+                    <p>
+                        View your progress in each enrolled course
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="course-list">
+
+
+                <!-- Web Development -->
+                <div class="course-card">
+
+                    <div class="course-top">
+
+                        <div class="course-icon blue-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+
+                        <div class="course-info">
+
+                            <h3>Web Development</h3>
+
+                            <p>
+                                HTML, CSS and JavaScript
+                            </p>
+
+                        </div>
+
+                        <strong class="percentage">
+                            75%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div class="progress web-progress"></div>
+
+                    </div>
+
+
+                    <div class="course-bottom">
+
+                        <span>
+                            <i class="fa-regular fa-circle-check"></i>
+                            15 of 20 lessons completed
+                        </span>
+
+                        <span>
+                            In Progress
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Python -->
+                <div class="course-card">
+
+                    <div class="course-top">
+
+                        <div class="course-icon green-icon">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+
+                        <div class="course-info">
+
+                            <h3>Python Programming</h3>
+
+                            <p>
+                                Python basics and programming
+                            </p>
+
+                        </div>
+
+                        <strong class="percentage">
+                            60%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div class="progress python-progress"></div>
+
+                    </div>
+
+
+                    <div class="course-bottom">
+
+                        <span>
+                            <i class="fa-regular fa-circle-check"></i>
+                            12 of 20 lessons completed
+                        </span>
+
+                        <span>
+                            In Progress
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Database -->
+                <div class="course-card">
+
+                    <div class="course-top">
+
+                        <div class="course-icon yellow-icon">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+
+                        <div class="course-info">
+
+                            <h3>Database Management</h3>
+
+                            <p>
+                                SQL and database concepts
+                            </p>
+
+                        </div>
+
+                        <strong class="percentage">
+                            45%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div class="progress database-progress"></div>
+
+                    </div>
+
+
+                    <div class="course-bottom">
+
+                        <span>
+                            <i class="fa-regular fa-circle-check"></i>
+                            9 of 20 lessons completed
+                        </span>
+
+                        <span>
+                            In Progress
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Computer Science -->
+                <div class="course-card">
+
+                    <div class="course-top">
+
+                        <div class="course-icon pink-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+
+                        <div class="course-info">
+
+                            <h3>Computer Science</h3>
+
+                            <p>
+                                Data Structures and Networks
+                            </p>
+
+                        </div>
+
+                        <strong class="percentage">
+                            80%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div class="progress cs-progress"></div>
+
+                    </div>
+
+
+                    <div class="course-bottom">
+
+                        <span>
+                            <i class="fa-regular fa-circle-check"></i>
+                            16 of 20 lessons completed
+                        </span>
+
+                        <span>
+                            In Progress
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
