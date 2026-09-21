@@ -31,10 +31,26 @@ body {
 }
 
 .site-logo {
+    width: 100%;
+    height: 80px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     margin-bottom: 25px;
+
+    overflow: hidden;
+}
+
+.site-logo img {
+    width: 220px;
+    max-width: 220px;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
 }
 
 .logo-accent {
@@ -140,24 +156,96 @@ body {
 .topbar-right {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
 }
 
-.bell {
-    width: 40px;
-    height: 40px;
+.bell-icon {
+    font-size: 18px;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.student-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #dbeafe;
+    color: #2563eb;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
+    font-weight: 700;
 }
 
-.student-info {
+.student-name {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.student-role {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.user-menu {
+    position: relative;
+}
+
+.user-menu-trigger {
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+.user-menu-trigger:hover {
+    background-color: #eef2f7;
+}
+
+.chevron-icon {
+    font-size: 11px;
+    color: #6b7280;
+    margin-left: 4px;
+}
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 8px;
+    min-width: 160px;
+    z-index: 100;
+}
+
+.user-menu:hover .user-dropdown {
+    display: block;
+}
+
+.user-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #1e293b;
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+.user-dropdown a:hover {
+    background-color: #f4f6fb;
+}
+
+.user-dropdown i {
+    width: 16px;
+    color: #6b7280;
 }
 
 .student-avatar {
@@ -229,72 +317,246 @@ body {
     font-size: 12px;
     font-weight: 600;
 }
+/* Card Background Colors */
 
-.stat-blue   { background-color: #dbeafe; }
-.stat-blue .label, .stat-blue .change { color: lightblue; }
-
-.stat-green  { background-color: #dcfce7; }
-.stat-green .label, .stat-green .change { color: lightgreen; }
-
-.stat-yellow { background-color: #fef3c7; }
-.stat-yellow .label, .stat-yellow .change { color: orange; }
-
-.stat-red    { background-color: #fee2e2; }
-.stat-red .label, .stat-red .change { color: red; }
-
-.section-title {
-    font-size: 19px;
-    margin-bottom: 16px;
+.stat-blue {
+    background-color: #dbeafe;
 }
+
+.stat-green {
+    background-color: #dcfce7;
+}
+
+.stat-yellow {
+    background-color: #fef3c7;
+}
+
+.stat-red {
+    background-color: #fee2e2;
+}
+
+
+/* Heading - Grey */
+
+.stat-card .label {
+    color: #6b7280;
+}
+
+
+/* Numbers - Black */
+
+.stat-card .value {
+    color: #111827;
+}
+
+
+/* Bottom text - Same color family, darker */
+
+.stat-blue .change {
+    color: #6fa8d4;
+}
+
+.stat-green .change {
+    color: #5dbb7a;
+}
+
+.stat-yellow .change {
+    color: #c59d20;
+}
+
+.stat-red .change {
+    color: #d95b32;
+}
+
+
+
+
+/* =========================
+   MY COURSES
+========================= */
+
+.courses-section {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 25px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #1f2937;
+}
+
+.section-header a {
+    text-decoration: none;
+    color: #5278a5;
+    font-size: 13px;
+}
+
+
+/* Table */
+
+.courses-table {
+    width: 100%;
+}
+
+
+/* Header */
+
+.table-header {
+    display: grid;
+    grid-template-columns: 2.4fr 0.8fr 1.6fr 1fr 0.8fr;
+
+    background-color: #f1f5f9;
+
+    padding: 10px;
+
+    font-size: 12px;
+    font-weight: 600;
+    color: #374151;
+}
+
+
+/* Course Row */
 
 .course-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 2.4fr 0.8fr 1.6fr 1fr 0.8fr;
+
+    align-items: center;
+
+    padding: 10px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    min-height: 60px;
 }
 
-.course-card {
-    flex: 1;
-    min-width: 250px;
-    background-color: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 20px;
+
+/* Course Information */
+
+.course-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .course-icon {
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
+
+    border-radius: 5px;
+
+    background-color: #dbeafe;
+
+    color: #2563eb;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #dbeafe;
-    border-radius: 10px;
-    color: #2563eb;
-    font-size: 22px;
-    margin-bottom: 14px;
+
+    font-size: 18px;
 }
 
-.course-tag {
-    display: inline-block;
-    padding: 4px 11px;
-    background-color: #dbeafe;
-    color: #1d4ed8;
-    border-radius: 20px;
+.course-info h3 {
+    margin: 0;
+
+    font-size: 14px;
+    color: #1f2937;
+}
+
+.course-info p {
+    margin: 3px 0 0;
+
     font-size: 11px;
-    font-weight: 600;
-    margin-bottom: 10px;
+    color: #6b7280;
 }
 
-.course-card h3 {
-    font-size: 17px;
-    margin-bottom: 6px;
-}
 
-.course-card p {
+/* Lessons */
+
+.lessons {
     font-size: 13px;
-    color: #64748b;
-    margin-bottom: 10px;
+    color: #6b7280;
+}
+
+
+/* Progress */
+
+.progress-area {
+    width: 130px;
+}
+
+.progress-text {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 7px;
+
+    background-color: #e2e8f0;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+
+    background-color: #2563eb;
+
+    border-radius: 10px;
+}
+
+
+.course-status.not-started {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.course-status {
+    font-size: 12px;
+
+    background-color: #dcfce7;
+    color: #15803d;
+
+    padding: 6px 10px;
+
+    border-radius: 5px;
+
+    width: fit-content;
+}
+
+
+/* Button */
+
+.continue-btn {
+    text-decoration: none;
+
+    background-color: #2563eb;
+    color: white;
+
+    padding: 8px 12px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    width: fit-content;
 }
 
 .progress-bar-bg {
