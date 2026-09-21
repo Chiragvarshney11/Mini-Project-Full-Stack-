@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course View | LearnHub</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/course-view.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="site-logo">
+            <img src="../assets/image.png" alt="LearnHub Logo">
+        </div>
+
+        <nav class="navbar">
+            <a href="student-learning.html" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="student-learning.html" class="nav-item active">
+                <i class="fa-solid fa-book-open"></i>
+                <span>My Courses</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-users"></i>
+                <span>My Progress</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Assignments</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
+
+        <hr>
+
+        <div class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </div>
+    </aside>
+
+    <main class="content">
+
+        <div class="topbar">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search courses or lessons...">
+            </div>
+
+            <div class="topbar-right">
+                <i class="fa-regular fa-bell bell-icon"></i>
+
+                <div class="user-menu">
+                    <div class="user-menu-trigger">
+                        <div class="student-avatar">A</div>
+                        <div>
+                            <div class="student-name">Aman</div>
+                            <div class="student-role">Student</div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                    </div>
+
+                    <div class="user-dropdown">
+                        <a href="#">
+                            <i class="fa-regular fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="student-learning.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to My Courses
+        </a>
+
+        <div class="course-view-header">
+            <div class="course-view-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <div>
+                <span class="course-tag">Web Development</span>
+                <h1>HTML Basics</h1>
+                <p>Learn the fundamentals of building web pages using HTML.</p>
+            </div>
+        </div>
+
+        <div class="progress-label">60% Complete &bull; 8 of 12 lessons done</div>
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 60%;"></div>
+        </div>
+
+        <h2 class="section-title">Lessons</h2>
+
+        <div class="lesson-card">
+
+            <div class="lesson-row">
+                <div class="lesson-main">
+                    <div class="lesson-icon"><i class="fa-solid fa-play"></i></div>
+                    <div class="lesson-info">
+                        <h3>Lesson 1: Introduction to HTML</h3>
+                        <p>Video &bull; 12 min</p>
+                    </div>
+                </div>
+                <span class="status completed">Completed</span>
+            </div>
+
+            <div class="lesson-row">
+                <div class="lesson-main">
+                    <div class="lesson-icon"><i class="fa-solid fa-file-lines"></i></div>
+                    <div class="lesson-info">
+                        <h3>Lesson 2: Tags &amp; Attributes</h3>
+                        <p>Reading &bull; 8 min</p>
+                    </div>
+                </div>
+                <span class="status completed">Completed</span>
+            </div>
+
+            <div class="lesson-row">
+                <div class="lesson-main">
+                    <div class="lesson-icon"><i class="fa-solid fa-play"></i></div>
+                    <div class="lesson-info">
+                        <h3>Lesson 3: Working with Layouts</h3>
+                        <p>Video &bull; 15 min</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-primary">Mark as Complete</a>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
