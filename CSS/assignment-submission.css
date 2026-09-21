@@ -1,0 +1,698 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #263238;
+}
+
+
+/* ================= DASHBOARD ================= */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    width: 228px;
+    height: 100vh;
+
+    background-color: #243042;
+
+    padding: 20px 12px;
+
+    flex-shrink: 0;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1001;
+}
+
+
+/* ================= LOGO ================= */
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 5px 0 25px 20px;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+/* ================= MENU ================= */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    height: 100%;
+}
+
+
+.nav-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 12px;
+
+    color: #c7cfda;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    border-radius: 5px;
+}
+
+
+/* ICON */
+
+.nav-item i {
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* HOVER */
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+
+    color: white;
+}
+
+
+/* ACTIVE */
+
+.nav-item.active {
+    background-color: #31598d;
+
+    color: white;
+}
+
+
+/* ================= LOGOUT ================= */
+
+.logout {
+    margin-top: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 12px;
+
+    color: #c7cfda;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+.logout i {
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* ================= MAIN CONTENT ================= */
+
+.main-content {
+    flex: 1;
+
+    min-width: 0;
+
+    height: 100vh;
+
+    overflow-y: auto;
+
+    margin-left: 228px;
+
+    padding: 0 18px 30px;
+}
+
+
+/* ================= TOPBAR ================= */
+
+.topbar {
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 10;
+
+    background-color: #f5f7fa;
+}
+
+
+/* ================= SEARCH ================= */
+
+.search-box {
+    width: 430px;
+
+    height: 34px;
+
+    background-color: white;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 11px;
+
+    gap: 8px;
+}
+
+
+.search-box i {
+    color: #8b95a1;
+
+    font-size: 12px;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 11px;
+}
+
+
+.search-box input::placeholder {
+    color: #8b95a1;
+}
+/* ================= TOPBAR RIGHT ================= */
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+/* ================= NOTIFICATION ================= */
+
+.notification {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #68727e;
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.notification:hover {
+    color: #2869e8;
+}
+
+/* ================= STUDENT PROFILE ================= */
+
+.student-profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.profile-icon {
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 50%;
+
+    background-color: #2869e8;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.student-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.student-info strong {
+    font-size: 10px;
+
+    color: #263238;
+}
+
+
+.student-info span {
+    font-size: 8px;
+
+    color: #7a8490;
+}
+
+
+.profile-arrow {
+    font-size: 8px;
+
+    color: #7a8490;
+
+    margin-left: 5px;
+}
+
+
+/* ================= PAGE ================= */
+
+.page {
+    padding-top: 5px;
+}
+
+
+/* ================= BACK ================= */
+
+.back-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 10px 0 18px;
+
+    text-decoration: none;
+
+    color: #2869e8;
+
+    font-size: 12px;
+}
+
+
+/* ================= PAGE HEADER ================= */
+
+.page-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+.page-header h1 {
+    font-size: 22px;
+
+    margin-bottom: 5px;
+}
+
+
+.page-header p {
+    font-size: 11px;
+
+    color: #697586;
+}
+
+
+/* ================= STATUS ================= */
+
+.status {
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+}
+
+
+.status.pending {
+    background-color: #fff8e9;
+
+    color: #b77900;
+}
+
+
+/* ================= ASSIGNMENT INFO ================= */
+
+.assignment-info {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 13px;
+
+    margin-bottom: 15px;
+}
+
+
+.info-card {
+    background-color: white;
+
+    border: 1px solid #e8ebef;
+
+    border-radius: 6px;
+
+    padding: 14px 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    min-height: 83px;
+}
+
+
+.info-icon {
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 5px;
+
+    background-color: #edf5ff;
+
+    color: #2869e8;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 16px;
+
+    flex-shrink: 0;
+}
+
+
+.info-card div:last-child {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.info-card span {
+    font-size: 10px;
+
+    color: #7a8490;
+}
+
+
+.info-card strong {
+    font-size: 11px;
+
+    color: #263238;
+}
+
+
+/* ================= SUBMISSION CARD ================= */
+
+.submission-card {
+    background-color: white;
+
+    border-radius: 6px;
+
+    border: 1px solid #edf0f3;
+
+    padding: 17px;
+}
+
+
+.submission-card h2 {
+    font-size: 15px;
+
+    margin-bottom: 4px;
+}
+
+
+.description {
+    font-size: 10px;
+
+    color: #7a8490;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================= FORM ================= */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+    display: block;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+
+/* ================= FILE BOX ================= */
+
+.file-box {
+    position: relative;
+
+    border: 1px dashed #cfd6dd;
+
+    border-radius: 6px;
+
+    padding: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    background-color: #fafbfc;
+}
+
+
+.file-box > i {
+    font-size: 20px;
+
+    color: #2869e8;
+}
+
+
+.file-box div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.file-box strong {
+    font-size: 11px;
+
+    color: #2869e8;
+}
+
+
+.file-box span {
+    font-size: 9px;
+
+    color: #8a949e;
+}
+
+
+.file-box input {
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    cursor: pointer;
+}
+
+
+/* ================= COMMENTS ================= */
+
+.form-group textarea {
+    width: 100%;
+
+    min-height: 90px;
+
+    resize: vertical;
+
+    border: 1px solid #dfe4e8;
+
+    border-radius: 5px;
+
+    padding: 11px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    outline: none;
+}
+
+
+.form-group textarea::placeholder {
+    color: #8a949e;
+}
+
+
+.form-group textarea:focus {
+    border-color: #2869e8;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.buttons {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+
+    margin-top: 8px;
+}
+
+
+.cancel-btn,
+.submit-btn {
+    padding: 9px 14px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 10px;
+}
+
+
+.cancel-btn {
+    background-color: #f1f3f5;
+
+    color: #555;
+
+    border: 1px solid #e0e3e6;
+}
+
+
+.submit-btn {
+    background-color: #2869e8;
+
+    color: white;
+
+    border: 1px solid #2869e8;
+}
+
+
+.submit-btn i {
+    margin-right: 5px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+    }
+
+    .assignment-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .main-content {
+        margin-left: 190px;
+    }
+
+    .search-box {
+        width: 280px;
+    }
+
+    .assignment-info {
+        grid-template-columns: 1fr;
+    }
+}
