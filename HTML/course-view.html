@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course View | LearnHub</title>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <link rel="stylesheet" href="../CSS/course-view.css">
 </head>
@@ -14,35 +13,26 @@
         <div class="site-logo">
             <img src="../assets/image.png" alt="LearnHub Logo">
         </div>
-
         <nav class="navbar">
             <a href="student-learning.html" class="nav-item">
-                <i class="fa-solid fa-house"></i>
-                <span>Dashboard</span>
+                <i class="fa-solid fa-house"></i><span>Dashboard</span>
             </a>
             <a href="student-learning.html" class="nav-item active">
-                <i class="fa-solid fa-book-open"></i>
-                <span>My Courses</span>
+                <i class="fa-solid fa-book-open"></i><span>My Courses</span>
             </a>
             <a href="#" class="nav-item">
-                <i class="fa-solid fa-users"></i>
-                <span>My Progress</span>
+                <i class="fa-solid fa-users"></i><span>My Progress</span>
             </a>
             <a href="#" class="nav-item">
-                <i class="fa-solid fa-file-lines"></i>
-                <span>Assignments</span>
+                <i class="fa-solid fa-file-lines"></i><span>Assignments</span>
             </a>
             <a href="#" class="nav-item">
-                <i class="fa-solid fa-user"></i>
-                <span>Profile</span>
+                <i class="fa-solid fa-user"></i><span>Profile</span>
             </a>
         </nav>
-
-        <hr>
-
+        <hr class="sidebar-line">
         <div class="logout">
-            <i class="fa-solid fa-right-from-bracket"></i>
-            <span>Logout</span>
+            <i class="fa-solid fa-right-from-bracket"></i><span>Logout</span>
         </div>
     </aside>
 
@@ -53,93 +43,175 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Search courses or lessons...">
             </div>
-
             <div class="topbar-right">
-                <i class="fa-regular fa-bell bell-icon"></i>
-
-                <div class="user-menu">
-                    <div class="user-menu-trigger">
-                        <div class="student-avatar">A</div>
-                        <div>
-                            <div class="student-name">Aman</div>
-                            <div class="student-role">Student</div>
-                        </div>
-                        <i class="fa-solid fa-chevron-down chevron-icon"></i>
-                    </div>
-
-                    <div class="user-dropdown">
-                        <a href="#">
-                            <i class="fa-regular fa-user"></i>
-                            <span>Profile</span>
-                        </a>
-                        <a href="#">
-                            <i class="fa-solid fa-right-from-bracket"></i>
-                            <span>Logout</span>
-                        </a>
-                    </div>
+                <i class="fa-regular fa-bell"></i>
+                <div class="student-avatar">A</div>
+                <div>
+                    <div class="student-name">Aman</div>
+                    <div class="student-role">Student</div>
                 </div>
             </div>
         </div>
 
         <a href="student-learning.html" class="back-link">
-            <i class="fa-solid fa-arrow-left"></i>
-            Back to My Courses
+            <i class="fa-solid fa-arrow-left"></i> Back to My Courses
         </a>
 
-        <div class="course-view-header">
-            <div class="course-view-icon">
-                <i class="fa-solid fa-code"></i>
-            </div>
-            <div>
-                <span class="course-tag">Web Development</span>
-                <h1>HTML Basics</h1>
-                <p>Learn the fundamentals of building web pages using HTML.</p>
-            </div>
-        </div>
-
-        <div class="progress-label">60% Complete &bull; 8 of 12 lessons done</div>
-        <div class="progress-bar-bg">
-            <div class="progress-bar-fill" style="width: 60%;"></div>
-        </div>
-
-        <h2 class="section-title">Lessons</h2>
-
-        <div class="lesson-card">
-
-            <div class="lesson-row">
-                <div class="lesson-main">
-                    <div class="lesson-icon"><i class="fa-solid fa-play"></i></div>
-                    <div class="lesson-info">
-                        <h3>Lesson 1: Introduction to HTML</h3>
-                        <p>Video &bull; 12 min</p>
+       
+        <section id="html-course" class="course-detail">
+            <div class="header-box">
+                <div class="header-left">
+                    <div class="header-icon"><i class="fa-solid fa-code"></i></div>
+                    <div>
+                        <h1>HTML Basics</h1>
+                        <p>Web Development</p>
                     </div>
                 </div>
-                <span class="status completed">Completed</span>
+                <span class="badge in-progress">In Progress</span>
             </div>
 
-            <div class="lesson-row">
-                <div class="lesson-main">
-                    <div class="lesson-icon"><i class="fa-solid fa-file-lines"></i></div>
-                    <div class="lesson-info">
-                        <h3>Lesson 2: Tags &amp; Attributes</h3>
-                        <p>Reading &bull; 8 min</p>
+            <div class="info-row">
+                <div class="info-card"><i class="fa-solid fa-list-check"></i><div><p class="info-label">Total Lessons</p><p class="info-value">12</p></div></div>
+                <div class="info-card"><i class="fa-solid fa-circle-check"></i><div><p class="info-label">Completed</p><p class="info-value">8</p></div></div>
+                <div class="info-card"><i class="fa-solid fa-chart-simple"></i><div><p class="info-label">Progress</p><p class="info-value">60%</p></div></div>
+            </div>
+
+            <div class="white-card">
+                <h2>Course Description</h2>
+                <p>Learn the fundamentals of building web pages using HTML. This course covers tags, attributes, forms, and page structure.</p>
+            </div>
+
+            <div class="white-card">
+                <h2>Lessons</h2>
+                <ul class="lesson-list">
+                    <li>Lesson 1: Introduction to HTML</li>
+                    <li>Lesson 2: Tags &amp; Attributes</li>
+                    <li>Lesson 3: Working with Layouts</li>
+                </ul>
+            </div>
+
+            <div class="footer-buttons">
+                <a href="student-learning.html" class="btn-back">Back</a>
+                <a href="#" class="btn-continue"><i class="fa-solid fa-play"></i> Continue Course</a>
+            </div>
+        </section>
+
+       
+        <section id="dsa-course" class="course-detail">
+            <div class="header-box">
+                <div class="header-left">
+                    <div class="header-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                    <div>
+                        <h1>Data Structures &amp; Algorithms</h1>
+                        <p>Computer Science</p>
                     </div>
                 </div>
-                <span class="status completed">Completed</span>
+                <span class="badge in-progress">In Progress</span>
             </div>
 
-            <div class="lesson-row">
-                <div class="lesson-main">
-                    <div class="lesson-icon"><i class="fa-solid fa-play"></i></div>
-                    <div class="lesson-info">
-                        <h3>Lesson 3: Working with Layouts</h3>
-                        <p>Video &bull; 15 min</p>
+            <div class="info-row">
+                <div class="info-card"><i class="fa-solid fa-list-check"></i><div><p class="info-label">Total Lessons</p><p class="info-value">10</p></div></div>
+                <div class="info-card"><i class="fa-solid fa-circle-check"></i><div><p class="info-label">Completed</p><p class="info-value">9</p></div></div>
+                <div class="info-card"><i class="fa-solid fa-chart-simple"></i><div><p class="info-label">Progress</p><p class="info-value">90%</p></div></div>
+            </div>
+
+            <div class="white-card">
+                <h2>Course Description</h2>
+                <p>Learn core data structures like arrays, linked lists, stacks, and queues, along with basic sorting algorithms.</p>
+            </div>
+
+            <div class="white-card">
+                <h2>Lessons</h2>
+                <ul class="lesson-list">
+                    <li>Lesson 1: Arrays &amp; Linked Lists</li>
+                    <li>Lesson 2: Stacks &amp; Queues</li>
+                    <li>Lesson 3: Sorting Algorithms</li>
+                </ul>
+            </div>
+
+            <div class="footer-buttons">
+                <a href="student-learning.html" class="btn-back">Back</a>
+                <a href="#" class="btn-continue"><i class="fa-solid fa-play"></i> Continue Course</a>
+            </div>
+        </section>
+
+        
+        <section id="js-course" class="course-detail">
+            <div class="header-box">
+                <div class="header-left">
+                    <div class="header-icon"><i class="fa-brands fa-js"></i></div>
+                    <div>
+                        <h1>JavaScript Basics</h1>
+                        <p>Programming</p>
                     </div>
                 </div>
-                <a href="#" class="btn-primary">Mark as Complete</a>
+                <span class="badge not-started">Not Started</span>
             </div>
 
-        </div>
+            <div class="info-row">
+                <div class="info-card"><i class="fa-solid fa-list-check"></i><div><p class="info-label">Total Lessons</p><p class="info-value">10</p></div></div>
+                <div class="info-card"><i class="fa-solid fa-circle-check"></i><div><p class="info-label">Completed</p><p class="info-value">0</p></div></div>
+                <div class="info-card"><i class="fa-solid fa-chart-simple"></i><div><p class="info-label">Progress</p><p class="info-value">0%</p></div></div>
+            </div>
+
+            <div class="white-card">
+                <h2>Course Description</h2>
+                <p>Learn the fundamentals of JavaScript including variables, functions, and basic DOM interaction.</p>
+            </div>
+
+            <div class="white-card">
+                <h2>Lessons</h2>
+                <ul class="lesson-list">
+                    <li>Lesson 1: Variables &amp; Data Types</li>
+                    <li>Lesson 2: Functions</li>
+                    <li>Lesson 3: Introduction to DOM</li>
+                </ul>
+            </div>
+
+            <div class="footer-buttons">
+                <a href="student-learning.html" class="btn-back">Back</a>
+                <a href="#" class="btn-continue"><i class="fa-solid fa-play"></i> Start Course</a>
+            </div>
+        </section>
+
+       
+        <section id="python-course" class="course-detail">
+            <div class="header-box">
+                <div class="header-left">
+                    <div class="header-icon"><i class="fa-brands fa-python"></i></div>
+                    <div>
+                        <h1>Python Programming</h1>
+                        <p>Programming</p>
+                    </div>
+                </div>
+                <span class="badge in-progress">In Progress</span>
+            </div>
+
+            <div class="info-row">
+                <div class="info-card"><i class="fa-solid fa-list-check"></i><div><p class="info-label">Total Lessons</p><p class="info-value">10</p></div></div>
+                <div class="info-card"><i class="fa-solid fa-circle-check"></i><div><p class="info-label">Completed</p><p class="info-value">5</p></div></div>
+                <div class="info-card"><i class="fa-solid fa-chart-simple"></i><div><p class="info-label">Progress</p><p class="info-value">50%</p></div></div>
+            </div>
+
+            <div class="white-card">
+                <h2>Course Description</h2>
+                <p>Learn Python programming basics including syntax, loops, conditions, and functions.</p>
+            </div>
+
+            <div class="white-card">
+                <h2>Lessons</h2>
+                <ul class="lesson-list">
+                    <li>Lesson 1: Python Syntax</li>
+                    <li>Lesson 2: Loops &amp; Conditions</li>
+                    <li>Lesson 3: Functions</li>
+                </ul>
+            </div>
+
+            <div class="footer-buttons">
+                <a href="student-learning.html" class="btn-back">Back</a>
+                <a href="#" class="btn-continue"><i class="fa-solid fa-play"></i> Continue Course</a>
+            </div>
+        </section>
 
     </main>
 
