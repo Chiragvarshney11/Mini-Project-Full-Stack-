@@ -181,7 +181,7 @@ body {
 
 .status-text { margin-top: 10px; color: gray; }
 
-/* Footer Buttons */
+
 .footer-buttons {
     display: flex;
     justify-content: flex-end;
@@ -203,4 +203,18 @@ body {
     text-decoration: none;
     color: white;
     background-color: steelblue;
+}
+
+.course-detail {
+    display: none;
+}
+
+
+.course-detail:target {
+    display: block;
+}
+
+.badge.not-started {
+    background-color: #fee2e2;
+    color: #dc2626;
 }
