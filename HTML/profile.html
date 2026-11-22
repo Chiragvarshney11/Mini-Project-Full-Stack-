@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LearnHub - Profile</title>
 
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 
-    <link rel="stylesheet" href="../CSS/profile.css">
+    <link rel="stylesheet" href="\CSS\profile.css">
+    <link rel="icon" href="\assets\assessment-logo.png">
 </head>
 
 <body>
@@ -21,10 +19,7 @@
         <aside class="sidebar">
 
             <div class="site-logo">
-                <img
-                    src="../assets/teacher-Learnhub logo.png"
-                    alt="LearnHub Logo"
-                >
+                <img src="\assets\assessment-logo.png" alt="LearnHub Logo">
             </div>
 
             <nav class="navbar">
@@ -34,17 +29,17 @@
                     <span>Dashboard</span>
                 </a>
 
-                <a href="#" class="nav-item">
+                <a href="managecourses.html" class="nav-item">
                     <i class="fa-solid fa-book-open"></i>
                     <span>Manage Courses</span>
                 </a>
 
-                <a href="#" class="nav-item">
+                <a href="addcourses.html" class="nav-item">
                     <i class="fa-solid fa-plus"></i>
                     <span>Add Course</span>
                 </a>
 
-                <a href="#" class="nav-item">
+                <a href="students.html" class="nav-item">
                     <i class="fa-solid fa-users"></i>
                     <span>Students</span>
                 </a>
@@ -58,10 +53,10 @@
 
             <hr>
 
-            <div class="logout">
+            <a href="login.html" class="logout">
                 <i class="fa-solid fa-right-from-bracket"></i>
                 <span>Logout</span>
-            </div>
+            </a>
 
         </aside>
 
@@ -73,11 +68,8 @@
                 <div class="search">
                     <i class="fa-solid fa-magnifying-glass"></i>
 
-                    <input
-                        type="text"
-                        placeholder="Search students, courses or anything..."
-                    >
-                </div>  
+                    <input type="text" placeholder="Search students, courses or anything...">
+                </div>
                 <div class="notification">
                     <i class="fa-solid fa-bell"></i>
                 </div>
@@ -98,7 +90,7 @@
                             <span>Profile</span>
                         </a>
 
-                        <a href="#">
+                        <a href="login.html">
                             <i class="fa-solid fa-right-from-bracket"></i>
                             <span>Logout</span>
                         </a>
@@ -137,11 +129,7 @@
                                 Full Name
                             </label>
 
-                            <input
-                                type="text"
-                                id="name"
-                                placeholder="Enter Name"
-                            >
+                            <input type="text" id="name" placeholder="Enter Name">
                         </div>
 
 
@@ -151,11 +139,7 @@
                                 Email Address
                             </label>
 
-                            <input
-                                type="email"
-                                id="mail"
-                                placeholder="Enter Mail ID"
-                            >
+                            <input type="email" id="mail" placeholder="Enter Mail ID">
 
                         </div>
 
@@ -184,7 +168,7 @@
         </main>
 
     </div>
-
+    <script src="../JS/profile.js"></script>
 </body>
 
 </html>
