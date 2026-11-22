@@ -85,7 +85,6 @@ body {
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
-
 .logout {
     margin: 0 20px 25px;
     padding: 12px 5px;
@@ -94,6 +93,16 @@ body {
     gap: 18px;
     color: rgba(255, 255, 255, 0.75);
     cursor: pointer;
+    text-decoration: none;
+}
+
+.logout:visited {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.logout:hover {
+    color: white;
+    text-decoration: none;
 }
 
 .logout i {
@@ -373,4 +382,196 @@ body {
     width: 18px;
     text-align: center;
     color: #566176;
+}
+
+/* Responsive Jod rha hu */
+
+
+/* ==========================================
+   LEARNHUB DASHBOARD RESPONSIVE UPDATE
+   Sidebar Hidden on Tablet and Mobile
+========================================== */
+
+
+/* TABLET AND MOBILE */
+
+@media screen and (max-width: 768px) {
+
+    /* Hide sidebar */
+    .sidebar {
+        display: none !important;
+    }
+
+    /* Main container */
+    .container {
+        display: block;
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Main content */
+    .main-content {
+        width: 100%;
+        min-width: 0;
+        padding: 16px;
+        margin: 0;
+    }
+
+    /* Topbar */
+    .topbar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 12px;
+        overflow: visible;
+    }
+
+    .search {
+        flex: 1;
+        min-width: 180px;
+        max-width: 100%;
+    }
+
+    .search input {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .topbar-right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 12px;
+        flex-shrink: 0;
+        overflow: visible;
+    }
+
+    /* Welcome section */
+    .welcome-section {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Dashboard cards */
+    .stats-container,
+    .stats-grid,
+    .overview-cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        width: 100%;
+    }
+
+    /* Charts and content */
+    .content-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        width: 100%;
+    }
+
+    /* Tables */
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    /* Prevent overflow */
+    .main-content > * {
+        max-width: 100%;
+    }
+}
+
+
+/* MOBILE PROFILE - AVATAR ONLY */
+
+@media screen and (max-width: 650px) {
+
+    /* Hide name and role */
+    .profile-name {
+        display: none !important;
+    }
+
+    /* Keep avatar visible */
+    .profile-photo {
+        display: flex;
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        font-size: 17px;
+    }
+
+    /* Profile alignment */
+    .profile-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    /* Dropdown positioning */
+    .profile-dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 10px);
+        z-index: 9999;
+        min-width: 170px;
+    }
+
+    /* Prevent dropdown clipping */
+    .topbar,
+    .topbar-right {
+        overflow: visible;
+    }
+}
+
+
+/* SMALL MOBILE */
+
+@media screen and (max-width: 480px) {
+
+    .main-content {
+        padding: 12px;
+    }
+
+    .topbar {
+        padding: 10px;
+    }
+
+    .search {
+        flex: 1 1 100%;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .topbar-right {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .welcome-section {
+        padding: 18px;
+    }
+
+    .stats-container,
+    .stats-grid,
+    .overview-cards,
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
 }
