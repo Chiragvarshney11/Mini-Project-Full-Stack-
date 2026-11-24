@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // ======================================
-    // 1. GET HTML ELEMENTS
-    // ======================================
-
+   
     const roleButtons = document.querySelectorAll(".role-btn");
 
     const welcomeTitle = document.getElementById("welcomeTitle");
@@ -25,16 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const formMessage = document.getElementById("formMessage");
 
 
-    // ======================================
-    // 2. CURRENT ROLE
-    // ======================================
+   
 
     let selectedRole = "student";
 
 
-    // ======================================
-    // 3. SHOW MESSAGE
-    // ======================================
+   
 
     function showMessage(message, type) {
 
@@ -46,10 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
             type === "success" ? "#16834b" : "#c74646";
     }
 
-
-    // ======================================
-    // 4. STUDENT / TEACHER SWITCHING
-    // ======================================
 
     function selectRole(role) {
 
@@ -67,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-        // Update heading and placeholder
+       
         if (role === "student") {
 
             welcomeTitle.textContent = "Welcome Back, Student!";
@@ -95,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // Attach click events
+   
     roleButtons.forEach(function (button) {
 
         button.addEventListener("click", function (event) {
@@ -113,9 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // ======================================
-    // 5. SHOW / HIDE PASSWORD
-    // ======================================
+   
 
     if (togglePassword && password) {
 
@@ -142,9 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // ======================================
-    // 6. REMEMBER ME
-    // ======================================
+   
 
     const savedUsername = localStorage.getItem(
         "learnhubRememberedUser"
@@ -161,9 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // ======================================
-    // 7. LOGIN FORM
-    // ======================================
+   
 
     if (loginForm) {
 
@@ -191,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            // Remember username
+        
             if (rememberMe && rememberMe.checked) {
 
                 localStorage.setItem(
@@ -208,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            // Save session
+         
             sessionStorage.setItem("userRole", selectedRole);
             sessionStorage.setItem("username", enteredUsername);
             sessionStorage.setItem("isLoggedIn", "true");
@@ -217,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
             showMessage("Login successful! Redirecting...", "success");
 
 
-            // Role based redirection
+          
             setTimeout(function () {
 
                 if (selectedRole === "teacher") {
@@ -239,9 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // ======================================
-    // 8. FORGOT PASSWORD
-    // ======================================
+
 
     if (forgotLink) {
 
@@ -256,9 +237,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // ======================================
-    // 9. GOOGLE LOGIN
-    // ======================================
+   
 
     if (googleBtn) {
 
@@ -271,9 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // ======================================
-    // 10. SIGN UP
-    // ======================================
+    
 
     if (signupLink) {
 
@@ -288,9 +265,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // ======================================
-    // 11. DEFAULT ROLE
-    // ======================================
 
     selectRole("student");
 
