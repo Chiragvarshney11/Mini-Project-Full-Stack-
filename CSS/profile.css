@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #172033;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 270px;
+    height: 100vh;
+    background-color: rgb(36, 48, 66);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1001;
+}
+
+.site-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.site-logo img {
+    width: 220px;
+    height: auto;
+    object-fit: contain;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 0 14px;
+    padding: 14px 15px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.85);
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.nav-item i {
+    width: 24px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+.nav-item.active {
+    background-color: rgba(62, 113, 181, 0.45);
+    color: white;
+}
+
+.sidebar hr {
+    margin-top: auto;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logout {
+    margin: 0 20px 25px;
+    padding: 12px 5px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+}
+
+.logout i {
+    width: 24px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    margin-left: 270px;
+}
+
+.topbar {
+    height: 105px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e1e5eb;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.search {
+    width: 535px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: #f7f9fc;
+    border: 1px solid #dce2eb;
+    border-radius: 8px;
+    padding: 0 18px;
+    color: #667085;
+}
+
+.search i {
+    font-size: 18px;
+
+}
+
+.search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+    color: #30394d;
+}
+
+.search input::placeholder {
+    color: #8993a5;
+}
+
+.notification {
+    margin-left: auto;
+    color: #566176;
+    font-size: 20px;
+}
+.notification:hover{
+    cursor:pointer;
+}
+.notification i {
+    font-size: 20px;
+    color: #536174;
+} 
+.profile-content {
+    padding: 35px 32px;
+}
+
+.profile-bar {
+    width: 100%;
+    background-color: #e8f1ff;
+    border: 1px solid #c7d9f5;
+    border-radius: 7px;
+    padding: 28px 30px;
+    margin-bottom: 25px;
+}
+
+.profile-bar h1 {
+    font-size: 31px;
+    margin-bottom: 8px;
+    color: #101828;
+}
+
+.profile-bar p {
+    font-size: 17px;
+    color: #43546e;
+}
+
+.box {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #ffffff;
+    border: 1px solid #dfe4eb;
+    border-radius: 7px;
+    padding: 32px 36px;
+}
+
+.my-profile {
+    margin-bottom: 28px;
+}
+
+.my-profile h1 {
+    font-size: 25px;
+    color: #172033;
+}
+
+.name {
+    margin-bottom: 30px;
+}
+
+.name h2 {
+    font-size: 25px;
+    margin-bottom: 7px;
+    color: #101828;
+}
+
+.name p {
+    font-size: 16px;
+    color: #68748a;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.fname,
+.mail,
+.phone {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.details label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #30394d;
+}
+
+.details input {
+    width: 100%;
+    height: 48px;
+    padding: 0 15px;
+    border: 1px solid #d7dde7;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+    color: #30394d;
+}
+
+.details input:focus {
+    border-color: #4c78c9;
+}
+
+.details button {
+    width: 155px;
+    height: 48px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2867e8;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.details button:hover {
+    background-color: #1f58cc;
+}
+
+.topbar-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.notification {
+    color: #566176;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 7px 9px;
+    border-radius: 7px;
+}
+
+.profile-info:hover {
+    background-color: #f4f6f9;
+}
+
+.profile-photo {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #2867e8;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.profile-name {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.profile-name span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #172033;
+}
+
+.profile-name small {
+    font-size: 12px;
+    color: #7a8496;
+}
+
+.profile-info > i {
+    font-size: 11px;
+    color: #667085;
+    margin-left: 3px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 175px;
+    background-color: white;
+    border: 1px solid #e0e5ec;
+    border-radius: 7px;
+    padding: 7px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    display: none;
+}
+
+.profile-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 12px;
+    text-decoration: none;
+    color: #30394d;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f4f6f9;
+}
+
+.dropdown-menu i {
+    width: 18px;
+    text-align: center;
+    color: #566176;
+}
