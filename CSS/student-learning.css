@@ -1,3 +1,8 @@
+
+/* =========================
+   GLOBAL CSS
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +19,11 @@ body {
     display: flex;
     min-height: 100vh;
 }
+
+
+/* =========================
+   SIDEBAR
+========================= */
 
 .sidebar {
     width: 270px;
@@ -33,13 +43,10 @@ body {
 .site-logo {
     width: 100%;
     height: 80px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     margin-bottom: 25px;
-
     overflow: hidden;
 }
 
@@ -47,9 +54,7 @@ body {
     width: 220px;
     max-width: 220px;
     height: auto;
-
     display: block;
-
     object-fit: contain;
 }
 
@@ -57,6 +62,11 @@ body {
     color: #3b82f6;
     font-weight: 700;
 }
+
+
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar {
     display: flex;
@@ -92,6 +102,11 @@ body {
     color: white;
 }
 
+
+/* =========================
+   LOGOUT
+========================= */
+
 .sidebar hr {
     margin-top: auto;
     margin-bottom: 15px;
@@ -117,11 +132,21 @@ body {
     font-size: 20px;
 }
 
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
 .content {
     margin-left: 270px;
     flex: 1;
     padding: 25px 38px 35px;
 }
+
+
+/* =========================
+   TOPBAR
+========================= */
 
 .topbar {
     display: flex;
@@ -164,6 +189,11 @@ body {
     color: #6b7280;
     cursor: pointer;
 }
+
+
+/* =========================
+   USER PROFILE
+========================= */
 
 .student-avatar {
     width: 38px;
@@ -248,27 +278,10 @@ body {
     color: #6b7280;
 }
 
-.student-avatar {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background-color: #dbeafe;
-    color: #2563eb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-}
 
-.student-name {
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.student-role {
-    font-size: 11px;
-    color: #94a3b8;
-}
+/* =========================
+   WELCOME BANNER
+========================= */
 
 .welcome-banner {
     background: linear-gradient(135deg, #dbeafe, #eef4ff);
@@ -286,6 +299,11 @@ body {
     font-size: 14px;
     color: #475569;
 }
+
+
+/* =========================
+   STATS SECTION
+========================= */
 
 .stats-row {
     display: flex;
@@ -305,19 +323,23 @@ body {
     font-size: 13px;
     font-weight: 600;
     margin-bottom: 8px;
+    color: #6b7280;
 }
 
 .stat-card .value {
     font-size: 26px;
     font-weight: 700;
     margin-bottom: 6px;
+    color: #111827;
 }
 
 .stat-card .change {
     font-size: 12px;
     font-weight: 600;
 }
-/* Card Background Colors */
+
+
+/* Stats Background Colors */
 
 .stat-blue {
     background-color: #dbeafe;
@@ -336,21 +358,7 @@ body {
 }
 
 
-/* Heading - Grey */
-
-.stat-card .label {
-    color: #6b7280;
-}
-
-
-/* Numbers - Black */
-
-.stat-card .value {
-    color: #111827;
-}
-
-
-/* Bottom text - Same color family, darker */
+/* Stats Bottom Text Colors */
 
 .stat-blue .change {
     color: #6fa8d4;
@@ -369,17 +377,15 @@ body {
 }
 
 
-
-
 /* =========================
-   MY COURSES
+   MY COURSES SECTION
 ========================= */
 
 .courses-section {
     background-color: white;
     border: 1px solid #e5e7eb;
     border-radius: 10px;
-    padding: 16px;
+    padding: 20px;
     margin-top: 25px;
 }
 
@@ -387,43 +393,46 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .section-header h2 {
     margin: 0;
-    font-size: 20px;
+    font-size: 22px;
     color: #1f2937;
 }
 
 .section-header a {
     text-decoration: none;
     color: #5278a5;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 
-/* Table */
+/* =========================
+   COURSES TABLE
+========================= */
 
 .courses-table {
     width: 100%;
 }
 
 
-/* Header */
+/* Table Header */
 
 .table-header {
     display: grid;
+
     grid-template-columns: 2.4fr 0.8fr 1.6fr 1fr 0.8fr;
 
     background-color: #f1f5f9;
 
-    padding: 10px;
+    padding: 14px 12px;
 
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
-    color: #374151;
+
+    color: #1e293b;
 }
 
 
@@ -431,31 +440,36 @@ body {
 
 .course-row {
     display: grid;
+
     grid-template-columns: 2.4fr 0.8fr 1.6fr 1fr 0.8fr;
 
     align-items: center;
 
-    padding: 10px;
+    padding: 12px;
 
     border-bottom: 1px solid #e5e7eb;
 
-    min-height: 60px;
+    min-height: 78px;
 }
 
 
-/* Course Information */
+/* =========================
+   COURSE INFORMATION
+========================= */
 
 .course-info {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .course-icon {
-    width: 42px;
-    height: 42px;
+    width: 52px;
+    height: 52px;
 
-    border-radius: 5px;
+    min-width: 52px;
+
+    border-radius: 7px;
 
     background-color: #dbeafe;
 
@@ -465,47 +479,53 @@ body {
     align-items: center;
     justify-content: center;
 
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .course-info h3 {
     margin: 0;
 
-    font-size: 14px;
+    font-size: 15px;
+
     color: #1f2937;
 }
 
 .course-info p {
-    margin: 3px 0 0;
+    margin: 4px 0 0;
 
-    font-size: 11px;
-    color: #6b7280;
+    font-size: 12px;
+
+    color: #64748b;
 }
 
 
-/* Lessons */
+/* =========================
+   LESSONS
+========================= */
 
 .lessons {
-    font-size: 13px;
-    color: #6b7280;
+    font-size: 14px;
+    color: #64748b;
 }
 
 
-/* Progress */
+/* =========================
+   PROGRESS AREA
+========================= */
 
 .progress-area {
-    width: 130px;
+    width: 160px;
 }
 
 .progress-text {
-    font-size: 12px;
-    color: #6b7280;
-    margin-bottom: 5px;
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 6px;
 }
 
 .progress-bar {
     width: 100%;
-    height: 7px;
+    height: 9px;
 
     background-color: #e2e8f0;
 
@@ -523,64 +543,120 @@ body {
 }
 
 
+/* =========================
+   COURSE STATUS
+========================= */
+
+
+/* =========================
+   COURSE STATUS
+========================= */
+
+.course-status {
+    display: inline-block;
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    width: fit-content;
+    font-weight: 500;
+}
+
+/* In Progress - Yellow */
+
+/* In Progress - Yellow */
+.course-status.in-progress {
+    background-color: #fef3c7;
+    color: #b45309;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* Completed - Green */
+.course-status.completed {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+/* Not Started - Red */
 .course-status.not-started {
     background-color: #fee2e2;
     color: #dc2626;
 }
 
-.course-status {
-    font-size: 12px;
 
-    background-color: #dcfce7;
-    color: #15803d;
-
-    padding: 6px 10px;
-
-    border-radius: 5px;
-
-    width: fit-content;
-}
-
-
-/* Button */
+/* =========================
+   CONTINUE BUTTON
+========================= */
 
 .continue-btn {
+    display: inline-block;
+
     text-decoration: none;
 
     background-color: #2563eb;
     color: white;
 
-    padding: 8px 12px;
+    padding: 10px 15px;
 
-    border-radius: 5px;
+    border-radius: 6px;
 
-    font-size: 12px;
+    font-size: 13px;
 
     width: fit-content;
+
+    text-align: center;
+
+    transition: 0.2s;
 }
+
+.continue-btn:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* =========================
+   EXTRA PROGRESS BAR
+========================= */
 
 .progress-bar-bg {
     width: 100%;
     height: 10px;
+
     background-color: #e2e8f0;
+
     border-radius: 20px;
+
     overflow: hidden;
+
     margin-bottom: 14px;
 }
 
 .progress-bar-fill {
     height: 100%;
+
     background-color: #2563eb;
+
     border-radius: 20px;
 }
 
+
+/* =========================
+   PRIMARY BUTTON
+========================= */
+
 .btn-primary {
     display: inline-block;
+
     padding: 10px 16px;
+
     background-color: #2563eb;
     color: white;
+
     border-radius: 6px;
+
     text-decoration: none;
+
     font-size: 12px;
     font-weight: 600;
 }
@@ -589,42 +665,83 @@ body {
     background-color: #1d4ed8;
 }
 
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .courses-table {
+        overflow-x: auto;
+    }
+
+    .table-header,
+    .course-row {
+        min-width: 750px;
+    }
+
+}
+
+
 @media (max-width: 800px) {
+
     .sidebar {
         width: 200px;
     }
+
     .content {
         margin-left: 200px;
         padding: 20px;
     }
+
     .search-box {
         width: 260px;
     }
+
 }
 
+
 @media (max-width: 600px) {
+
     .sidebar {
         width: 70px;
     }
+
     .site-logo img {
         width: 40px;
     }
+
     .nav-item span,
     .logout span {
         display: none;
     }
-    .nav-item, .logout {
+
+    .nav-item,
+    .logout {
         justify-content: center;
     }
+
     .content {
         margin-left: 70px;
         padding: 18px 12px;
     }
+
     .topbar {
         flex-wrap: wrap;
         gap: 12px;
     }
+
     .search-box {
         width: 100%;
     }
+
+    .courses-section {
+        padding: 12px;
+    }
+
+    .section-header h2 {
+        font-size: 19px;
+    }
+
 }
