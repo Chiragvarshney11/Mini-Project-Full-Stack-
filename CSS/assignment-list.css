@@ -1,3 +1,8 @@
+
+/* =====================================
+   GLOBAL CSS
+===================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,10 +18,13 @@ body {
 .dashboard {
     display: flex;
     min-height: 100vh;
+    width: 100%;
 }
 
 
-/* ================= SIDEBAR ================= */
+/* =====================================
+   SIDEBAR
+===================================== */
 
 .sidebar {
     width: 228px;
@@ -24,10 +32,8 @@ body {
     background-color: #243042;
     padding: 20px 12px;
     flex-shrink: 0;
-
     position: sticky;
     top: 0;
-
     display: flex;
     flex-direction: column;
 }
@@ -83,8 +89,14 @@ body {
     color: white;
 }
 
+.logout {
+    margin-top: auto;
+}
 
-/* ================= MAIN ================= */
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
 
 .main-content {
     flex: 1;
@@ -95,18 +107,18 @@ body {
 }
 
 
-/* ================= TOPBAR ================= */
+/* =====================================
+   TOPBAR
+===================================== */
 
 .topbar {
     height: 62px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     position: sticky;
     top: 0;
     z-index: 10;
-
     background-color: #f5f7fa;
 }
 
@@ -129,23 +141,11 @@ body {
 
 .search-box input {
     width: 100%;
+    min-width: 0;
     border: none;
     outline: none;
     font-size: 11px;
 }
-
-.notification {
-    width: 35px;
-    height: 35px;
-    background-color: white;
-    border: 1px solid #e1e5ea;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #68727e;
-}
-/* ================= TOPBAR RIGHT ================= */
 
 .topbar-right {
     display: flex;
@@ -154,26 +154,32 @@ body {
 }
 
 
-/* ================= NOTIFICATION ================= */
+/* =====================================
+   NOTIFICATION
+===================================== */
 
 .notification {
     width: 30px;
     height: 30px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
+    background-color: white;
+    border: 1px solid #e1e5ea;
+    border-radius: 5px;
     color: #68727e;
-
     font-size: 13px;
-
     cursor: pointer;
 }
 
 .notification:hover {
     color: #2869e8;
 }
+
+
+/* =====================================
+   STUDENT PROFILE
+===================================== */
 
 .student-profile {
     display: flex;
@@ -184,14 +190,13 @@ body {
 .profile-icon {
     width: 30px;
     height: 30px;
+    flex-shrink: 0;
     border-radius: 50%;
     background-color: #2869e8;
     color: white;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 12px;
     font-weight: 600;
 }
@@ -219,7 +224,9 @@ body {
 }
 
 
-/* ================= PAGE HEADER ================= */
+/* =====================================
+   PAGE HEADER
+===================================== */
 
 .page-header {
     background-color: #edf5ff;
@@ -228,6 +235,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
     margin-bottom: 15px;
 }
 
@@ -249,6 +257,7 @@ body {
     padding: 9px 13px;
     font-size: 11px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .add-btn i {
@@ -256,11 +265,13 @@ body {
 }
 
 
-/* ================= SUMMARY CARDS ================= */
+/* =====================================
+   SUMMARY CARDS
+===================================== */
 
 .summary-cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 13px;
     margin-bottom: 15px;
 }
@@ -272,6 +283,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 8px;
 }
 
 .summary-card p {
@@ -306,12 +318,15 @@ body {
 }
 
 
-/* ================= ASSIGNMENT SECTION ================= */
+/* =====================================
+   ASSIGNMENT SECTION
+===================================== */
 
 .assignment-section {
     background-color: white;
     border-radius: 6px;
     padding: 17px;
+    width: 100%;
 }
 
 .section-heading {
@@ -329,11 +344,14 @@ body {
 }
 
 
-/* ================= TABLE ================= */
+/* =====================================
+   TABLE
+===================================== */
 
 .table-container {
     width: 100%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 table {
@@ -352,6 +370,7 @@ th {
     font-weight: 600;
     padding: 11px 9px;
     border-bottom: 1px solid #e9edf2;
+    white-space: nowrap;
 }
 
 td {
@@ -376,12 +395,11 @@ td {
     font-size: 8px;
     color: #8a949f;
 }
-.logout {
-    margin-top: auto;
-}
 
 
-/* ================= STATUS ================= */
+/* =====================================
+   STATUS
+===================================== */
 
 .status {
     display: inline-block;
@@ -389,6 +407,7 @@ td {
     border-radius: 10px;
     font-size: 8px;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .submitted {
@@ -407,7 +426,9 @@ td {
 }
 
 
-/* ================= BUTTONS ================= */
+/* =====================================
+   ACTION BUTTONS
+===================================== */
 
 .action-buttons {
     white-space: nowrap;
@@ -444,32 +465,691 @@ td {
 }
 
 
-/* ================= RESPONSIVE ================= */
+/* =====================================
+   TABLET RESPONSIVE - 1024px
+===================================== */
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
 
     .sidebar {
         width: 200px;
     }
 
-    .summary-cards {
-        grid-template-columns: repeat(2, 1fr);
+    .logo img {
+        width: 155px;
     }
 
-}
-
-@media (max-width: 700px) {
-
-    .sidebar {
-        width: 180px;
+    .main-content {
+        padding: 0 14px 25px;
     }
 
     .search-box {
-        width: 280px;
+        width: 300px;
+    }
+
+    .summary-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .assignment-section {
+        padding: 14px;
+    }
+
+    th,
+    td {
+        padding: 10px 7px;
+    }
+}
+
+
+/* =====================================
+   MOBILE AND TABLET - 768px
+===================================== */
+
+@media screen and (max-width: 768px) {
+
+    .dashboard {
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* Sidebar */
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        position: relative;
+        padding: 12px;
+    }
+
+    .logo {
+        padding: 5px 10px 15px;
+    }
+
+    .logo img {
+        width: 145px;
+    }
+
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+        height: auto;
+    }
+
+    .nav-item {
+        padding: 10px 8px;
+        font-size: 11px;
+        gap: 7px;
+    }
+
+    .nav-item i {
+        width: 16px;
+    }
+
+    .logout {
+        margin-top: 0;
+    }
+
+    /* Main Content */
+
+    .main-content {
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        overflow: visible;
+        padding: 0 12px 25px;
+    }
+
+    /* Topbar */
+
+    .topbar {
+        height: auto;
+        min-height: 60px;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    .search-box {
+        width: 100%;
+        order: 2;
+    }
+
+    .topbar-right {
+        margin-left: auto;
+        gap: 12px;
+    }
+
+    /* Page Header */
+
+    .page-header {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .page-header h1 {
+        font-size: 20px;
+    }
+
+    /* Summary Cards */
+
+    .summary-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .summary-card {
+        min-height: 75px;
+        padding: 12px;
+    }
+
+    .summary-card h2 {
+        font-size: 19px;
+    }
+
+    /* Assignment Section */
+
+    .assignment-section {
+        padding: 12px;
+    }
+
+    .section-heading h2 {
+        font-size: 14px;
+    }
+
+    /* Table */
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 720px;
+    }
+}
+
+
+/* =====================================
+   SMALL MOBILE - 480px
+===================================== */
+
+@media screen and (max-width: 480px) {
+
+    /* Sidebar */
+
+    .menu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .nav-item {
+        font-size: 10px;
+        padding: 9px 7px;
+    }
+
+    /* Topbar */
+
+    .profile-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .student-info strong {
+        font-size: 10px;
+    }
+
+    .student-info span {
+        font-size: 8px;
+    }
+
+    .topbar-right {
+        gap: 9px;
+    }
+
+    /* Page Header */
+
+    .page-header {
+        padding: 13px;
+    }
+
+    .page-header h1 {
+        font-size: 18px;
+    }
+
+    .page-header p {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .add-btn {
+        padding: 8px 9px;
+        font-size: 10px;
+    }
+
+    /* Summary Cards */
+
+    .summary-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .summary-card {
+        min-height: 70px;
+        padding: 10px;
+    }
+
+    .summary-card p {
+        font-size: 9px;
+    }
+
+    .summary-card h2 {
+        font-size: 17px;
+    }
+
+    .summary-card > i {
+        font-size: 17px;
+    }
+
+    /* Assignment Section */
+
+    .assignment-section {
+        padding: 10px;
+    }
+
+    .section-heading p {
+        font-size: 9px;
+    }
+
+    /* Table */
+
+    table {
+        min-width: 700px;
+    }
+}
+
+
+/* =====================================
+   EXTRA SMALL MOBILE - 350px
+===================================== */
+
+@media screen and (max-width: 350px) {
+
+    .main-content {
+        padding-left: 8px;
+        padding-right: 8px;
     }
 
     .summary-cards {
         grid-template-columns: 1fr;
     }
 
+    .topbar-right {
+        gap: 8px;
+    }
+
+    .student-profile {
+        gap: 6px;
+    }
+
+    .page-header h1 {
+        font-size: 16px;
+    }
+
+    .nav-item {
+        font-size: 9px;
+        gap: 5px;
+    }
+
 }
+
+/* =====================================
+   COMMON LEARNHUB TYPOGRAPHY
+   Same font style on all 4 pages
+===================================== */
+
+body,
+button,
+input,
+textarea,
+select {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-size: 14px;
+    color: #263238;
+}
+
+/* Sidebar */
+.nav-item,
+.logout {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-item i,
+.logout i {
+    font-size: 16px;
+}
+
+/* Topbar */
+.search-box input {
+    font-size: 12px;
+}
+
+.student-info strong {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.student-info span {
+    font-size: 10px;
+}
+
+.profile-icon {
+    font-size: 14px;
+}
+
+/* Main headings */
+.page-header h1,
+.assignment-title h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.page-header p,
+.assignment-title p {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Section headings */
+.section-heading h2,
+.section h2,
+.submission-card h2 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.section-heading p,
+.description {
+    font-size: 12px;
+}
+
+/* Cards and information */
+.summary-card p,
+.info-card span,
+.info-card strong {
+    font-size: 12px;
+}
+
+.summary-card h2 {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+/* Course and assignment names */
+.course-info h3,
+.assignment-name strong {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.course-info p,
+.assignment-name span {
+    font-size: 12px;
+}
+
+/* Tables */
+th {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+td {
+    font-size: 12px;
+}
+
+/* Details content */
+.section p,
+.section li {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* Forms */
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group textarea,
+.file-box strong {
+    font-size: 12px;
+}
+
+.file-box span {
+    font-size: 11px;
+}
+
+/* Status and buttons */
+.status,
+.course-status,
+.percentage {
+    font-size: 12px;
+}
+
+.view-btn,
+.submit-btn,
+.cancel-btn,
+.add-btn,
+.back-link {
+    font-size: 12px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .nav-item,
+    .logout {
+        font-size: 12px;
+    }
+
+    .page-header h1,
+    .assignment-title h1 {
+        font-size: 19px;
+    }
+
+    .page-header p,
+    .assignment-title p {
+        font-size: 11px;
+    }
+
+    .summary-card p,
+    .course-info p,
+    .assignment-name span {
+        font-size: 11px;
+    }
+
+    .course-info h3,
+    .assignment-name strong {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        font-size: 11px;
+    }
+}
+/* Profile Dropdown */
+
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-dropdown .student-profile {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 180px;
+    background: #fff;
+    border-radius: 9px;
+    padding: 8px 0;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    z-index: 999;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    color: #344054;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.dropdown-menu a:hover {
+    background: #f5f7fa;
+}
+
+/* =====================================
+   PROFILE DROPDOWN
+===================================== */
+
+.profile-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.profile-dropdown .student-profile {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.profile-arrow {
+    transition: transform 0.2s ease;
+}
+
+.profile-dropdown:has(.dropdown-menu.show) .profile-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 180px;
+    background-color: #ffffff;
+    border: 1px solid #e8edf3;
+    border-radius: 8px;
+    padding: 7px 0;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    z-index: 999;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 16px;
+    color: #344054;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-menu a i {
+    width: 16px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f5f7fa;
+    color: #2869e8;
+}
+
+/* Mobile Dropdown */
+
+@media screen and (max-width: 480px) {
+    .dropdown-menu {
+        width: 160px;
+    }
+}
+/* =====================================
+   MOBILE AND TABLET - 768px
+===================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Hide Sidebar */
+    .sidebar {
+        display: none !important;
+    }
+
+    /* Full Width Main Content */
+    .dashboard {
+        display: block;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .main-content {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-width: 0;
+        margin-left: 0 !important;
+        overflow: visible;
+        padding: 0 12px 25px;
+    }
+
+    /* Topbar */
+    .topbar {
+        width: 100%;
+        height: auto;
+        min-height: 60px;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    .search-box {
+        width: 100%;
+        order: 2;
+    }
+
+    .topbar-right {
+        margin-left: auto;
+        gap: 12px;
+    }
+
+    /* Page Header */
+    .page-header {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .page-header h1 {
+        font-size: 20px;
+    }
+
+    /* Summary Cards */
+    .summary-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .summary-card {
+        min-height: 75px;
+        padding: 12px;
+    }
+
+    .summary-card h2 {
+        font-size: 19px;
+    }
+
+    /* Assignment Section */
+    .assignment-section {
+        padding: 12px;
+    }
+
+    .section-heading h2 {
+        font-size: 14px;
+    }
+
+    /* Table */
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 720px;
+    }
+}
+
