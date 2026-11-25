@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,14 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>LearnHub | Login</title>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <title>Login | LearnHub</title>
 
     <!-- Login CSS -->
     <link rel="stylesheet" href="../CSS/login.css">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
@@ -20,30 +21,29 @@
 
     <div class="login-container">
 
-        
+        <!-- LEFT SECTION -->
         <div class="left-section">
 
-            <!-- Logo -->
             <div class="brand-logo">
-                <img src="\assets\teacher-Learnhub logo.png" alt="LearnHub Logo">
+                <img src="../assets/teacher-Learnhub logo.png"
+                    alt="LearnHub Logo">
             </div>
 
-
-           
             <div class="left-content">
 
                 <h1>
-                    Learn. Teach. <span>Grow.</span>
+                    Learn Without <span>Limits.</span>
                 </h1>
 
                 <p>
-                    Your complete learning platform for a better tomorrow.
+                    Welcome to LearnHub, your personalized learning
+                    platform. Explore courses, track your progress,
+                    and achieve your learning goals.
                 </p>
 
             </div>
 
-
-            
+            <!-- Illustration -->
             <div class="illustration">
 
                 <div class="floating-object book">
@@ -60,43 +60,22 @@
 
             </div>
 
-
-            
+            <!-- Features -->
             <div class="features">
 
                 <div class="feature-item">
-
-                    <i class="fa-solid fa-book-open"></i>
-
-                    <p>
-                        Access<br>
-                        Courses
-                    </p>
-
+                    <i class="fa-solid fa-book"></i>
+                    <p>Quality<br>Courses</p>
                 </div>
 
-
                 <div class="feature-item">
-
-                    <i class="fa-solid fa-users"></i>
-
-                    <p>
-                        Connect<br>
-                        with Teachers
-                    </p>
-
-                </div>
-
-
-                <div class="feature-item">
-
                     <i class="fa-solid fa-chart-line"></i>
+                    <p>Track Your<br>Progress</p>
+                </div>
 
-                    <p>
-                        Track<br>
-                        Progress
-                    </p>
-
+                <div class="feature-item">
+                    <i class="fa-solid fa-users"></i>
+                    <p>Learn<br>Together</p>
                 </div>
 
             </div>
@@ -104,39 +83,36 @@
         </div>
 
 
-
-       
-
+        <!-- RIGHT SECTION -->
         <div class="right-section">
 
-
-            <!-- Header -->
+            <!-- Login Header -->
             <div class="login-header">
 
-                <h1 id="welcomeTitle">
-                    Welcome Back, Student!
-                </h1>
+                <h1 id="welcomeTitle">Welcome Back!</h1>
 
                 <p id="welcomeText">
-                    Login to continue your learning journey
+                    Please login to continue your learning journey.
                 </p>
 
             </div>
 
 
-
-          
+            <!-- Role Selector -->
             <div class="role-selector">
 
-                <button class="role-btn active" type="button" data-role="student">
+                <button type="button"
+                    class="role-btn active"
+                    data-role="student">
 
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-user-graduate"></i>
                     Student
 
                 </button>
 
-
-                <button class="role-btn" type="button" data-role="teacher">
+                <button type="button"
+                    class="role-btn"
+                    data-role="teacher">
 
                     <i class="fa-solid fa-chalkboard-user"></i>
                     Teacher
@@ -146,42 +122,48 @@
             </div>
 
 
-
-            
+            <!-- Login Form -->
             <form id="loginForm">
 
-
-                
+                <!-- Username -->
                 <div class="form-group">
 
                     <label for="username">
                         Username / Email
                     </label>
 
-                    <input type="text" id="username" name="username" placeholder="Enter your username or email"
-                        autocomplete="username" required>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username or email"
+                        autocomplete="username"
+                        required
+                    >
 
                 </div>
 
 
-
-               
+                <!-- Password -->
                 <div class="form-group">
 
                     <label for="password">
                         Password
                     </label>
 
-
                     <div class="password-box">
 
-                        <input type="password" id="password" name="password" placeholder="Enter your password"
-                            autocomplete="current-password" required>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
 
                         <button type="button" id="togglePassword">
-
-                            Show
-
+                            <i class="fa-solid fa-eye"></i>
                         </button>
 
                     </div>
@@ -189,18 +171,20 @@
                 </div>
 
 
-
-               
+                <!-- Form Options -->
                 <div class="form-options">
 
                     <label class="remember-me">
 
-                        <input type="checkbox" id="rememberMe">
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                            name="rememberMe"
+                        >
 
-                        <span>Remember Me</span>
+                        Remember Me
 
                     </label>
-
 
                     <a href="#" id="forgotLink">
                         Forgot Password?
@@ -209,45 +193,38 @@
                 </div>
 
 
-
-                
+                <!-- Sign In Button -->
                 <button type="submit" class="login-btn">
 
                     <i class="fa-solid fa-right-to-bracket"></i>
-
-                    Login
+                    Sign In
 
                 </button>
 
 
-               
+                <!-- Login Message -->
                 <p id="formMessage"></p>
-
 
             </form>
 
 
-
-           
+            <!-- Divider -->
             <div class="divider">
                 <span>OR</span>
             </div>
 
 
-
-           
+            <!-- Google Login -->
             <button type="button" class="google-btn" id="googleBtn">
 
                 <i class="fa-brands fa-google"></i>
-
                 Continue with Google
 
             </button>
 
 
-
-            
-            <p class="signup-text">
+            <!-- Signup -->
+            <div class="signup-text">
 
                 Don't have an account?
 
@@ -255,14 +232,15 @@
                     Sign Up
                 </a>
 
-            </p>
-
+            </div>
 
         </div>
 
     </div>
 
-    <script src="../JS/login.js" defer></script>
-</body>
 
+    <!-- Login JavaScript -->
+    <script src="../JS/login.js"></script>
+
+</body>
 </html>

@@ -391,8 +391,8 @@ if (resultPercentage) {
 }
 
 // PROFILE DROPDOWN
-const profileBtn = document.getElementById("profileBtn");
-const profileMenu = document.getElementById("profileMenu");
+const profileBtn = document.getElementById("profileBtn") || document.getElementById("userMenuTrigger") || document.querySelector(".user-menu-trigger") || document.querySelector(".student-profile");
+const profileMenu = document.getElementById("profileMenu") || document.getElementById("userDropdown") || document.querySelector(".user-dropdown") || document.querySelector(".dropdown-menu");
 
 if (profileBtn && profileMenu) {
     profileBtn.addEventListener("click", function (event) {
@@ -401,10 +401,35 @@ if (profileBtn && profileMenu) {
     });
 
     document.addEventListener("click", function (event) {
-        if (!event.target.closest(".profile-dropdown")) {
+        if (!event.target.closest(".user-menu") && !event.target.closest(".profile-dropdown")) {
             profileMenu.classList.remove("show");
         }
     });
+}
+
+// LOGOUT HANDLER
+document.querySelectorAll(".logout a, #logoutBtn, .dropdown-item[href='login.html']").forEach(link => {
+    link.addEventListener("click", function () {
+        sessionStorage.clear();
+    });
+});
+
+// SYNC PROFILE INFO FROM LOCAL STORAGE
+try {
+    const savedProfile = localStorage.getItem("learnhubStudentProfile");
+    if (savedProfile) {
+        const data = JSON.parse(savedProfile);
+        const nameEl = document.getElementById("topUsername") || document.querySelector(".student-name") || document.querySelector(".student-info strong");
+        const avatarEl = document.getElementById("topAvatar") || document.querySelector(".student-avatar") || document.querySelector(".profile-icon");
+        if (nameEl && data.fullName) {
+            nameEl.textContent = data.fullName.trim().split(" ")[0] || data.fullName;
+        }
+        if (avatarEl && data.fullName) {
+            avatarEl.textContent = data.fullName.trim().charAt(0).toUpperCase();
+        }
+    }
+} catch (e) {
+    console.error("Profile sync error in Assignment.js:", e);
 }
 
 });

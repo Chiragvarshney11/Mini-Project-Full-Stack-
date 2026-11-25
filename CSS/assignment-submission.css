@@ -27,10 +27,10 @@ body {
 ===================================== */
 
 .sidebar {
-    width: 228px;
+    width: 270px;
     height: 100vh;
-    background-color: #243042;
-    padding: 20px 12px;
+    background-color: rgb(36, 48, 66);
+    padding-top: 20px;
     flex-shrink: 0;
     position: fixed;
     left: 0;
@@ -40,17 +40,22 @@ body {
     z-index: 1001;
 }
 
-.logo {
+.site-logo, .logo {
+    width: 100%;
+    height: 80px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
-    padding: 5px 0 25px 20px;
+    margin-bottom: 25px;
+    overflow: hidden;
 }
 
-.logo img {
-    width: 180px;
+.site-logo img, .logo img {
+    width: 220px;
+    max-width: 220px;
     height: auto;
     display: block;
+    object-fit: contain;
 }
 
 
@@ -58,28 +63,30 @@ body {
    MENU
 ===================================== */
 
-.menu {
+.navbar, .menu {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    height: 100%;
 }
 
 .nav-item {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 11px 12px;
-    color: #c7cfda;
+    gap: 18px;
+    margin: 0 14px;
+    padding: 14px 15px;
     text-decoration: none;
-    font-size: 13px;
-    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.85);
+    border-radius: 6px;
+    transition: 0.2s;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .nav-item i {
-    width: 20px;
+    width: 24px;
     text-align: center;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .nav-item:hover {
@@ -88,7 +95,7 @@ body {
 }
 
 .nav-item.active {
-    background-color: #31598d;
+    background-color: rgba(62, 113, 181, 0.45);
     color: white;
 }
 
@@ -97,21 +104,46 @@ body {
    LOGOUT
 ===================================== */
 
-.logout {
+.sidebar hr {
     margin-top: auto;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logout {
+    margin: 0 20px 25px;
+    padding: 12px 5px;
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 11px 12px;
-    color: #c7cfda;
-    font-size: 13px;
+    gap: 18px;
+    color: rgba(255, 255, 255, 0.75);
     cursor: pointer;
 }
 
-.logout i {
-    width: 20px;
-    text-align: center;
+.logout a,
+.logout a:link,
+.logout a:visited {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: rgba(255, 255, 255, 0.75) !important;
+    text-decoration: none !important;
     font-size: 14px;
+    transition: 0.2s;
+}
+
+.logout a:hover {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.logout i {
+    width: 24px;
+    text-align: center;
+    font-size: 20px;
 }
 
 
@@ -122,10 +154,9 @@ body {
 .main-content {
     flex: 1;
     min-width: 0;
-    height: 100vh;
-    overflow-y: auto;
-    margin-left: 228px;
-    padding: 0 18px 30px;
+    min-height: 100vh;
+    margin-left: 270px;
+    padding: 25px 38px 35px;
 }
 
 

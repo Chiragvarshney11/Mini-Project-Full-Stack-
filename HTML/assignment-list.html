@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,33 +6,34 @@
     <title>Assignments - LearnHub</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <link rel="stylesheet" href="../CSS/assignment-list.css">
+    <link rel="stylesheet" href="../CSS/student-learning.css">
+    <link rel="icon" href="../assets/teacher-Learnhub logo.png">
 </head>
 
 <body>
 
 <div class="dashboard">
 
-    <!-- Sidebar -->
+    <!-- SIDEBAR -->
     <aside class="sidebar">
 
-        <div class="logo">
-            <img src="\assets\teacher-Learnhub logo.png" alt="LearnHub Logo">
+        <div class="site-logo">
+            <img src="../assets/teacher-Learnhub logo.png" alt="LearnHub Logo">
         </div>
 
-        <nav class="menu">
+        <nav class="navbar">
             <a href="student-learning.html" class="nav-item">
                 <i class="fa-solid fa-house"></i>
                 <span>Dashboard</span>
             </a>
 
-            <a href="course-view.html" class="nav-item">
+            <a href="student-learning.html#my-courses" class="nav-item">
                 <i class="fa-solid fa-book-open"></i>
                 <span>My Courses</span>
             </a>
 
             <a href="my-progress.html" class="nav-item">
-                <i class="fa-solid fa-users"></i>
+                <i class="fa-solid fa-chart-line"></i>
                 <span>My Progress</span>
             </a>
 
@@ -46,57 +46,58 @@
                 <i class="fa-solid fa-user"></i>
                 <span>Profile</span>
             </a>
+        </nav>
 
-            <a href="login.html" class="nav-item logout">
+        <div class="sidebar-bottom">
+            <hr>
+            <a href="login.html" class="logout-btn">
                 <i class="fa-solid fa-right-from-bracket"></i>
                 <span>Logout</span>
             </a>
-        </nav>
+        </div>
 
     </aside>
 
-    <!-- Main Content -->
+    <!-- MAIN CONTENT -->
     <main class="main-content">
 
-        <!-- Topbar -->
+        <!-- TOPBAR -->
         <header class="topbar">
 
-            <div class="search-box">
+            <div class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="searchInput"
-                    placeholder="Search students, courses or anything...">
+                <input type="text" id="searchInput" placeholder="Search courses or lessons...">
             </div>
 
             <div class="topbar-right">
 
                 <div class="notification">
-                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-solid fa-bell"></i>
                 </div>
 
-                <!-- Profile Dropdown -->
-                <div class="profile-dropdown">
+                <div class="profile-dropdown" id="userMenu">
 
-                    <div class="student-profile" id="profileBtn">
+                    <div class="profile-info" id="profileBtn">
 
-                        <div class="profile-icon">A</div>
+                        <div class="profile-photo" id="topAvatar">R</div>
 
-                        <div class="student-info">
-                            <strong>Aman</strong>
-                            <span>Student</span>
+                        <div class="profile-name">
+                            <span id="topUsername">Ram</span>
+                            <small class="student-role-label">Student</small>
                         </div>
 
-                        <i class="fa-solid fa-chevron-down profile-arrow"></i>
+                        <i class="fa-solid fa-chevron-down chevron-icon"></i>
 
                     </div>
 
                     <div class="dropdown-menu" id="profileMenu">
 
-                        <a href="#">
+                        <a href="student-profile.html" class="dropdown-item">
                             <i class="fa-regular fa-user"></i>
                             <span>Profile</span>
                         </a>
 
-                        <a href="#">
+                        <a href="login.html" class="dropdown-item" id="logoutBtn">
                             <i class="fa-solid fa-right-from-bracket"></i>
                             <span>Logout</span>
                         </a>
@@ -109,58 +110,51 @@
 
         </header>
 
-        <!-- Page Header -->
-        <section class="page-header">
+        <!-- PAGE HEADER -->
+        <section class="welcome-tag">
             <div>
                 <h1>Assignments</h1>
-                <p>Manage assignments and track student submissions</p>
+                <p>Manage assignments and track your submissions</p>
             </div>
+            <i class="fa-solid fa-file-lines banner-icon"></i>
         </section>
 
-        <!-- Summary Cards -->
-        <section class="summary-cards">
+        <!-- SUMMARY CARDS -->
+        <section class="stats">
 
-            <div class="summary-card blue">
-                <div>
-                    <p>Total Assignments</p>
-                    <h2 id="totalAssignments">7</h2>
-                </div>
-                <i class="fa-solid fa-file-lines"></i>
+            <div class="totalcourses">
+                <p>Total Assignments</p>
+                <h2 id="totalAssignments">7</h2>
+                <h5>All Assigned</h5>
             </div>
 
-            <div class="summary-card green">
-                <div>
-                    <p>Submitted</p>
-                    <h2 id="submittedAssignments">4</h2>
-                </div>
-                <i class="fa-solid fa-circle-check"></i>
+            <div class="totalstud">
+                <p>Submitted</p>
+                <h2 id="submittedAssignments">4</h2>
+                <h5>Completed</h5>
             </div>
 
-            <div class="summary-card yellow">
-                <div>
-                    <p>Pending</p>
-                    <h2 id="pendingAssignments">1</h2>
-                </div>
-                <i class="fa-solid fa-clock"></i>
+            <div class="totallessons">
+                <p>Pending</p>
+                <h2 id="pendingAssignments">1</h2>
+                <h5>Due Soon</h5>
             </div>
 
-            <div class="summary-card pink">
-                <div>
-                    <p>Upcoming</p>
-                    <h2 id="upcomingAssignments">2</h2>
-                </div>
-                <i class="fa-solid fa-calendar-days"></i>
+            <div class="avgcomp">
+                <p>Upcoming</p>
+                <h2 id="upcomingAssignments">2</h2>
+                <h5>Scheduled</h5>
             </div>
 
         </section>
 
-        <!-- Assignment Table -->
+        <!-- ASSIGNMENT TABLE -->
         <section class="assignment-section">
 
             <div class="section-heading">
                 <div>
                     <h2>All Assignments</h2>
-                    <p>View and manage student assignments</p>
+                    <p>View and manage your assignments</p>
                 </div>
             </div>
 
@@ -196,9 +190,7 @@
                                 <span class="status submitted">Submitted</span>
                             </td>
                             <td>
-                                <a href="assignment-details.html" class="view-btn">
-                                    View Details
-                                </a>
+                                <a href="assignment-details.html" class="view-btn">View Details</a>
                             </td>
                         </tr>
 
@@ -217,9 +209,7 @@
                                 <span class="status submitted">Submitted</span>
                             </td>
                             <td class="action-buttons">
-                                <a href="assignment-details.html" class="view-btn">
-                                    View Details
-                                </a>
+                                <a href="assignment-details.html" class="view-btn">View Details</a>
                             </td>
                         </tr>
 
@@ -238,9 +228,7 @@
                                 <span class="status upcoming">Upcoming</span>
                             </td>
                             <td>
-                                <a href="assignment-details.html" class="view-btn">
-                                    View Details
-                                </a>
+                                <a href="assignment-details.html" class="view-btn">View Details</a>
                             </td>
                         </tr>
 
@@ -259,9 +247,7 @@
                                 <span class="status submitted">Submitted</span>
                             </td>
                             <td>
-                                <a href="assignment-details.html" class="view-btn">
-                                    View Details
-                                </a>
+                                <a href="assignment-details.html" class="view-btn">View Details</a>
                             </td>
                         </tr>
 
@@ -280,15 +266,8 @@
                                 <span class="status pending">Pending</span>
                             </td>
                             <td class="action-buttons">
-                                <a href="assignment-details.html" class="view-btn">
-                                    View Details
-                                </a>
-
-                                <a href="assignment-submission.html"
-                                    class="submit-btn"
-                                    data-assignment="Database Management">
-                                    Submit
-                                </a>
+                                <a href="assignment-details.html" class="view-btn">View Details</a>
+                                <a href="assignment-submission.html" class="submit-btn" data-assignment="Database Management">Submit</a>
                             </td>
                         </tr>
 
@@ -307,9 +286,7 @@
                                 <span class="status submitted">Submitted</span>
                             </td>
                             <td>
-                                <a href="assignment-details.html" class="view-btn">
-                                    View Details
-                                </a>
+                                <a href="assignment-details.html" class="view-btn">View Details</a>
                             </td>
                         </tr>
 
@@ -328,9 +305,7 @@
                                 <span class="status upcoming">Upcoming</span>
                             </td>
                             <td>
-                                <a href="assignment-details.html" class="view-btn">
-                                    View Details
-                                </a>
+                                <a href="assignment-details.html" class="view-btn">View Details</a>
                             </td>
                         </tr>
 
@@ -343,7 +318,7 @@
     </main>
 </div>
 
-<script src="../JS/script.js"></script>
+<script src="../JS/Assignment.js"></script>
 
 </body>
 </html>

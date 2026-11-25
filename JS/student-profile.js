@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
 
     console.log("Student Profile JS Connected!");
@@ -8,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // =====================================
 
     const profileForm = document.getElementById("profile-form");
+    const saveButton = document.querySelector(".save-btn");
 
     const nameInput = document.getElementById("fullName");
     const emailInput = document.getElementById("email");
@@ -68,23 +68,21 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateProfile(profile) {
 
         const firstLetter = profile.fullName
-            ? profile.fullName.charAt(0).toUpperCase()
+            ? profile.fullName.trim().charAt(0).toUpperCase()
             : "A";
 
 
-        // Update profile name
+        // Update profile name and verified badge
         if (displayName) {
 
-            displayName.textContent = profile.fullName;
-
-            const verifiedIcon = document.createElement("i");
-
-            verifiedIcon.className =
-                "fa-solid fa-circle-check verified";
+            displayName.innerHTML = "";
 
             displayName.appendChild(
-                document.createTextNode(" ")
+                document.createTextNode(profile.fullName + " ")
             );
+
+            const verifiedIcon = document.createElement("i");
+            verifiedIcon.className = "fa-solid fa-circle-check verified";
 
             displayName.appendChild(verifiedIcon);
 
@@ -115,16 +113,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // Update topbar username
+        // Update topbar username (use first name if available)
         if (topUsername) {
-            topUsername.textContent = profile.fullName;
+            const firstName = profile.fullName.trim().split(" ")[0];
+            topUsername.textContent = firstName || profile.fullName;
         }
 
 
-        // Update course
+        // Update course / role
         if (studentRole) {
-            studentRole.textContent =
-                profile.course + " Student";
+            const courseText = profile.course.trim();
+            studentRole.textContent = courseText.toLowerCase().endsWith("student")
+                ? courseText
+                : courseText + " Student";
         }
 
     }
@@ -150,8 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        const emailPattern =
-            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!emailPattern.test(profile.email)) {
 
@@ -162,12 +162,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        const phonePattern =
-            /^\+?[0-9\s-]{10,16}$/;
+        const phonePattern = /^[0-9+\-\s()]{10,18}$/;
 
         if (!phonePattern.test(profile.phone)) {
 
-            showMessage("Please enter a valid phone number.", "error");
+            showMessage("Please enter a valid contact number.", "error");
 
             return false;
 
@@ -219,18 +218,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         try {
 
-            const savedData =
-                localStorage.getItem(STORAGE_KEY);
+            const savedData = localStorage.getItem(STORAGE_KEY);
 
             if (savedData) {
 
                 const profile = JSON.parse(savedData);
 
                 // Fill form inputs
-                nameInput.value = profile.fullName || "";
-                emailInput.value = profile.email || "";
-                phoneInput.value = profile.phone || "";
-                courseInput.value = profile.course || "";
+                if (profile.fullName) nameInput.value = profile.fullName;
+                if (profile.email) emailInput.value = profile.email;
+                if (profile.phone) phoneInput.value = profile.phone;
+                if (profile.course) courseInput.value = profile.course;
 
                 // Update profile display
                 updateProfile(profile);
@@ -263,14 +261,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // =====================================
-    // 9. SAVE BUTTON EVENT
+    // 9. SAVE HANDLER
     // =====================================
 
-    profileForm.addEventListener("submit", function (event) {
+    function handleSave(event) {
 
-        event.preventDefault();
+        if (event) {
+            event.preventDefault();
+        }
 
-        console.log("Save button clicked!");
+        console.log("Save Changes triggered!");
 
         const profile = getProfileData();
 
@@ -278,7 +278,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!validateProfile(profile)) {
             return;
         }
-
 
         try {
 
@@ -307,7 +306,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
-    });
+    }
+
+    profileForm.addEventListener("submit", handleSave);
+
+    if (saveButton && saveButton.type !== "submit") {
+        saveButton.addEventListener("click", handleSave);
+    }
 
 
     // =====================================
@@ -341,5 +346,33 @@ document.addEventListener("DOMContentLoaded", function () {
     // =====================================
 
     loadProfile();
+
+
+    // =====================================
+    // 13. TOPBAR DROPDOWN & LOGOUT
+    // =====================================
+
+    const topProfileBtn = document.getElementById("profileBtn") || document.querySelector(".user-menu-trigger");
+    const topProfileMenu = document.getElementById("profileMenu") || document.querySelector(".user-dropdown");
+    const topLogoutBtn = document.getElementById("logoutBtn");
+
+    if (topProfileBtn && topProfileMenu) {
+        topProfileBtn.addEventListener("click", function (event) {
+            event.stopPropagation();
+            topProfileMenu.classList.toggle("show");
+        });
+
+        document.addEventListener("click", function (event) {
+            if (!event.target.closest("#userMenu") && !event.target.closest(".user-menu")) {
+                topProfileMenu.classList.remove("show");
+            }
+        });
+    }
+
+    if (topLogoutBtn) {
+        topLogoutBtn.addEventListener("click", function () {
+            sessionStorage.clear();
+        });
+    }
 
 });
