@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Add Course</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+    <link rel="stylesheet" href="../CSS/addcourses.css">
+    <link rel="icon" type="image/png" href="../assets/assessment-logo.png">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <div class="site-logo">
+                <img src="\assets\teacher-Learnhub logo.png" alt="LearnHub Logo">
+            </div>
+
+            <nav class="navbar">
+
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="managecourses.html" class="nav-item">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Manage Courses</span>
+                </a>
+
+                <a href="addcourses.html" class="nav-item active">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Add Course</span>
+                </a>
+
+                <a href="students.html" class="nav-item">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Students</span>
+                </a>
+
+                <a href="profile.html" class="nav-item">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+
+            </nav>
+
+            <hr>
+
+            <a href="login.html" class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <div class="topbar">
+
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search students, courses or anything...">
+                </div>
+
+                <div class="topbar-right">
+
+                    <div class="notification">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+
+                    <div class="profile-dropdown">
+
+                        <div class="profile-info">
+                            <div class="profile-photo">T</div>
+
+                            <div class="profile-name">
+                                <span>Teacher</span>
+                                <small>Admin</small>
+                            </div>
+
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <a href="profile.html">
+                                <i class="fa-solid fa-user"></i>
+                                <span>Profile</span>
+                            </a>
+
+                            <a href="#">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <section class="add-course-content">
+
+                <div class="page-heading">
+                    <div>
+                        <h1>Add New Course</h1>
+                        <p>Create a course and organize its lectures for your students.</p>
+                    </div>
+
+                    <a href="managecourses.html" class="back-btn">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Manage Courses
+                    </a>
+                </div>
+
+
+                <form id="courseForm">
+
+                    <div class="form-layout">
+
+                        <div class="form-main">
+
+                            <div class="form-card">
+
+                                <div class="card-heading">
+                                    <div class="heading-icon">
+                                        <i class="fa-solid fa-book-open"></i>
+                                    </div>
+
+                                    <div>
+                                        <h2>Course Information</h2>
+                                        <p>Enter the basic details of your course.</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="courseTitle">Course Title <span>*</span></label>
+
+                                    <input type="text" id="courseTitle" placeholder="e.g. Full Stack Web Development"
+                                        required>
+                                </div>
+
+
+                                <div class="form-row">
+
+                                    <div class="form-group">
+                                        <label for="courseCategory">Category <span>*</span></label>
+
+                                        <select id="courseCategory" required>
+                                            <option value="">Select Category</option>
+                                            <option value="Web Development">Web Development</option>
+                                            <option value="Programming">Programming</option>
+                                            <option value="Computer Science">Computer Science</option>
+                                            <option value="Database">Database</option>
+                                            <option value="Artificial Intelligence">Artificial Intelligence</option>
+                                            <option value="Data Science">Data Science</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="courseLevel">Course Level <span>*</span></label>
+
+                                        <select id="courseLevel" required>
+                                            <option value="">Select Level</option>
+                                            <option value="Beginner">Beginner</option>
+                                            <option value="Intermediate">Intermediate</option>
+                                            <option value="Advanced">Advanced</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-row">
+
+                                    <div class="form-group">
+                                        <label for="courseDuration">Course Duration <span>*</span></label>
+
+                                        <input type="text" id="courseDuration" placeholder="e.g. 8 Weeks" required>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="courseStatus">Course Status</label>
+
+                                        <select id="courseStatus">
+                                            <option value="Draft">Draft</option>
+                                            <option value="Published">Published</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="courseDescription">Course Description <span>*</span></label>
+
+                                    <textarea id="courseDescription" rows="5"
+                                        placeholder="Describe what students will learn in this course..."
+                                        required></textarea>
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-card">
+
+                                <div class="card-heading">
+                                    <div class="heading-icon">
+                                        <i class="fa-solid fa-image"></i>
+                                    </div>
+
+                                    <div>
+                                        <h2>Course Cover Image</h2>
+                                        <p>Upload an image to represent your course.</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="upload-area">
+
+                                    <input type="file" id="courseImage" accept="image/png, image/jpeg, image/webp"
+                                        hidden>
+
+                                    <label for="courseImage" class="upload-label">
+
+                                        <div class="upload-icon">
+                                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                                        </div>
+
+                                        <h3>Click to upload course image</h3>
+                                        <p>PNG, JPG or WEBP (Maximum 2 MB)</p>
+
+                                    </label>
+
+                                    <div class="image-preview" id="imagePreview">
+                                        <img id="previewImage" src="" alt="Course Preview">
+                                        <button type="button" id="removeImage" title="Remove Image">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-card">
+
+                                <div class="card-heading lecture-heading">
+
+                                    <div class="heading-icon">
+                                        <i class="fa-solid fa-video"></i>
+                                    </div>
+
+                                    <div>
+                                        <h2>Course Lectures</h2>
+                                        <p>Add lessons that students will study in this course.</p>
+                                    </div>
+
+                                </div>
+
+
+                                <div id="lectureContainer"></div>
+
+
+                                <button type="button" id="addLectureBtn" class="add-lecture-btn">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Add Another Lecture
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-sidebar">
+
+                            <div class="publish-card">
+
+                                <h2>Publish Course</h2>
+
+                                <p>Review your course information before saving.</p>
+
+                                <div class="publish-info">
+                                    <div>
+                                        <i class="fa-solid fa-book"></i>
+                                        <span>Course details</span>
+                                    </div>
+
+                                    <div>
+                                        <i class="fa-solid fa-image"></i>
+                                        <span>Cover image</span>
+                                    </div>
+
+                                    <div>
+                                        <i class="fa-solid fa-video"></i>
+                                        <span>Course lectures</span>
+                                    </div>
+                                </div>
+
+                                <button type="submit" id="saveCourseBtn" class="publish-btn">
+                                    <i class="fa-solid fa-floppy-disk"></i>
+                                    Save Course
+                                </button>
+
+                                <button type="reset" class="reset-btn">
+                                    Reset Form
+                                </button>
+
+                                <p class="form-message" id="formMessage"></p>
+
+                            </div>
+
+
+                            <div class="help-card">
+
+                                <div class="help-icon">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </div>
+
+                                <h3>Course Creation Tips</h3>
+
+                                <ul>
+                                    <li>Use a clear and meaningful course title.</li>
+                                    <li>Write a detailed course description.</li>
+                                    <li>Add relevant lectures in sequence.</li>
+                                    <li>Choose a good quality cover image.</li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+        </main>
+
+    </div>
+    <script src="../JS/addcourses.js"></script>
+</body>
+
+</html>

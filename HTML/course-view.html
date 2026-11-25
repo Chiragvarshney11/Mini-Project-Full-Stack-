@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course View | LearnHub</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/course-view.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="site-logo">
+            <img src="\assets\teacher-Learnhub logo.png" alt="LearnHub Logo">
+        </div>
+
+        <nav class="navbar">
+
+            <a href="student-learning.html" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="course-view.html" class="nav-item active">
+                <i class="fa-solid fa-book-open"></i>
+                <span>My Courses</span>
+            </a>
+
+            <a href="my-progress.html" class="nav-item">
+                <i class="fa-solid fa-users"></i>
+                <span>My Progress</span>
+            </a>
+
+            <a href="assignment-list.html" class="nav-item">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Assignments</span>
+            </a>
+
+            <a href="Profile.html" class="nav-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+
+        </nav>
+
+        <hr class="sidebar-line">
+
+        <div class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </div>
+
+    </aside>
+
+
+    <main class="content">
+
+        <div class="topbar">
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search courses or lessons...">
+            </div>
+
+            <div class="topbar-right">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <div class="student-avatar">A</div>
+
+                <div>
+                    <div class="student-name">Aman</div>
+                    <div class="student-role">Student</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <a href="student-learning.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to My Courses
+        </a>
+
+
+        <!-- 1. WEB DEVELOPMENT -->
+
+        <section id="web-course" class="course-detail">
+
+            <div class="header-box">
+
+                <div class="header-left">
+
+                    <div class="header-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <div>
+                        <h1>Web Development</h1>
+                        <p>HTML, CSS and JavaScript</p>
+                    </div>
+
+                </div>
+
+                <span class="badge in-progress">In Progress</span>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-card">
+                    <i class="fa-solid fa-list-check"></i>
+                    <div>
+                        <p class="info-label">Total Lessons</p>
+                        <p class="info-value">20</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div>
+                        <p class="info-label">Completed</p>
+                        <p class="info-value">15</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <div>
+                        <p class="info-label">Progress</p>
+                        <p class="info-value">75%</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="white-card">
+                <h2>Course Description</h2>
+                <p>Learn how to create modern websites using HTML, CSS and JavaScript. Understand website structure, styling and interactive web pages.</p>
+            </div>
+
+
+            <div class="white-card">
+                <h2>Course Information</h2>
+                <p><b>Course Fee:</b> ₹499</p>
+                <p><b>Free Trial:</b> 7 Days</p>
+                <p><b>Duration:</b> 4 Weeks</p>
+                <p><b>Total Lectures:</b> 20</p>
+            </div>
+
+
+            <div class="white-card">
+                <h2>Lessons</h2>
+
+                <ul class="lesson-list">
+                    <li>Lesson 1: Introduction to HTML</li>
+                    <li>Lesson 2: HTML Tags and Attributes</li>
+                    <li>Lesson 3: CSS Fundamentals</li>
+                    <li>Lesson 4: CSS Styling and Layouts</li>
+                    <li>Lesson 5: JavaScript Basics</li>
+                </ul>
+            </div>
+
+
+            <div class="footer-buttons">
+                <a href="student-learning.html" class="btn-back">Back</a>
+                <a href="lesson-view.html?course=web" class="btn-continue">Continue Course</a>
+            </div>
+
+        </section>
+
+
+
+        <!-- 2. PYTHON PROGRAMMING -->
+
+        <section id="python-course" class="course-detail">
+
+            <div class="header-box">
+
+                <div class="header-left">
+                    <div class="header-icon">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+
+                    <div>
+                        <h1>Python Programming</h1>
+                        <p>Python basics and programming</p>
+                    </div>
+                </div>
+
+                <span class="badge in-progress">In Progress</span>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-card">
+                    <i class="fa-solid fa-list-check"></i>
+                    <div>
+                        <p class="info-label">Total Lessons</p>
+                        <p class="info-value">20</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div>
+                        <p class="info-label">Completed</p>
+                        <p class="info-value">12</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <div>
+                        <p class="info-label">Progress</p>
+                        <p class="info-value">60%</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="white-card">
+                <h2>Course Description</h2>
+                <p>Learn Python programming from basics. Understand variables, data types, loops, functions and object-oriented programming.</p>
+            </div>
+
+
+            <div class="white-card">
+                <h2>Course Information</h2>
+                <p><b>Course Fee:</b> ₹399</p>
+                <p><b>Free Trial:</b> 3 Days</p>
+                <p><b>Duration:</b> 4 Weeks</p>
+                <p><b>Total Lectures:</b> 20</p>
+            </div>
+
+
+            <div class="white-card">
+                <h2>Lessons</h2>
+                <ul class="lesson-list">
+                    <li>Lesson 1: Introduction to Python</li>
+                    <li>Lesson 2: Variables and Data Types</li>
+                    <li>Lesson 3: Conditional Statements</li>
+                    <li>Lesson 4: Loops</li>
+                    <li>Lesson 5: Functions</li>
+                </ul>
+            </div>
+
+
+            <div class="footer-buttons">
+                <a href="student-learning.html" class="btn-back">Back</a>
+                <a href="lesson-view.html?course=python" class="btn-continue">Continue Course</a>
+            </div>
+
+        </section>
+
+
+
+        <!-- 3. DATABASE MANAGEMENT -->
+
+        <section id="database-course" class="course-detail">
+
+            <div class="header-box">
+
+                <div class="header-left">
+                    <div class="header-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+
+                    <div>
+                        <h1>Database Management</h1>
+                        <p>SQL and database concepts</p>
+                    </div>
+                </div>
+
+                <span class="badge in-progress">In Progress</span>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-card">
+                    <i class="fa-solid fa-list-check"></i>
+                    <div>
+                        <p class="info-label">Total Lessons</p>
+                        <p class="info-value">20</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div>
+                        <p class="info-label">Completed</p>
+                        <p class="info-value">9</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <div>
+                        <p class="info-label">Progress</p>
+                        <p class="info-value">45%</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="white-card">
+                <h2>Course Description</h2>
+                <p>Learn database concepts, SQL queries, tables, relationships and database management fundamentals.</p>
+            </div>
+
+
+            <div class="white-card">
+                <h2>Course Information</h2>
+                <p><b>Course Fee:</b> ₹299</p>
+                <p><b>Free Trial:</b> 3 Days</p>
+                <p><b>Duration:</b> 3 Weeks</p>
+                <p><b>Total Lectures:</b> 20</p>
+            </div>
+
+
+            <div class="white-card">
+                <h2>Lessons</h2>
+                <ul class="lesson-list">
+                    <li>Lesson 1: Introduction to DBMS</li>
+                    <li>Lesson 2: Database Tables</li>
+                    <li>Lesson 3: SQL Commands</li>
+                    <li>Lesson 4: Joins and Queries</li>
+                    <li>Lesson 5: Database Relationships</li>
+                </ul>
+            </div>
+
+
+            <div class="footer-buttons">
+                <a href="student-learning.html" class="btn-back">Back</a>
+                <a href="lesson-view.html?course=database" class="btn-continue">Continue Course</a>
+            </div>
+
+        </section>
+
+
+
+        <!-- 4. COMPUTER SCIENCE -->
+
+        <section id="computer-course" class="course-detail">
+
+            <div class="header-box">
+
+                <div class="header-left">
+                    <div class="header-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+
+                    <div>
+                        <h1>Computer Science</h1>
+                        <p>Data Structures and Networks</p>
+                    </div>
+                </div>
+
+                <span class="badge in-progress">In Progress</span>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-card">
+                    <i class="fa-solid fa-list-check"></i>
+                    <div>
+                        <p class="info-label">Total Lessons</p>
+                        <p class="info-value">20</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div>
+                        <p class="info-label">Completed</p>
+                        <p class="info-value">16</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <div>
+                        <p class="info-label">Progress</p>
+                        <p class="info-value">80%</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="white-card">
+                <h2>Course Description</h2>
+                <p>Understand fundamental computer science concepts including operating systems, networking and computer architecture.</p>
+            </div>
+
+
+            <div class="white-card">
+                <h2>Course Information</h2>
+                <p><b>Course Fee:</b> ₹499</p>
+                <p><b>Free Trial:</b> 7 Days</p>
+                <p><b>Duration:</b> 4 Weeks</p>
+                <p><b>Total Lectures:</b> 20</p>
+            </div>
+
+
+            <div class="white-card">
+                <h2>Lessons</h2>
+                <ul class="lesson-list">
+                    <li>Lesson 1: Computer Fundamentals</li>
+                    <li>Lesson 2: Operating Systems</li>
+                    <li>Lesson 3: Computer Architecture</li>
+                    <li>Lesson 4: Networking Basics</li>
+                    <li>Lesson 5: Internet Fundamentals</li>
+                </ul>
+            </div>
+
+
+            <div class="footer-buttons">
+                <a href="student-learning.html" class="btn-back">Back</a>
+                <a href="lesson-view.html?course=computer" class="btn-continue">Continue Course</a>
+            </div>
+
+        </section>
+
+
+
+        <!-- 5. JAVASCRIPT BASICS -->
+
+        <section id="js-course" class="course-detail">
+
+            <div class="header-box">
+
+                <div class="header-left">
+                    <div class="header-icon">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+
+                    <div>
+                        <h1>JavaScript Basics</h1>
+                        <p>Variables and Functions</p>
+                    </div>
+                </div>
+
+                <span class="badge completed">Completed</span>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-card">
+                    <i class="fa-solid fa-list-check"></i>
+                    <div>
+                        <p class="info-label">Total Lessons</p>
+                        <p class="info-value">10</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div>
+                        <p class="info-label">Completed</p>
+                        <p class="info-value">10</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <div>
+                        <p class="info-label">Progress</p>
+                        <p class="info-value">100%</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="white-card">
+                <h2>Course Description</h2>
+                <p>Learn JavaScript fundamentals including variables, functions, arrays, objects and DOM manipulation.</p>
+            </div>
+
+
+            <div class="white-card">
+                <h2>Course Information</h2>
+                <p><b>Course Fee:</b> Free</p>
+                <p><b>Free Trial:</b> Not Required</p>
+                <p><b>Duration:</b> 2 Weeks</p>
+                <p><b>Total Lectures:</b> 10</p>
+            </div>
+
+
+            <div class="white-card">
+                <h2>Lessons</h2>
+                <ul class="lesson-list">
+                    <li>Lesson 1: Variables and Data Types</li>
+                    <li>Lesson 2: Functions</li>
+                    <li>Lesson 3: Arrays and Objects</li>
+                    <li>Lesson 4: Events</li>
+                    <li>Lesson 5: DOM Manipulation</li>
+                </ul>
+            </div>
+
+
+            <div class="footer-buttons">
+                <a href="student-learning.html" class="btn-back">Back</a>
+                <a href="lesson-view.html?course=javascript" class="btn-continue">View Course Again</a>
+            </div>
+
+        </section>
+
+
+
+        <!-- 6. DATA STRUCTURES -->
+
+        <section id="dsa-course" class="course-detail">
+
+            <div class="header-box">
+
+                <div class="header-left">
+                    <div class="header-icon">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+
+                    <div>
+                        <h1>Data Structures</h1>
+                        <p>Arrays and Linked Lists</p>
+                    </div>
+                </div>
+
+                <span class="badge in-progress">In Progress</span>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-card">
+                    <i class="fa-solid fa-list-check"></i>
+                    <div>
+                        <p class="info-label">Total Lessons</p>
+                        <p class="info-value">20</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div>
+                        <p class="info-label">Completed</p>
+                        <p class="info-value">16</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <div>
+                        <p class="info-label">Progress</p>
+                        <p class="info-value">80%</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="white-card">
+                <h2>Course Description</h2>
+                <p>Learn important data structures and algorithms used in programming and problem solving.</p>
+            </div>
+
+
+            <div class="white-card">
+                <h2>Course Information</h2>
+                <p><b>Course Fee:</b> ₹399</p>
+                <p><b>Free Trial:</b> 7 Days</p>
+                <p><b>Duration:</b> 4 Weeks</p>
+                <p><b>Total Lectures:</b> 20</p>
+            </div>
+
+
+            <div class="white-card">
+                <h2>Lessons</h2>
+                <ul class="lesson-list">
+                    <li>Lesson 1: Introduction to Data Structures</li>
+                    <li>Lesson 2: Arrays</li>
+                    <li>Lesson 3: Linked Lists</li>
+                    <li>Lesson 4: Stacks and Queues</li>
+                    <li>Lesson 5: Searching and Sorting</li>
+                </ul>
+            </div>
+
+
+            <div class="footer-buttons">
+                <a href="student-learning.html" class="btn-back">Back</a>
+                <a href="lesson-view.html?course=dsa" class="btn-continue">Continue Course</a>
+            </div>
+
+        </section>
+
+
+
+        <!-- 7. COMPUTER NETWORKS -->
+
+        <section id="network-course" class="course-detail">
+
+            <div class="header-box">
+
+                <div class="header-left">
+                    <div class="header-icon">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+
+                    <div>
+                        <h1>Computer Networks</h1>
+                        <p>Network Fundamentals</p>
+                    </div>
+                </div>
+
+                <span class="badge not-started">Not Started</span>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-card">
+                    <i class="fa-solid fa-list-check"></i>
+                    <div>
+                        <p class="info-label">Total Lessons</p>
+                        <p class="info-value">15</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div>
+                        <p class="info-label">Completed</p>
+                        <p class="info-value">0</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <div>
+                        <p class="info-label">Progress</p>
+                        <p class="info-value">0%</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="white-card">
+                <h2>Course Description</h2>
+                <p>Understand computer networking concepts, network types, protocols and communication fundamentals.</p>
+            </div>
+
+
+            <div class="white-card">
+                <h2>Course Information</h2>
+                <p><b>Course Fee:</b> ₹299</p>
+                <p><b>Free Trial:</b> 3 Days</p>
+                <p><b>Duration:</b> 3 Weeks</p>
+                <p><b>Total Lectures:</b> 15</p>
+            </div>
+
+
+            <div class="white-card">
+                <h2>Lessons</h2>
+                <ul class="lesson-list">
+                    <li>Lesson 1: Introduction to Networks</li>
+                    <li>Lesson 2: Types of Networks</li>
+                    <li>Lesson 3: Network Topologies</li>
+                    <li>Lesson 4: OSI Model</li>
+                    <li>Lesson 5: TCP/IP Protocol</li>
+                </ul>
+            </div>
+
+
+            <div class="footer-buttons">
+                <a href="student-learning.html" class="btn-back">Back</a>
+                <a href="lesson-view.html?course=network" class="btn-continue">Start Course</a>
+            </div>
+
+        </section>
+
+
+    </main>
+    <script src="../JS/course-view.js" defer></script>
+
+</body>
+</html>

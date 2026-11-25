@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Progress - LearnHub</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/student-learning.css">
+    <link rel="icon" href="../assets/teacher-Learnhub logo.png">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="site-logo">
+            <img src="../assets/teacher-Learnhub logo.png" alt="LearnHub Logo">
+        </div>
+
+        <nav class="navbar">
+            <a href="student-learning.html" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="student-learning.html#my-courses" class="nav-item">
+                <i class="fa-solid fa-book-open"></i>
+                <span>My Courses</span>
+            </a>
+
+            <a href="my-progress.html" class="nav-item active">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>My Progress</span>
+            </a>
+
+            <a href="assignment-list.html" class="nav-item">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Assignments</span>
+            </a>
+
+            <a href="student-profile.html" class="nav-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <hr>
+            <a href="login.html" class="logout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search courses or lessons...">
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="notification">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+
+                <div class="profile-dropdown" id="userMenu">
+
+                    <div class="profile-info" id="profileBtn">
+
+                        <div class="profile-photo" id="topAvatar">R</div>
+
+                        <div class="profile-name">
+                            <span id="topUsername">Ram</span>
+                            <small class="student-role-label">Student</small>
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down chevron-icon"></i>
+
+                    </div>
+
+                    <div class="dropdown-menu" id="profileMenu">
+
+                        <a href="student-profile.html" class="dropdown-item">
+                            <i class="fa-regular fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+
+                        <a href="login.html" class="dropdown-item" id="logoutBtn">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Logout</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- PAGE HEADER -->
+        <section class="welcome-tag">
+            <div>
+                <h1>My Progress</h1>
+                <p>Track your learning progress across all courses</p>
+            </div>
+            <i class="fa-solid fa-chart-line banner-icon"></i>
+        </section>
+
+        <!-- SUMMARY CARDS -->
+        <section class="stats">
+
+            <div class="totalcourses">
+                <p>Total Courses</p>
+                <h2 id="totalCourses">7</h2>
+                <h5>Active Enrolled</h5>
+            </div>
+
+            <div class="totalstud">
+                <p>Completed</p>
+                <h2 id="completedCourses">0</h2>
+                <h5>Finished Courses</h5>
+            </div>
+
+            <div class="totallessons">
+                <p>In Progress</p>
+                <h2 id="inProgressCourses">7</h2>
+                <h5>Ongoing Courses</h5>
+            </div>
+
+            <div class="avgcomp">
+                <p>Average Progress</p>
+                <h2 id="averageProgress">49%</h2>
+                <h5>Across All</h5>
+            </div>
+
+        </section>
+
+        <!-- COURSE PROGRESS -->
+        <section class="progress-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Course Progress</h2>
+                    <p>View your progress in each enrolled course</p>
+                </div>
+            </div>
+
+            <div class="course-list">
+
+                <!-- WEB DEVELOPMENT -->
+                <div class="course-card" data-completed="15" data-total="20">
+                    <div class="course-top">
+                        <div class="course-icon blue-icon"><i class="fa-solid fa-code"></i></div>
+                        <div class="course-info">
+                            <h3>Web Development</h3>
+                            <p>HTML, CSS and JavaScript</p>
+                        </div>
+                        <strong class="percentage">75%</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress web-progress"></div>
+                    </div>
+                    <div class="course-bottom">
+                        <span>
+                            <i class="fa-regular fa-circle-check"></i>
+                            <span class="lesson-count">15 of 20 lessons completed</span>
+                        </span>
+                        <span class="course-status in-progress">In Progress</span>
+                    </div>
+                </div>
+
+                <!-- PYTHON -->
+                <div class="course-card" data-completed="12" data-total="20">
+                    <div class="course-top">
+                        <div class="course-icon green-icon"><i class="fa-brands fa-python"></i></div>
+                        <div class="course-info">
+                            <h3>Python Programming</h3>
+                            <p>Python basics and programming</p>
+                        </div>
+                        <strong class="percentage">60%</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress python-progress"></div>
+                    </div>
+                    <div class="course-bottom">
+                        <span>
+                            <i class="fa-regular fa-circle-check"></i>
+                            <span class="lesson-count">12 of 20 lessons completed</span>
+                        </span>
+                        <span class="course-status in-progress">In Progress</span>
+                    </div>
+                </div>
+
+                <!-- DATABASE -->
+                <div class="course-card" data-completed="9" data-total="20">
+                    <div class="course-top">
+                        <div class="course-icon yellow-icon"><i class="fa-solid fa-database"></i></div>
+                        <div class="course-info">
+                            <h3>Database Management</h3>
+                            <p>SQL and database concepts</p>
+                        </div>
+                        <strong class="percentage">45%</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress database-progress"></div>
+                    </div>
+                    <div class="course-bottom">
+                        <span>
+                            <i class="fa-regular fa-circle-check"></i>
+                            <span class="lesson-count">9 of 20 lessons completed</span>
+                        </span>
+                        <span class="course-status in-progress">In Progress</span>
+                    </div>
+                </div>
+
+                <!-- COMPUTER SCIENCE -->
+                <div class="course-card" data-completed="16" data-total="20">
+                    <div class="course-top">
+                        <div class="course-icon pink-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <div class="course-info">
+                            <h3>Computer Science</h3>
+                            <p>Data Structures and Networks</p>
+                        </div>
+                        <strong class="percentage">80%</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress cs-progress"></div>
+                    </div>
+                    <div class="course-bottom">
+                        <span>
+                            <i class="fa-regular fa-circle-check"></i>
+                            <span class="lesson-count">16 of 20 lessons completed</span>
+                        </span>
+                        <span class="course-status in-progress">In Progress</span>
+                    </div>
+                </div>
+
+                <!-- JAVASCRIPT BASICS -->
+                <div class="course-card" data-completed="20" data-total="20">
+                    <div class="course-top">
+                        <div class="course-icon purple-icon"><i class="fa-brands fa-js"></i></div>
+                        <div class="course-info">
+                            <h3>JavaScript Basics</h3>
+                            <p>Variables and Functions</p>
+                        </div>
+                        <strong class="percentage">100%</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress js-progress"></div>
+                    </div>
+                    <div class="course-bottom">
+                        <span>
+                            <i class="fa-regular fa-circle-check"></i>
+                            <span class="lesson-count">20 of 20 lessons completed</span>
+                        </span>
+                        <span class="course-status completed">Completed</span>
+                    </div>
+                </div>
+
+<<<<<<< HEAD
+                <!-- DATA STRUCTURES -->
+                <div class="course-card" data-completed="16" data-total="20">
+                    <div class="course-top">
+                        <div class="course-icon orange-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                        <div class="course-info">
+                            <h3>Data Structures</h3>
+                            <p>Arrays and Linked Lists</p>
+                        </div>
+                        <strong class="percentage">80%</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress ds-progress"></div>
+                    </div>
+                    <div class="course-bottom">
+                        <span>
+                            <i class="fa-regular fa-circle-check"></i>
+                            <span class="lesson-count">16 of 20 lessons completed</span>
+                        </span>
+                        <span class="course-status in-progress">In Progress</span>
+                    </div>
+                </div>
+=======
+    <script src="../JS/Assignment.js"></script>
+>>>>>>> 81334c030057c9c10efdc2f313e4a2ff87838c5c
+
+                <!-- COMPUTER NETWORKS -->
+                <div class="course-card" data-completed="0" data-total="20">
+                    <div class="course-top">
+                        <div class="course-icon teal-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <div class="course-info">
+                            <h3>Computer Networks</h3>
+                            <p>Network Fundamentals</p>
+                        </div>
+                        <strong class="percentage">0%</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress cn-progress"></div>
+                    </div>
+                    <div class="course-bottom">
+                        <span>
+                            <i class="fa-regular fa-circle-check"></i>
+                            <span class="lesson-count">0 of 20 lessons completed</span>
+                        </span>
+                        <span class="course-status not-started">Not Started</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../JS/Assignment.js"></script>
+
+</body>
+</html>

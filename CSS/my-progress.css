@@ -1,0 +1,12 @@
+/* My Progress page - Now uses shared student-learning.css */
+/* This file kept for backwards compatibility */
+@import url("student-learning.css");
+
+/* Progress bar widths for individual courses */
+.web-progress { width: 75%; }
+.python-progress { width: 60%; }
+.database-progress { width: 45%; }
+.cs-progress { width: 80%; }
+.js-progress { width: 100%; }
+.ds-progress { width: 80%; }
+.cn-progress { width: 0%; }

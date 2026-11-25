@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Students Management</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/students.css">
+    <link rel="icon" href="../assets/assessment-logo.png">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <div class="site-logo">
+                <img src="\assets\teacher-Learnhub logo.png" alt="LearnHub Logo">
+            </div>
+
+            <nav class="navbar">
+
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="managecourses.html" class="nav-item">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Manage Courses</span>
+                </a>
+
+                <a href="addcourses.html" class="nav-item">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Add Course</span>
+                </a>
+
+                <a href="students.html" class="nav-item active">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Students</span>
+                </a>
+
+                <a href="profile.html" class="nav-item">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+
+            </nav>
+
+            <hr>
+
+            <a href="login.html" class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </aside>
+
+        <main class="main-content">
+
+            <div class="topbar">
+
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search students, courses or anything...">
+                </div>
+
+                <div class="topbar-right">
+
+                    <div class="notification">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+
+                    <div class="profile-dropdown">
+
+                        <div class="profile-info">
+                            <div class="profile-photo">C</div>
+
+                            <div class="profile-name">
+                                <span>Chirag Varshney</span>
+                                <small>Admin</small>
+                            </div>
+
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <a href="profile.html">
+                                <i class="fa-solid fa-user"></i>
+                                <span>Profile</span>
+                            </a>
+
+                            <a href="login.html">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <section class="students-content">
+
+                <div class="page-heading">
+
+                    <div>
+                        <h1>Students Management</h1>
+                        <p>Manage students and monitor their learning performance.</p>
+                    </div>
+
+                    <button class="primary-btn" id="openAddStudent">
+                        <i class="fa-solid fa-plus"></i>
+                        Add Student
+                    </button>
+
+                </div>
+
+                <!-- OVERVIEW -->
+
+                <div class="stats">
+
+                    <div class="stat-card total-card">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div>
+                            <p>Total Students</p>
+                            <h2 id="totalStudents">0</h2>
+                        </div>
+                    </div>
+
+                    <div class="stat-card active-card">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+                        <div>
+                            <p>Active Students</p>
+                            <h2 id="activeStudents">0</h2>
+                        </div>
+                    </div>
+
+                    <div class="stat-card risk-card">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <div>
+                            <p>At Risk</p>
+                            <h2 id="riskStudents">0</h2>
+                        </div>
+                    </div>
+
+                    <div class="stat-card completed-card">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <p>Completed</p>
+                            <h2 id="completedStudents">0</h2>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ANALYTICS -->
+
+                <section class="analytics-section">
+
+                    <div class="section-title">
+                        <div>
+                            <h2>Student Analytics</h2>
+                            <p>Understand enrollment, performance and attendance.</p>
+                        </div>
+                    </div>
+
+                    <div class="analytics-grid">
+
+                        <div class="chart-card chart-wide">
+                            <div class="chart-heading">
+                                <div>
+                                    <h3>Student Enrollment Trend</h3>
+                                    <p>New enrollments over the last 6 months</p>
+                                </div>
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="enrollmentChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="chart-card">
+                            <div class="chart-heading">
+                                <div>
+                                    <h3>Course Distribution</h3>
+                                    <p>Students enrolled per course</p>
+                                </div>
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="courseChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="chart-card">
+                            <div class="chart-heading">
+                                <div>
+                                    <h3>Performance Distribution</h3>
+                                    <p>Based on overall performance score</p>
+                                </div>
+                                <i class="fa-solid fa-chart-column"></i>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="performanceChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="chart-card">
+                            <div class="chart-heading">
+                                <div>
+                                    <h3>Attendance Analytics</h3>
+                                    <p>Student attendance categories</p>
+                                </div>
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="attendanceChart"></canvas>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- STUDENT HIGHLIGHTS -->
+
+                <section class="highlights-grid">
+
+                    <div class="highlight-card">
+                        <div class="highlight-heading">
+                            <div>
+                                <h2>Top Performing Students</h2>
+                                <p>Highest overall performance scores</p>
+                            </div>
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+
+                        <div id="topStudentsList"></div>
+                    </div>
+
+                    <div class="highlight-card">
+                        <div class="highlight-heading">
+                            <div>
+                                <h2>Students At Risk</h2>
+                                <p>Students who may need additional support</p>
+                            </div>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+
+                        <div id="atRiskStudentsList"></div>
+                    </div>
+
+                </section>
+
+                <!-- STUDENT TABLE -->
+
+                <section class="student-section">
+
+                    <div class="section-heading">
+                        <div>
+                            <h2>All Students</h2>
+                            <p>View, search and manage enrolled students.</p>
+                        </div>
+                    </div>
+
+                    <div class="filters">
+
+                        <div class="student-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="studentSearch" placeholder="Search by name, email or ID...">
+                        </div>
+
+                        <select id="courseFilter">
+                            <option value="all">All Courses</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Data Structures">Data Structures</option>
+                            <option value="Computer Fundamentals">Computer Fundamentals</option>
+                        </select>
+
+                        <select id="statusFilter">
+                            <option value="all">All Status</option>
+                            <option value="Active">Active</option>
+                            <option value="At Risk">At Risk</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+
+                    </div>
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Student</th>
+                                    <th>Student ID</th>
+                                    <th>Course</th>
+                                    <th>Progress</th>
+                                    <th>Performance</th>
+                                    <th>Attendance</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="studentTableBody"></tbody>
+
+                        </table>
+
+                        <div class="empty-state" id="emptyState">
+                            <i class="fa-solid fa-user-slash"></i>
+                            <h3>No Students Found</h3>
+                            <p>Try changing your search or filters.</p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- ADD / EDIT STUDENT MODAL -->
+
+    <div class="modal-overlay" id="studentModal">
+
+        <div class="modal">
+
+            <div class="modal-header">
+                <div>
+                    <h2 id="modalTitle">Add New Student</h2>
+                    <p>Enter the student's academic and personal information.</p>
+                </div>
+
+                <button class="close-modal" id="closeStudentModal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="studentForm">
+
+                <input type="hidden" id="studentEditId">
+
+                <div class="form-group">
+                    <label for="studentName">Full Name *</label>
+                    <input type="text" id="studentName" placeholder="Enter student name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentEmail">Email Address *</label>
+                    <input type="email" id="studentEmail" placeholder="Enter email address" required>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="studentId">Student ID *</label>
+                        <input type="text" id="studentId" placeholder="LH101" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentPhone">Phone Number</label>
+                        <input type="tel" id="studentPhone" placeholder="Phone number">
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="studentDepartment">Department</label>
+                        <select id="studentDepartment">
+                            <option value="CSE">CSE</option>
+                            <option value="IT">IT</option>
+                            <option value="ECE">ECE</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentSemester">Semester</label>
+                        <select id="studentSemester">
+                            <option value="1">1st Semester</option>
+                            <option value="2">2nd Semester</option>
+                            <option value="3">3rd Semester</option>
+                            <option value="4">4th Semester</option>
+                            <option value="5">5th Semester</option>
+                            <option value="6">6th Semester</option>
+                            <option value="7">7th Semester</option>
+                            <option value="8">8th Semester</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="studentCourse">Assigned Course *</label>
+                    <select id="studentCourse" required>
+                        <option value="">Select Course</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Data Structures">Data Structures</option>
+                        <option value="Computer Fundamentals">Computer Fundamentals</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="studentProgress">Course Progress (%)</label>
+                        <input type="number" id="studentProgress" min="0" max="100" value="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentPerformance">Performance (%)</label>
+                        <input type="number" id="studentPerformance" min="0" max="100" value="0" required>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="studentAttendance">Attendance (%)</label>
+                        <input type="number" id="studentAttendance" min="0" max="100" value="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentAssignment">Assignment Average (%)</label>
+                        <input type="number" id="studentAssignment" min="0" max="100" value="0" required>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="studentQuiz">Quiz Average (%)</label>
+                        <input type="number" id="studentQuiz" min="0" max="100" value="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentEnrollment">Enrollment Date</label>
+                        <input type="date" id="studentEnrollment" required>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="studentStatus">Student Status</label>
+                    <select id="studentStatus">
+                        <option value="Active">Active</option>
+                        <option value="At Risk">At Risk</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="cancel-btn" id="cancelStudent">Cancel</button>
+                    <button type="submit" class="primary-btn" id="saveStudent">Save Student</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- PERFORMANCE MODAL -->
+
+    <div class="modal-overlay" id="performanceModal">
+
+        <div class="modal performance-modal">
+
+            <div class="modal-header">
+                <div>
+                    <h2>Student Performance</h2>
+                    <p id="performanceStudentName">Student Details</p>
+                </div>
+
+                <button class="close-modal" id="closePerformanceModal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div id="performanceContent"></div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../JS/students.js"></script>
+
+</body>
+
+</html>

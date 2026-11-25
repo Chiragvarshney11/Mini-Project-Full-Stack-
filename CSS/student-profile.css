@@ -1,0 +1,3 @@
+/* Student Profile page - Now uses shared student-learning.css */
+/* This file kept for backwards compatibility */
+@import url("student-learning.css");

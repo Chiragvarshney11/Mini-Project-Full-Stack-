@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments - LearnHub</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/student-learning.css">
+    <link rel="icon" href="../assets/teacher-Learnhub logo.png">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="site-logo">
+            <img src="../assets/teacher-Learnhub logo.png" alt="LearnHub Logo">
+        </div>
+
+        <nav class="navbar">
+            <a href="student-learning.html" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="student-learning.html#my-courses" class="nav-item">
+                <i class="fa-solid fa-book-open"></i>
+                <span>My Courses</span>
+            </a>
+
+            <a href="my-progress.html" class="nav-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>My Progress</span>
+            </a>
+
+            <a href="assignment-list.html" class="nav-item active">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Assignments</span>
+            </a>
+
+            <a href="student-profile.html" class="nav-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <hr>
+            <a href="login.html" class="logout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Search courses or lessons...">
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="notification">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+
+                <div class="profile-dropdown" id="userMenu">
+
+                    <div class="profile-info" id="profileBtn">
+
+                        <div class="profile-photo" id="topAvatar">R</div>
+
+                        <div class="profile-name">
+                            <span id="topUsername">Ram</span>
+                            <small class="student-role-label">Student</small>
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down chevron-icon"></i>
+
+                    </div>
+
+                    <div class="dropdown-menu" id="profileMenu">
+
+                        <a href="student-profile.html" class="dropdown-item">
+                            <i class="fa-regular fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+
+                        <a href="login.html" class="dropdown-item" id="logoutBtn">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Logout</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- PAGE HEADER -->
+        <section class="welcome-tag">
+            <div>
+                <h1>Assignments</h1>
+                <p>Manage assignments and track your submissions</p>
+            </div>
+            <i class="fa-solid fa-file-lines banner-icon"></i>
+        </section>
+
+        <!-- SUMMARY CARDS -->
+        <section class="stats">
+
+            <div class="totalcourses">
+                <p>Total Assignments</p>
+                <h2 id="totalAssignments">7</h2>
+                <h5>All Assigned</h5>
+            </div>
+
+            <div class="totalstud">
+                <p>Submitted</p>
+                <h2 id="submittedAssignments">4</h2>
+                <h5>Completed</h5>
+            </div>
+
+            <div class="totallessons">
+                <p>Pending</p>
+                <h2 id="pendingAssignments">1</h2>
+                <h5>Due Soon</h5>
+            </div>
+
+            <div class="avgcomp">
+                <p>Upcoming</p>
+                <h2 id="upcomingAssignments">2</h2>
+                <h5>Scheduled</h5>
+            </div>
+
+        </section>
+
+        <!-- ASSIGNMENT TABLE -->
+        <section class="assignment-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>All Assignments</h2>
+                    <p>View and manage your assignments</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Assignment</th>
+                            <th>Course</th>
+                            <th>Due Date</th>
+                            <th>Submissions</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <!-- HTML Basics -->
+                        <tr>
+                            <td>
+                                <div class="assignment-name">
+                                    <strong>HTML Basics</strong>
+                                    <span>Introduction to HTML</span>
+                                </div>
+                            </td>
+                            <td>Web Development</td>
+                            <td>10 Sep 2026</td>
+                            <td>42 / 50</td>
+                            <td>
+                                <span class="status submitted">Submitted</span>
+                            </td>
+                            <td>
+                                <a href="assignment-details.html" class="view-btn">View Details</a>
+                            </td>
+                        </tr>
+
+                        <!-- CSS Fundamentals -->
+                        <tr>
+                            <td>
+                                <div class="assignment-name">
+                                    <strong>CSS Fundamentals</strong>
+                                    <span>Selectors and Styling</span>
+                                </div>
+                            </td>
+                            <td>Web Development</td>
+                            <td>18 Sep 2026</td>
+                            <td>28 / 50</td>
+                            <td>
+                                <span class="status submitted">Submitted</span>
+                            </td>
+                            <td class="action-buttons">
+                                <a href="assignment-details.html" class="view-btn">View Details</a>
+                            </td>
+                        </tr>
+
+                        <!-- JavaScript Basics -->
+                        <tr>
+                            <td>
+                                <div class="assignment-name">
+                                    <strong>JavaScript Basics</strong>
+                                    <span>Variables and Functions</span>
+                                </div>
+                            </td>
+                            <td>Web Development</td>
+                            <td>20 Sep 2026</td>
+                            <td>0 / 50</td>
+                            <td>
+                                <span class="status upcoming">Upcoming</span>
+                            </td>
+                            <td>
+                                <a href="assignment-details.html" class="view-btn">View Details</a>
+                            </td>
+                        </tr>
+
+                        <!-- Python Programming -->
+                        <tr>
+                            <td>
+                                <div class="assignment-name">
+                                    <strong>Python Programming</strong>
+                                    <span>Functions and Lists</span>
+                                </div>
+                            </td>
+                            <td>Python Programming</td>
+                            <td>22 Sep 2026</td>
+                            <td>38 / 50</td>
+                            <td>
+                                <span class="status submitted">Submitted</span>
+                            </td>
+                            <td>
+                                <a href="assignment-details.html" class="view-btn">View Details</a>
+                            </td>
+                        </tr>
+
+                        <!-- Database Management -->
+                        <tr>
+                            <td>
+                                <div class="assignment-name">
+                                    <strong>Database Management</strong>
+                                    <span>SQL Queries</span>
+                                </div>
+                            </td>
+                            <td>Database Management</td>
+                            <td>25 Sep 2026</td>
+                            <td>18 / 50</td>
+                            <td>
+                                <span class="status pending">Pending</span>
+                            </td>
+                            <td class="action-buttons">
+                                <a href="assignment-details.html" class="view-btn">View Details</a>
+                                <a href="assignment-submission.html" class="submit-btn" data-assignment="Database Management">Submit</a>
+                            </td>
+                        </tr>
+
+                        <!-- Data Structures -->
+                        <tr>
+                            <td>
+                                <div class="assignment-name">
+                                    <strong>Data Structures</strong>
+                                    <span>Arrays and Linked Lists</span>
+                                </div>
+                            </td>
+                            <td>Computer Science</td>
+                            <td>28 Sep 2026</td>
+                            <td>45 / 50</td>
+                            <td>
+                                <span class="status submitted">Submitted</span>
+                            </td>
+                            <td>
+                                <a href="assignment-details.html" class="view-btn">View Details</a>
+                            </td>
+                        </tr>
+
+                        <!-- Computer Networks -->
+                        <tr>
+                            <td>
+                                <div class="assignment-name">
+                                    <strong>Computer Networks</strong>
+                                    <span>Network Fundamentals</span>
+                                </div>
+                            </td>
+                            <td>Computer Science</td>
+                            <td>30 Sep 2026</td>
+                            <td>0 / 50</td>
+                            <td>
+                                <span class="status upcoming">Upcoming</span>
+                            </td>
+                            <td>
+                                <a href="assignment-details.html" class="view-btn">View Details</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="../JS/Assignment.js"></script>
+
+</body>
+</html>
