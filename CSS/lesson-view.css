@@ -1,0 +1,292 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+    color: #243044;
+}
+
+/* Main layout */
+.container,
+.lesson-container,
+.main-content {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* Course Header */
+.course-header {
+    background: #243044;
+    color: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.course-header h1,
+.course-header h2 {
+    margin-bottom: 10px;
+}
+
+.course-header p {
+    color: #d5dce7;
+    line-height: 1.6;
+}
+
+/* Progress section */
+.progress-section {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background: #16a34a;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+/* Lesson layout */
+.lesson-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+/* Lesson sidebar */
+.lesson-sidebar {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.lesson-sidebar h3,
+.topics h3 {
+    margin-bottom: 18px;
+    font-size: 19px;
+}
+
+#lessonList {
+    list-style: none;
+}
+
+#lessonList li {
+    padding: 13px 12px;
+    margin-bottom: 8px;
+    border-radius: 7px;
+    background: #f3f5f9;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: 0.2s;
+}
+
+#lessonList li:hover {
+    background: #e0e7ff;
+}
+
+#lessonList li.active,
+#lessonList li.current {
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-weight: bold;
+    border-left: 4px solid #2563eb;
+}
+
+#lessonList li i {
+    color: #16a34a;
+    margin-right: 6px;
+}
+
+/* Main lesson content */
+.lesson-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    min-width: 0;
+}
+
+#lessonTitle {
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: #243044;
+}
+
+.lesson-subtitle {
+    color: #64748b;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Chapter notes */
+.lesson-material {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 25px;
+}
+
+.lesson-material h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: #243044;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.lesson-material h3 i:first-child {
+    color: #2563eb;
+}
+
+#notesArrow {
+    margin-left: auto;
+    transition: transform 0.3s;
+}
+
+#lessonNotes {
+    margin-top: 20px;
+    line-height: 1.8;
+    color: #334155;
+}
+
+#lessonNotes h3,
+#lessonNotes h4 {
+    margin: 18px 0 10px;
+    color: #1e40af;
+}
+
+#lessonNotes p {
+    margin-bottom: 12px;
+}
+
+#lessonNotes pre {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 12px 0;
+}
+
+#lessonNotes code {
+    font-family: Consolas, monospace;
+}
+
+/* Course lessons */
+.topics {
+    margin-bottom: 25px;
+}
+
+.topics ul {
+    padding-left: 0;
+}
+
+/* Buttons */
+button {
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 22px;
+    border-radius: 7px;
+    transition: 0.2s;
+}
+
+.btn-next,
+#completeBtn {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-next:hover,
+#completeBtn:hover {
+    background: #1d4ed8;
+}
+
+.btn-back,
+#previousBtn {
+    background: #e2e8f0;
+    color: #243044;
+}
+
+.btn-back:hover,
+#previousBtn:hover {
+    background: #cbd5e1;
+}
+
+.lesson-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .lesson-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-sidebar {
+        order: 2;
+    }
+
+    .lesson-content {
+        order: 1;
+    }
+}
+
+@media (max-width: 550px) {
+    .container,
+    .lesson-container,
+    .main-content {
+        padding: 14px;
+    }
+
+    .lesson-content {
+        padding: 18px;
+    }
+
+    #lessonTitle {
+        font-size: 21px;
+    }
+
+    .lesson-buttons {
+        flex-direction: column;
+    }
+
+    .lesson-buttons button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Courses | LearnHub</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/student-learning.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="site-logo">
+            <img src="../assets/image.png" alt="LearnHub Logo">
+        </div>
+
+        <nav class="navbar">
+
+            <a href="student-learning.html" class="nav-item active" id="dashboardLink">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="student-learning.html#my-courses" class="nav-item" id="myCoursesLink">
+                <i class="fa-solid fa-book-open"></i>
+                <span>My Courses</span>
+            </a>
+
+            <a href="my-progress.html" class="nav-item">
+                <i class="fa-solid fa-users"></i>
+                <span>My Progress</span>
+            </a>
+
+            <a href="assignment-list.html" class="nav-item">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Assignments</span>
+            </a>
+
+            <a href="Profile.html" class="nav-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+
+        </nav>
+
+        <hr>
+
+        <div class="logout">
+            <a href="login.html">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+
+    </aside>
+
+
+    <main class="content">
+
+        <div class="topbar">
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search courses or lessons...">
+            </div>
+
+            <div class="topbar-right">
+
+                <i class="fa-regular fa-bell bell-icon"></i>
+
+                <div class="user-menu">
+
+                    <div class="user-menu-trigger">
+
+                        <div class="student-avatar">A</div>
+
+                        <div>
+                            <div class="student-name">Aman</div>
+                            <div class="student-role">Student</div>
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down chevron-icon"></i>
+
+                    </div>
+
+                    <div class="user-dropdown">
+
+                        <a href="#">
+                            <i class="fa-regular fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+
+                        <a href="login.html">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Logout</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WELCOME BANNER -->
+
+        <div class="welcome-banner">
+
+            <h1>Welcome back, Aman!</h1>
+
+            <p>
+                Continue learning where you left off and keep your progress going.
+            </p>
+
+        </div>
+
+
+        <!-- DASHBOARD STATISTICS -->
+
+        <div class="stats-row">
+
+            <div class="stat-card stat-blue">
+                <p class="label">Enrolled Courses</p>
+                <p class="value">6</p>
+                <p class="change">+1 This Month</p>
+            </div>
+
+            <div class="stat-card stat-green">
+                <p class="label">Lessons Completed</p>
+                <p class="value">16</p>
+                <p class="change">+2 This Month</p>
+            </div>
+
+            <div class="stat-card stat-yellow">
+                <p class="label">Pending Assignments</p>
+                <p class="value">2</p>
+                <p class="change">Due this week</p>
+            </div>
+
+            <div class="stat-card stat-red">
+                <p class="label">Avg Completion</p>
+                <p class="value">28%</p>
+                <p class="change">+8% This Month</p>
+            </div>
+
+        </div>
+
+
+        <!-- MY COURSES SECTION -->
+
+        <section class="courses-section" id="my-courses">
+
+            <div class="section-header">
+
+                <h2>My Courses</h2>
+
+                <a href="#">View All</a>
+
+            </div>
+
+
+            <div class="courses-table">
+
+                <!-- TABLE HEADER -->
+
+                <div class="table-header">
+
+                    <span>Course</span>
+                    <span>Lessons</span>
+                    <span>Progress</span>
+                    <span>Status</span>
+                    <span>Action</span>
+
+                </div>
+
+
+                <!-- 1. WEB DEVELOPMENT -->
+
+                <div class="course-row">
+
+                    <div class="course-info">
+
+                        <div class="course-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+
+                        <div>
+                            <h3>Web Development</h3>
+                            <p>HTML, CSS and JavaScript</p>
+                        </div>
+
+                    </div>
+
+                    <span class="lessons">15 / 20</span>
+
+                    <div class="progress-area">
+
+                        <div class="progress-text">75%</div>
+
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+
+                    </div>
+
+                    <span class="course-status in-progress">
+                        In Progress
+                    </span>
+
+                    <a href="course-view.html#web-course" class="continue-btn">
+                        Continue
+                    </a>
+
+                </div>
+
+
+                <!-- 2. PYTHON PROGRAMMING -->
+
+                <div class="course-row">
+
+                    <div class="course-info">
+
+                        <div class="course-icon">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+
+                        <div>
+                            <h3>Python Programming</h3>
+                            <p>Python basics and programming</p>
+                        </div>
+
+                    </div>
+
+                    <span class="lessons">12 / 20</span>
+
+                    <div class="progress-area">
+
+                        <div class="progress-text">60%</div>
+
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%;"></div>
+                        </div>
+
+                    </div>
+
+                    <span class="course-status in-progress">
+                        In Progress
+                    </span>
+
+                    <a href="course-view.html#python-course" class="continue-btn">
+                        Continue
+                    </a>
+
+                </div>
+
+
+                <!-- 3. DATABASE MANAGEMENT -->
+
+                <div class="course-row">
+
+                    <div class="course-info">
+
+                        <div class="course-icon">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+
+                        <div>
+                            <h3>Database Management</h3>
+                            <p>SQL and database concepts</p>
+                        </div>
+
+                    </div>
+
+                    <span class="lessons">9 / 20</span>
+
+                    <div class="progress-area">
+
+                        <div class="progress-text">45%</div>
+
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 45%;"></div>
+                        </div>
+
+                    </div>
+
+                    <span class="course-status in-progress">
+                        In Progress
+                    </span>
+
+                    <a href="course-view.html#database-course" class="continue-btn">
+                        Continue
+                    </a>
+
+                </div>
+
+
+                <!-- 4. COMPUTER SCIENCE -->
+
+                <div class="course-row">
+
+                    <div class="course-info">
+
+                        <div class="course-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+
+                        <div>
+                            <h3>Computer Science</h3>
+                            <p>Data Structures and Networks</p>
+                        </div>
+
+                    </div>
+
+                    <span class="lessons">16 / 20</span>
+
+                    <div class="progress-area">
+
+                        <div class="progress-text">80%</div>
+
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+
+                    </div>
+
+                    <span class="course-status in-progress">
+                        In Progress
+                    </span>
+
+                    <a href="course-view.html#computer-course" class="continue-btn">
+                        Continue
+                    </a>
+
+                </div>
+
+
+                <!-- 5. JAVASCRIPT BASICS -->
+
+                <div class="course-row">
+
+                    <div class="course-info">
+
+                        <div class="course-icon">
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+
+                        <div>
+                            <h3>JavaScript Basics</h3>
+                            <p>Variables and Functions</p>
+                        </div>
+
+                    </div>
+
+                    <span class="lessons">20 / 20</span>
+
+                    <div class="progress-area">
+
+                        <div class="progress-text">100%</div>
+
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+
+                    </div>
+
+                    <span class="course-status completed">
+                        Completed
+                    </span>
+
+                    <a href="course-view.html#js-course" class="continue-btn">
+                        Continue
+                    </a>
+
+                </div>
+
+
+                <!-- 6. DATA STRUCTURES -->
+
+                <div class="course-row">
+
+                    <div class="course-info">
+
+                        <div class="course-icon">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+
+                        <div>
+                            <h3>Data Structures</h3>
+                            <p>Arrays and Linked Lists</p>
+                        </div>
+
+                    </div>
+
+                    <span class="lessons">16 / 20</span>
+
+                    <div class="progress-area">
+
+                        <div class="progress-text">80%</div>
+
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+
+                    </div>
+
+                    <span class="course-status in-progress">
+                        In Progress
+                    </span>
+
+                    <a href="course-view.html#dsa-course" class="continue-btn">
+                        Continue
+                    </a>
+
+                </div>
+
+
+                <!-- 7. COMPUTER NETWORKS -->
+
+                <div class="course-row">
+
+                    <div class="course-info">
+
+                        <div class="course-icon">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+
+                        <div>
+                            <h3>Computer Networks</h3>
+                            <p>Network Fundamentals</p>
+                        </div>
+
+                    </div>
+
+                    <span class="lessons">0 / 20</span>
+
+                    <div class="progress-area">
+
+                        <div class="progress-text">0%</div>
+
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%;"></div>
+                        </div>
+
+                    </div>
+
+                    <span class="course-status not-started">
+                        Not Started
+                    </span>
+
+                    <a href="course-view.html#network-course" class="continue-btn">
+                        Continue
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- EXISTING JAVASCRIPT -->
+
+    <script src="../JAVASCRIPT/course-view.js" defer></script>
+
+
+    <!-- DASHBOARD AND MY COURSES NAVIGATION -->
+
+    <script>
+
+        "use strict";
+
+        const dashboardLink = document.getElementById("dashboardLink");
+        const myCoursesLink = document.getElementById("myCoursesLink");
+
+        const welcomeBanner = document.querySelector(".welcome-banner");
+        const statsRow = document.querySelector(".stats-row");
+
+        const coursesSection = document.getElementById("my-courses");
+
+
+        function updatePage() {
+
+            const showCoursesOnly = window.location.hash === "#my-courses";
+
+            // Dashboard content
+
+            welcomeBanner.style.display = showCoursesOnly ? "none" : "";
+            statsRow.style.display = showCoursesOnly ? "none" : "";
+
+            // Courses table
+
+            coursesSection.style.display = "block";
+
+            // Active sidebar link
+
+            dashboardLink.classList.toggle("active", !showCoursesOnly);
+
+            myCoursesLink.classList.toggle("active", showCoursesOnly);
+
+        }
+
+
+        // Run when page loads
+
+        updatePage();
+
+
+        // Run when navigation hash changes
+
+        window.addEventListener("hashchange", updatePage);
+
+    </script>
+
+</body>
+</html>
