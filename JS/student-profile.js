@@ -1,0 +1,345 @@
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    console.log("Student Profile JS Connected!");
+
+    // =====================================
+    // 1. SELECT HTML ELEMENTS
+    // =====================================
+
+    const profileForm = document.getElementById("profile-form");
+
+    const nameInput = document.getElementById("fullName");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+    const courseInput = document.getElementById("course");
+
+    const displayName = document.getElementById("display-name");
+    const displayEmail = document.getElementById("display-email");
+    const displayPhone = document.getElementById("display-phone");
+
+    const topAvatar = document.getElementById("top-avatar");
+    const topUsername = document.getElementById("top-username");
+
+    const studentAvatar = document.querySelector(".student-avatar");
+    const studentRole = document.querySelector(".student-role");
+
+    const saveMessage = document.getElementById("save-message");
+
+    const STORAGE_KEY = "learnhubStudentProfile";
+
+
+    // =====================================
+    // 2. CHECK ELEMENTS
+    // =====================================
+
+    if (
+        !profileForm ||
+        !nameInput ||
+        !emailInput ||
+        !phoneInput ||
+        !courseInput
+    ) {
+        console.error("Profile form or input elements not found!");
+        return;
+    }
+
+
+    // =====================================
+    // 3. GET FORM DATA
+    // =====================================
+
+    function getProfileData() {
+
+        return {
+            fullName: nameInput.value.trim(),
+            email: emailInput.value.trim(),
+            phone: phoneInput.value.trim(),
+            course: courseInput.value.trim()
+        };
+
+    }
+
+
+    // =====================================
+    // 4. UPDATE PROFILE DISPLAY
+    // =====================================
+
+    function updateProfile(profile) {
+
+        const firstLetter = profile.fullName
+            ? profile.fullName.charAt(0).toUpperCase()
+            : "A";
+
+
+        // Update profile name
+        if (displayName) {
+
+            displayName.textContent = profile.fullName;
+
+            const verifiedIcon = document.createElement("i");
+
+            verifiedIcon.className =
+                "fa-solid fa-circle-check verified";
+
+            displayName.appendChild(
+                document.createTextNode(" ")
+            );
+
+            displayName.appendChild(verifiedIcon);
+
+        }
+
+
+        // Update email
+        if (displayEmail) {
+            displayEmail.textContent = profile.email;
+        }
+
+
+        // Update phone
+        if (displayPhone) {
+            displayPhone.textContent = profile.phone;
+        }
+
+
+        // Update student avatar
+        if (studentAvatar) {
+            studentAvatar.textContent = firstLetter;
+        }
+
+
+        // Update topbar avatar
+        if (topAvatar) {
+            topAvatar.textContent = firstLetter;
+        }
+
+
+        // Update topbar username
+        if (topUsername) {
+            topUsername.textContent = profile.fullName;
+        }
+
+
+        // Update course
+        if (studentRole) {
+            studentRole.textContent =
+                profile.course + " Student";
+        }
+
+    }
+
+
+    // =====================================
+    // 5. VALIDATE FORM
+    // =====================================
+
+    function validateProfile(profile) {
+
+        if (
+            !profile.fullName ||
+            !profile.email ||
+            !profile.phone ||
+            !profile.course
+        ) {
+
+            showMessage("Please fill all the fields.", "error");
+
+            return false;
+
+        }
+
+
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(profile.email)) {
+
+            showMessage("Please enter a valid email address.", "error");
+
+            return false;
+
+        }
+
+
+        const phonePattern =
+            /^\+?[0-9\s-]{10,16}$/;
+
+        if (!phonePattern.test(profile.phone)) {
+
+            showMessage("Please enter a valid phone number.", "error");
+
+            return false;
+
+        }
+
+        return true;
+
+    }
+
+
+    // =====================================
+    // 6. SHOW MESSAGE
+    // =====================================
+
+    function showMessage(message, type) {
+
+        if (!saveMessage) return;
+
+        saveMessage.textContent = message;
+
+        if (type === "success") {
+            saveMessage.style.color = "#159447";
+        } else {
+            saveMessage.style.color = "#dc2626";
+        }
+
+    }
+
+
+    // =====================================
+    // 7. SAVE PROFILE TO LOCAL STORAGE
+    // =====================================
+
+    function saveProfile(profile) {
+
+        localStorage.setItem(
+            STORAGE_KEY,
+            JSON.stringify(profile)
+        );
+
+    }
+
+
+    // =====================================
+    // 8. LOAD PROFILE FROM LOCAL STORAGE
+    // =====================================
+
+    function loadProfile() {
+
+        try {
+
+            const savedData =
+                localStorage.getItem(STORAGE_KEY);
+
+            if (savedData) {
+
+                const profile = JSON.parse(savedData);
+
+                // Fill form inputs
+                nameInput.value = profile.fullName || "";
+                emailInput.value = profile.email || "";
+                phoneInput.value = profile.phone || "";
+                courseInput.value = profile.course || "";
+
+                // Update profile display
+                updateProfile(profile);
+
+                console.log("Saved profile loaded:", profile);
+
+            } else {
+
+                // First visit: use HTML default values
+                const defaultProfile = getProfileData();
+
+                updateProfile(defaultProfile);
+
+                console.log("Default profile loaded.");
+
+            }
+
+        } catch (error) {
+
+            console.error("Profile loading error:", error);
+
+            showMessage(
+                "Unable to load saved profile.",
+                "error"
+            );
+
+        }
+
+    }
+
+
+    // =====================================
+    // 9. SAVE BUTTON EVENT
+    // =====================================
+
+    profileForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        console.log("Save button clicked!");
+
+        const profile = getProfileData();
+
+        // Validate
+        if (!validateProfile(profile)) {
+            return;
+        }
+
+
+        try {
+
+            // Save data
+            saveProfile(profile);
+
+            // Update page immediately
+            updateProfile(profile);
+
+            // Success message
+            showMessage(
+                "Profile updated successfully!",
+                "success"
+            );
+
+            console.log("Profile saved successfully:", profile);
+
+        } catch (error) {
+
+            console.error("Profile saving error:", error);
+
+            showMessage(
+                "Unable to save profile. Please check browser storage.",
+                "error"
+            );
+
+        }
+
+    });
+
+
+    // =====================================
+    // 10. CLEAR MESSAGE WHEN USER EDITS
+    // =====================================
+
+    profileForm.addEventListener("input", function () {
+
+        if (saveMessage) {
+            saveMessage.textContent = "";
+        }
+
+    });
+
+
+    // =====================================
+    // 11. SYNC OTHER BROWSER TABS
+    // =====================================
+
+    window.addEventListener("storage", function (event) {
+
+        if (event.key === STORAGE_KEY) {
+            loadProfile();
+        }
+
+    });
+
+
+    // =====================================
+    // 12. INITIALIZE PROFILE
+    // =====================================
+
+    loadProfile();
+
+});

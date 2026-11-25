@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LearnHub - Student Profile</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="\CSS\student-profile.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/teacher-Learnhub logo.png">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <!-- Logo -->
+            <div class="site-logo">
+
+                <img src="\assets\teacher-Learnhub logo.png"
+                    alt="LearnHub Logo">
+
+            </div>
+
+
+            <!-- Navigation -->
+            <nav class="navbar">
+
+                <a href="student-learning.html" class="nav-item">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="student-learning.html#my-courses" class="nav-item">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <span>My Courses</span>
+
+                </a>
+
+
+                <a href="my-progress.html" class="nav-item">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>My Progress</span>
+
+                </a>
+
+
+                <a href="assignment-list.html" class="nav-item">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <span>Assignments</span>
+
+                </a>
+
+
+                <a href="student-profile.html" class="nav-item active">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>Profile</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- Bottom Logout -->
+
+            <div class="sidebar-bottom">
+
+                <hr>
+
+                <a href="login.html" class="logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main-content">
+
+
+            <!-- Topbar -->
+
+            <header class="topbar">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Search students, courses or anything...">
+
+                </div>
+
+
+                <div class="top-right">
+
+                    <i class="fa-solid fa-bell notification"></i>
+
+
+                    <div class="user-info">
+
+                        <div class="user-avatar" id="top-avatar">
+                            A
+                        </div>
+
+                        <span id="top-username">Aman</span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ================= PROFILE BANNER ================= -->
+
+            <section class="profile-banner">
+
+                <div>
+
+                    <h1>My Profile</h1>
+
+                    <p>
+                        View and update your personal information.
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-graduation-cap banner-icon"></i>
+
+            </section>
+
+
+
+            <!-- ================= PROFILE LAYOUT ================= -->
+
+            <section class="profile-layout">
+
+
+                <!-- LEFT PROFILE CARD -->
+
+                <div class="profile-card">
+
+
+                    <!-- Student Header -->
+
+                    <div class="student-header">
+
+                        <div class="student-avatar">
+                            A
+                        </div>
+
+
+                        <div class="student-details">
+
+                            <h2 id="display-name">
+
+                                Aman Kumar
+
+                                <i class="fa-solid fa-circle-check verified"></i>
+
+                            </h2>
+
+
+                            <p class="student-role">
+                                B.Tech Computer Science Student
+                            </p>
+
+
+                            <div class="student-contact">
+
+
+                                <span>
+
+                                    <i class="fa-solid fa-graduation-cap"></i>
+
+                                    GLA University
+
+                                </span>
+
+
+                                <span>
+
+                                    <i class="fa-solid fa-envelope"></i>
+
+                                    <span id="display-email">
+                                        aman@example.com
+                                    </span>
+
+                                </span>
+
+
+                                <span>
+
+                                    <i class="fa-solid fa-phone"></i>
+
+                                    <span id="display-phone">
+                                        +91 98765 43210
+                                    </span>
+
+                                </span>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= PROFILE FORM ================= -->
+
+                    <form id="profile-form">
+
+
+                        <div class="form-group">
+
+                            <label for="fullName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                value="Aman Kumar"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                value="aman@example.com"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Contact Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                value="+91 98765 43210"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="course">
+                                Course / Branch
+                            </label>
+
+                            <input
+                                type="text"
+                                id="course"
+                                value="B.Tech Computer Science"
+                                required>
+
+                        </div>
+
+
+
+                        <button type="submit" class="save-btn">
+
+                            <i class="fa-solid fa-floppy-disk"></i>
+
+                            Save Changes
+
+                        </button>
+
+
+                        <p id="save-message"></p>
+
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- ================= RIGHT SECTION ================= -->
+
+                <div class="right-section">
+
+
+                    <!-- Statistics -->
+
+                    <div class="stats-grid">
+
+
+                        <!-- Enrolled Courses -->
+
+                        <div class="stat-card purple">
+
+                            <div class="stat-icon">
+
+                                <i class="fa-solid fa-book-open"></i>
+
+                            </div>
+
+                            <h2>5</h2>
+
+                            <p>Enrolled Courses</p>
+
+                        </div>
+
+
+
+                        <!-- Completed Courses -->
+
+                        <div class="stat-card green">
+
+                            <div class="stat-icon">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                            </div>
+
+                            <h2>3</h2>
+
+                            <p>Completed Courses</p>
+
+                        </div>
+
+
+
+                        <!-- Average Score -->
+
+                        <div class="stat-card orange">
+
+                            <div class="stat-icon">
+
+                                <i class="fa-solid fa-star"></i>
+
+                            </div>
+
+                            <h2>8.5</h2>
+
+                            <p>Average Score</p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- ================= RECENT ACTIVITY ================= -->
+
+                    <div class="activity-card">
+
+
+                        <div class="activity-header">
+
+                            <h2>
+
+                                <i class="fa-regular fa-clock"></i>
+
+                                Recent Activity
+
+                            </h2>
+
+
+                            <a href="#">
+
+                                View All
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+
+
+                        <div class="activity-list">
+
+
+                            <!-- Activity 1 -->
+
+                            <div class="activity-item purple-activity">
+
+                                <div class="activity-icon">
+
+                                    <i class="fa-solid fa-play"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <h3>
+                                        Completed: Introduction to Python
+                                    </h3>
+
+                                    <p>2 days ago</p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Activity 2 -->
+
+                            <div class="activity-item blue-activity">
+
+                                <div class="activity-icon">
+
+                                    <i class="fa-solid fa-file-lines"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <h3>
+                                        Submitted Assignment: Web Development
+                                    </h3>
+
+                                    <p>4 days ago</p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Activity 3 -->
+
+                            <div class="activity-item green-activity">
+
+                                <div class="activity-icon">
+
+                                    <i class="fa-solid fa-trophy"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <h3>
+                                        Achieved Badge: Quick Learner
+                                    </h3>
+
+                                    <p>1 week ago</p>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="JS/student-profile.js"></script>
+
+</body>
+
+</html>
